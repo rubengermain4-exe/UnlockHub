@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#060761">
+  <title>Connexion — UnlockHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#060761;--navy2:#080b70;--mint:#00f5b0;--mint2:#41ffa7;--white:#f8f9ff;--muted:#b7c8f4;--line:rgba(35,91,255,.55);--error:#ff8eaa}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 82% 18%,rgba(45,58,220,.35),transparent 33%),radial-gradient(ellipse at 8% 90%,rgba(0,245,176,.10),transparent 28%),#03064c;color:var(--white);font-family:"DM Sans",sans-serif;display:grid;grid-template-rows:auto 1fr auto;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}button,input{font:inherit}
+    .top{padding:26px clamp(20px,5vw,76px);display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand-mark{width:39px;height:44px;color:var(--mint)}
+    .brand-mark svg{width:100%;height:100%}
+    .brand-name{font-size:29px;line-height:1;font-weight:800;letter-spacing:-1.5px}.brand-name span{color:var(--mint)}
+    .back{font-size:14px;color:#d4ddff;display:flex;gap:9px;align-items:center}.back:hover{color:var(--mint)}
+    .main{width:min(1100px,calc(100% - 36px));margin:auto;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:clamp(30px,6vw,80px);padding:20px 0 50px}
+    .intro{position:relative;min-height:510px;display:flex;flex-direction:column;justify-content:center}
+    .eyebrow{display:inline-flex;align-self:flex-start;border:1px solid var(--mint);border-radius:30px;color:var(--mint);padding:8px 15px;font-size:12px;font-weight:800;letter-spacing:1.4px}
+    h1{font-size:clamp(44px,5.2vw,70px);line-height:.98;letter-spacing:-3.5px;margin:22px 0 18px;font-weight:800}
+    h1 span{color:var(--mint)}
+    .intro-copy{font-size:clamp(17px,1.7vw,21px);line-height:1.6;color:#dce4ff;max-width:490px;margin:0}
+    .intro-copy strong{color:var(--mint)}
+    .benefits{display:grid;gap:15px;margin-top:32px;color:#d5defe;font-size:14px}
+    .benefit{display:flex;align-items:center;gap:12px}
+    .check{width:28px;height:28px;display:grid;place-items:center;border:1px solid rgba(0,245,176,.55);border-radius:9px;color:var(--mint);font-weight:800;flex:none}
+    .glow{position:absolute;z-index:-1;right:1%;bottom:2%;width:210px;height:210px;border-radius:50%;background:rgba(34,55,255,.25);filter:blur(55px)}
+    .auth-card{border:1px solid rgba(38,83,225,.72);border-radius:28px;padding:clamp(24px,4vw,42px);background:linear-gradient(145deg,rgba(9,17,108,.96),rgba(4,7,66,.96));box-shadow:0 25px 80px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.04)}
+    .card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
+    .mini-label{font-size:11px;font-weight:800;letter-spacing:1.6px;color:var(--mint)}
+    .spark{color:var(--mint);font-size:24px}
+    h2{font-size:29px;letter-spacing:-.8px;margin:0 0 8px}
+    .sub{font-size:14px;line-height:1.6;color:var(--muted);margin:0 0 25px}
+    .tabs{display:grid;grid-template-columns:1fr 1fr;gap:5px;padding:5px;background:rgba(2,5,57,.75);border:1px solid rgba(45,80,210,.38);border-radius:14px;margin-bottom:24px}
+    .tab{border:0;background:transparent;color:#bdcafa;padding:11px 8px;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer}
+    .tab.active{background:var(--mint);color:#05215c}
+    .field{display:grid;gap:8px;margin-bottom:17px}
+    .field label{font-size:13px;font-weight:700;color:#edf0ff}
+    .input-wrap{position:relative}
+    .field input{width:100%;height:48px;border:1px solid #1a3fbd;border-radius:12px;background:rgba(2,5,57,.55);padding:0 14px;color:#fff;outline:none;transition:border-color .2s,box-shadow .2s}
+    .field input::placeholder{color:#8295d1}
+    .field input:focus{border-color:var(--mint);box-shadow:0 0 0 3px rgba(0,245,176,.1)}
+    .password-toggle{position:absolute;right:10px;top:50%;transform:translateY(-50%);border:0;background:transparent;color:#b8c8f2;cursor:pointer;padding:6px;font-size:12px}
+    .password-toggle:hover{color:var(--mint)}
+    .form-row{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12px;margin:2px 0 20px;color:#c7d2fa}
+    .remember{display:flex;align-items:center;gap:8px}.remember input{accent-color:var(--mint)}
+    .text-link{color:var(--mint);cursor:pointer;background:none;border:0;padding:0;font-size:12px}.text-link:hover{text-decoration:underline}
+    .submit{width:100%;border:0;border-radius:13px;background:linear-gradient(100deg,#00f5b0,#41ffa7);color:#05215c;font-weight:800;padding:15px 18px;display:flex;justify-content:center;align-items:center;gap:10px;cursor:pointer;box-shadow:0 8px 25px rgba(0,245,176,.13);transition:transform .2s,box-shadow .2s}
+    .submit:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,245,176,.22)}
+    .submit:disabled{opacity:.65;cursor:wait;transform:none}
+    .separator{display:flex;align-items:center;gap:12px;color:#8496d0;font-size:11px;margin:21px 0}.separator:before,.separator:after{content:"";height:1px;background:rgba(68,94,193,.45);flex:1}
+    .google{width:100%;border:1px solid #2343ad;border-radius:12px;background:rgba(4,8,65,.5);color:#f1f4ff;padding:12px;display:flex;justify-content:center;align-items:center;gap:10px;font-weight:700;font-size:13px;cursor:pointer}
+    .google:hover{border-color:var(--mint)}
+    .google-mark{width:19px;height:19px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#4285f4;font-weight:800}
+    .terms{font-size:11px;line-height:1.6;text-align:center;color:#8496d0;margin:21px 0 0}.terms a{color:#b7c8f4;text-decoration:underline;text-underline-offset:3px}
+    .message{display:none;margin:0 0 17px;padding:11px 13px;border-radius:10px;font-size:12px;line-height:1.5}
+    .message.show{display:block}.message.error{background:rgba(255,74,119,.1);border:1px solid rgba(255,142,170,.45);color:#ffc0d0}.message.success{background:rgba(0,245,176,.08);border:1px solid rgba(0,245,176,.4);color:#baffdf}
+    .footer{display:flex;justify-content:space-between;gap:16px;padding:20px clamp(20px,5vw,76px);font-size:12px;color:#8396d0}
+    .footer .motto{font-family:"Space Grotesk",sans-serif;font-style:italic;color:var(--mint);font-size:14px}
+    @media(max-width:850px){.main{grid-template-columns:1fr;max-width:520px;padding-top:15px}.intro{min-height:0;padding:12px 4px 5px}.intro h1{font-size:54px}.intro-copy{font-size:17px}.benefits{display:none}.glow{right:15%;top:0;width:120px;height:120px}.auth-card{padding:27px}.top{padding:20px}.footer{padding:18px 20px}}
+    @media(max-width:480px){.brand-name{font-size:25px}.brand-mark{width:32px;height:36px}.top{align-items:flex-start}.back{font-size:12px;padding-top:8px}.main{width:calc(100% - 24px);gap:20px;padding-bottom:25px}.intro h1{font-size:47px;letter-spacing:-2.5px}.intro-copy{font-size:15px}.auth-card{padding:22px 18px;border-radius:22px}h2{font-size:25px}.footer{flex-direction:column;align-items:center;text-align:center}.form-row{font-size:11px}}
+  </style>
+</head>
+<body>
+<header class="top">
+  <a href="index.html" class="brand" aria-label="UnlockHub accueil">
+    <span class="brand-mark"><svg viewBox="0 0 48 52" aria-hidden="true"><path d="M15 21v-7a9 9 0 0 1 18 0v7" stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round"/><rect x="7" y="20" width="34" height="29" rx="5" fill="currentColor"/><circle cx="24" cy="32" r="3" fill="#060761"/><path d="M24 35v5" stroke="#060761" stroke-width="3" stroke-linecap="round"/></svg></span>
+    <span class="brand-name">Unlock<span>Hub</span></span>
+  </a>
+  <a class="back" href="index.html">← Retour à l'accueil</a>
+</header>
+
+<main class="main">
+  <section class="intro">
+    <div class="glow"></div>
+    <span class="eyebrow">TON ESPACE UNLOCKHUB</span>
+    <h1>Le numérique.<br><span>En mieux.</span></h1>
+    <p class="intro-copy">Connecte-toi pour retrouver tes astuces préférées, partager tes découvertes et profiter de bons plans <strong>sans te ruiner.</strong></p>
+    <div class="benefits">
+      <div class="benefit"><span class="check">✓</span> Retrouve tes astuces sauvegardées</div>
+      <div class="benefit"><span class="check">✓</span> Partage tes bons plans avec la communauté</div>
+      <div class="benefit"><span class="check">✓</span> Un compte gratuit, sans prise de tête</div>
+    </div>
+  </section>
+
+  <section class="auth-card" aria-labelledby="auth-title">
+    <div class="card-top"><span class="mini-label">BIENVENUE DANS LA COMMUNAUTÉ</span><span class="spark">✳</span></div>
+    <h2 id="auth-title">Content de te revoir !</h2>
+    <p class="sub" id="auth-subtitle">Entre tes identifiants pour continuer.</p>
+
+    <div class="tabs" role="tablist" aria-label="Type de compte">
+      <button class="tab active" id="login-tab" type="button" role="tab" aria-selected="true">Connexion</button>
+      <button class="tab" id="signup-tab" type="button" role="tab" aria-selected="false">Créer un compte</button>
+    </div>
+
+    <div id="message" class="message" role="status" aria-live="polite"></div>
+    <form id="auth-form">
+      <div class="field" id="name-field" hidden>
+        <label for="name">Ton pseudo</label>
+        <input id="name" name="name" type="text" autocomplete="nickname" placeholder="Ex. PixelRuben" minlength="2" maxlength="24">
+      </div>
+      <div class="field">
+        <label for="email">Adresse e-mail</label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="toi@exemple.com" required>
+      </div>
+      <div class="field">
+        <label for="password">Mot de passe</label>
+        <div class="input-wrap">
+          <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Au moins 8 caractères" minlength="8" required>
+          <button class="password-toggle" type="button" id="toggle-password" aria-label="Afficher le mot de passe">Afficher</button>
+        </div>
+      </div>
+      <div class="form-row" id="login-options">
+        <label class="remember"><input type="checkbox" id="remember"> Rester connecté</label>
+        <button class="text-link" id="forgot" type="button">Mot de passe oublié ?</button>
+      </div>
+      <button class="submit" id="submit" type="submit"><span id="submit-text">Se connecter</span><span aria-hidden="true">→</span></button>
+    </form>
+    <div class="separator">OU</div>
+    <button class="google" type="button" id="google"><span class="google-mark">G</span> Continuer avec Google</button>
+    <p class="terms">En continuant, tu acceptes nos <a href="conditions.html">conditions d'utilisation</a> et notre <a href="confidentialite.html">politique de confidentialité</a>.</p>
+  </section>
+</main>
+
+<footer class="footer"><span>© <span id="year"></span> UnlockHub</span><span class="motto">Explore · Apprends · Économise · Grandis</span></footer>
+
+<!-- Supabase JS v2. Remplace les deux valeurs de configuration ci-dessous. -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  // Dans Supabase : Project Settings > API. Utilise la clé publishable/anon,
+  // jamais une clé secrète ou service_role dans le navigateur.
+  const SUPABASE_URL = "https://todipvfklflzjdiufazy.supabase.co/rest/v1/";
+  const SUPABASE_ANON_KEY = "sb_publishable_Hsn2zeY1kRa0CAOyjUnRMQ_iO6GqXTK";
+  const isConfigured = SUPABASE_URL.startsWith("https://")
+    && !SUPABASE_URL.includes("TON-PROJET")
+    && !SUPABASE_ANON_KEY.includes("TA_CLE");
+
+  const supabaseClient = isConfigured && window.supabase
+    ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+        auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
+      })
+    : null;
+
+  const $ = id => document.getElementById(id);
+  let mode = "login";
+  $("year").textContent = new Date().getFullYear();
+
+  function showMessage(text, type = "error") {
+    const box = $("message");
+    box.textContent = text;
+    box.className = "message show " + type;
+  }
+  function clearMessage() {
+    $("message").className = "message";
+    $("message").textContent = "";
+  }
+  function setMode(nextMode) {
+    mode = nextMode;
+    clearMessage();
+    const signup = mode === "signup";
+    $("login-tab").classList.toggle("active", !signup);
+    $("signup-tab").classList.toggle("active", signup);
+    $("login-tab").setAttribute("aria-selected", String(!signup));
+    $("signup-tab").setAttribute("aria-selected", String(signup));
+    $("name-field").hidden = !signup;
+    $("name").required = signup;
+    $("login-options").style.display = signup ? "none" : "flex";
+    $("auth-title").textContent = signup ? "Rejoins UnlockHub !" : "Content de te revoir !";
+    $("auth-subtitle").textContent = signup
+      ? "Crée ton compte gratuit en quelques secondes."
+      : "Entre tes identifiants pour continuer.";
+    $("submit-text").textContent = signup ? "Créer mon compte" : "Se connecter";
+    $("password").autocomplete = signup ? "new-password" : "current-password";
+  }
+  $("login-tab").addEventListener("click", () => setMode("login"));
+  $("signup-tab").addEventListener("click", () => setMode("signup"));
+  $("toggle-password").addEventListener("click", () => {
+    const input = $("password");
+    const visible = input.type === "password";
+    input.type = visible ? "text" : "password";
+    $("toggle-password").textContent = visible ? "Masquer" : "Afficher";
+    $("toggle-password").setAttribute("aria-label", visible ? "Masquer le mot de passe" : "Afficher le mot de passe");
+  });
+
+  $("auth-form").addEventListener("submit", async event => {
+    event.preventDefault();
+    clearMessage();
+    if (!supabaseClient) {
+      showMessage("Supabase n'est pas encore configuré. Ajoute l'URL de ton projet et ta clé publishable/anon dans le script de cette page.");
+      return;
+    }
+    const email = $("email").value.trim();
+    const password = $("password").value;
+    const button = $("submit");
+    button.disabled = true;
+    $("submit-text").textContent = mode === "signup" ? "Création en cours..." : "Connexion...";
+    try {
+      if (mode === "signup") {
+        const username = $("name").value.trim();
+        const { data, error } = await supabaseClient.auth.signUp({
+          email, password, options: { data: { username, display_name: username }, emailRedirectTo: window.location.origin + "/index.html" }
+        });
+        if (error) throw error;
+        if (data.session) {
+          showMessage("Compte créé ! Tu vas être redirigé.", "success");
+          window.location.href = "index.html";
+        } else {
+          showMessage("Compte créé. Vérifie ta boîte e-mail pour confirmer ton adresse avant de te connecter.", "success");
+        }
+      } else {
+        const { error } = await supabaseClient.auth.signInWithPassword({ email, password });
+        if (error) throw error;
+        showMessage("Connexion réussie. Redirection...", "success");
+        window.location.href = "index.html";
+      }
+    } catch (error) {
+      const messages = {
+        "Invalid login credentials": "Adresse e-mail ou mot de passe incorrect.",
+        "Email not confirmed": "Confirme d'abord ton adresse e-mail grâce au lien reçu.",
+        "User already registered": "Cette adresse e-mail possède déjà un compte."
+      };
+      showMessage(messages[error.message] || error.message || "Une erreur est survenue. Réessaie.");
+    } finally {
+      button.disabled = false;
+      $("submit-text").textContent = mode === "signup" ? "Créer mon compte" : "Se connecter";
+    }
+  });
+
+  $("forgot").addEventListener("click", async () => {
+    clearMessage();
+    if (!supabaseClient) {
+      showMessage("Configure d'abord Supabase avec l'URL du projet et la clé publishable/anon.");
+      return;
+    }
+    const email = $("email").value.trim();
+    if (!email) {
+      $("email").focus();
+      showMessage("Entre ton adresse e-mail dans le champ ci-dessus, puis clique sur « Mot de passe oublié ? ».");
+      return;
+    }
+    try {
+      const { error } = await supabaseClient.auth.resetPasswordForEmail(email, {
+        redirectTo: window.location.origin + "/reset-password.html"
+      });
+      if (error) throw error;
+      showMessage("Si un compte correspond à cette adresse, un e-mail de réinitialisation va être envoyé.", "success");
+    } catch (error) {
+      showMessage(error.message || "Impossible d'envoyer l'e-mail de réinitialisation.");
+    }
+  });
+
+  $("google").addEventListener("click", async () => {
+    clearMessage();
+    if (!supabaseClient) {
+      showMessage("Configure d'abord Supabase. Ensuite, active Google dans Authentication > Sign In / Providers.");
+      return;
+    }
+    try {
+      const { error } = await supabaseClient.auth.signInWithOAuth({
+        provider: "google",
+        options: { redirectTo: window.location.origin + "/index.html" }
+      });
+      if (error) throw error;
+    } catch (error) {
+      showMessage(error.message || "La connexion Google n'a pas pu démarrer.");
+    }
+  });
+</script>
+</body>
+</html>
