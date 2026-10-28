@@ -1,392 +1,153 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#060761" />
-  <title>UnlockHub — Ton univers numérique</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
-
-    :root {
-      --sidebar: #060761;
-      --panel: #0b0b58;
-      --purple: #41FFA7;
-      --pink: #41FFA7;
-      --text: #f4fff9;
-      --muted: #b9ffe0;
-      --border: rgba(65, 255, 167, .42);
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: #03033f;
-      color: var(--text);
-      font-family: Inter, system-ui, sans-serif;
-    }
-
-    .sidebar {
-      position: fixed;
-      inset: 16px auto 16px 16px;
-      z-index: 10;
-      width: 298px;
-      padding: 16px 10px;
-      display: flex;
-      flex-direction: column;
-      border: 1px solid var(--border);
-      border-radius: 27px;
-      background: rgba(20, 12, 32, .96);
-      box-shadow: 0 0 36px rgba(65, 255, 167, .08);
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 13px;
-      padding: 0 8px 22px;
-    }
-
-    .menu-toggle {
-      width: 47px;
-      height: 47px;
-      flex: 0 0 47px;
-      display: grid;
-      place-items: center;
-      border: 1px solid rgba(65, 255, 167, .65);
-      border-radius: 15px;
-      color: white;
-      background: #10105f;
-      cursor: pointer;
-      font-size: 22px;
-      transition: background .2s, transform .2s;
-    }
-    .menu-toggle:hover { background: #171778; transform: translateY(-1px); }
-
-    .brand-name {
-      font-family: Cinzel, Georgia, serif;
-      font-size: 18px;
-      line-height: .95;
-      letter-spacing: -.8px;
-      font-weight: 900;
-    }
-
-    .nav {
-      padding: 6px;
-      border: 1px solid rgba(65, 255, 167, .22);
-      border-radius: 21px;
-      background: rgba(29, 16, 45, .8);
-    }
-
-    .nav a, .discord {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      min-height: 59px;
-      padding: 0 14px;
-      color: #d9cfe5;
-      text-decoration: none;
-      font-family: Cinzel, Georgia, serif;
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: .45px;
-      border-radius: 16px;
-      transition: color .2s, background .2s, transform .2s;
-    }
-    .nav a + a { margin-top: 8px; }
-    .nav a:hover { color: white; background: rgba(65, 255, 167, .13); }
-    .nav a.active {
-      color: #060761;
-      background: linear-gradient(110deg, #41FFA7 0%, #35e99b 100%);
-      box-shadow: 0 8px 22px rgba(65, 255, 167, .18);
-    }
-    .nav-icon { width: 21px; text-align: center; font-family: sans-serif; font-size: 18px; }
-
-    .discord {
-      min-height: 60px;
-      margin: auto 5px 0;
-      border: 1px solid #41FFA7;
-      background: rgba(18, 10, 28, .7);
-    }
-    .discord:hover { background: rgba(65, 255, 167, .12); color: white; }
-
-    .main {
-      min-height: 100vh;
-      margin-left: 330px;
-      position: relative;
-      overflow: hidden;
-      isolation: isolate;
-      background:
-        radial-gradient(ellipse at 50% 83%, rgba(65, 255, 167, .14), transparent 43%),
-        linear-gradient(180deg, #060761 0%, #08085c 34%, #101080 73%, #1a1a91 100%);
-    }
-
-    .stars {
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      overflow: hidden;
-      pointer-events: none;
-    }
-    .star {
-      position: absolute;
-      width: 3px;
-      height: 3px;
-      border-radius: 50%;
-      background: #f7eaff;
-      opacity: .8;
-      box-shadow: 0 0 8px rgba(255,255,255,.25);
-      animation: twinkle 3.8s ease-in-out infinite alternate;
-    }
-    @keyframes twinkle { from { opacity: .25; transform: scale(.7); } to { opacity: .95; transform: scale(1.25); } }
-
-    .moon {
-      position: absolute;
-      top: 35%;
-      right: 12.3%;
-      width: 102px;
-      aspect-ratio: 1;
-      border-radius: 50%;
-      background: #fbf8ff;
-      box-shadow: 0 0 30px 15px rgba(65, 255, 167, .10), 0 0 75px 30px rgba(65, 255, 167, .08);
-    }
-    .moon::before, .moon::after {
-      content: "";
-      position: absolute;
-      border-radius: 50%;
-      background: #c8ffe5;
-    }
-    .moon::before { width: 17px; height: 17px; top: 28px; right: 25px; }
-    .moon::after { width: 11px; height: 11px; top: 62px; left: 31px; }
-
-    .hero {
-      position: relative;
-      z-index: 2;
-      min-height: 530px;
-      padding: 92px 32px 0;
-      text-align: center;
-    }
-    .eyebrow {
-      margin: 0 0 9px;
-      color: #41FFA7;
-      font-family: Cinzel, Georgia, serif;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: .55em;
-      text-transform: uppercase;
-    }
-    h1 {
-      margin: 0;
-      font-family: Cinzel, Georgia, serif;
-      font-size: clamp(43px, 6.1vw, 96px);
-      font-weight: 900;
-      line-height: 1.15;
-      letter-spacing: -.075em;
-      text-shadow: 0 0 22px rgba(65, 255, 167, .24), 0 5px 0 rgba(0, 0, 30, .6);
-    }
-    .subtitle {
-      max-width: 550px;
-      margin: 20px auto 0;
-      font-family: Georgia, serif;
-      font-size: 20px;
-      line-height: 1.7;
-      text-shadow: 0 2px 6px rgba(0,0,0,.2);
-    }
-
-    .landscape {
-      position: absolute;
-      inset: auto 0 0;
-      z-index: 1;
-      width: 100%;
-      height: 47%;
-      min-height: 320px;
-      pointer-events: none;
-    }
-    .castle-glow {
-      position: absolute;
-      bottom: 8%;
-      left: 50%;
-      width: 340px;
-      height: 260px;
-      transform: translateX(-50%);
-      background: rgba(65, 255, 167, .10);
-      filter: blur(35px);
-    }
-
-    .content {
-      position: relative;
-      z-index: 3;
-      padding: 28px clamp(20px, 5vw, 72px) 70px;
-      margin-top: 8px;
-    }
-    .content-card {
-      max-width: 850px;
-      margin: 0 auto;
-      padding: 25px;
-      border: 1px solid rgba(65, 255, 167, .24);
-      border-radius: 20px;
-      background: rgba(6, 7, 97, .72);
-      backdrop-filter: blur(12px);
-    }
-    .content-card h2 {
-      margin: 0 0 8px;
-      font-family: Cinzel, Georgia, serif;
-      font-size: 22px;
-    }
-    .content-card p { margin: 0; color: #d7c9e5; line-height: 1.7; }
-
-    body.collapsed .sidebar { width: 78px; }
-    body.collapsed .brand { justify-content: center; padding-inline: 0; }
-    body.collapsed .brand-name, body.collapsed .nav-label, body.collapsed .discord-label { display: none; }
-    body.collapsed .nav a, body.collapsed .discord { justify-content: center; padding-inline: 0; }
-    body.collapsed .nav-icon { font-size: 21px; }
-    body.collapsed .main { margin-left: 110px; }
-
-    @media (max-width: 900px) {
-      .sidebar { width: 245px; }
-      .main { margin-left: 277px; }
-      h1 { font-size: clamp(39px, 7vw, 70px); }
-      .moon { right: 7%; width: 75px; }
-      .eyebrow { letter-spacing: .3em; }
-    }
-    @media (max-width: 640px) {
-      .sidebar {
-        inset: 10px 10px auto;
-        width: auto;
-        height: auto;
-        padding: 9px;
-        border-radius: 19px;
-      }
-      .brand { padding: 0 4px; }
-      .brand-name { font-size: 16px; }
-      .nav { display: flex; gap: 4px; padding: 5px; }
-      .nav a, .nav a + a {
-        flex: 1;
-        justify-content: center;
-        min-height: 43px;
-        margin: 0;
-        padding: 0 6px;
-        gap: 5px;
-        font-size: 10px;
-        letter-spacing: 0;
-      }
-      .nav-icon { width: auto; font-size: 15px; }
-      .discord { display: none; }
-      .main, body.collapsed .main { margin-left: 0; padding-top: 135px; }
-      .hero { min-height: 460px; padding: 60px 16px 0; }
-      .eyebrow { font-size: 10px; letter-spacing: .2em; }
-      h1 { font-size: clamp(36px, 10vw, 60px); letter-spacing: -.07em; }
-      .subtitle { font-size: 17px; }
-      .moon { top: 42%; right: 8%; width: 58px; }
-      .landscape { height: 37%; min-height: 250px; }
-      .content { padding: 20px 14px 35px; }
-      .content-card { padding: 20px; }
-      body.collapsed .sidebar { width: auto; }
-      body.collapsed .brand-name { display: block; }
-      body.collapsed .nav-label { display: inline; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#060761">
+<title>UnlockHub — Le numérique, sans se ruiner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#060761;--navy2:#080b70;--navy3:#0c147f;--mint:#00f5b0;--mint2:#41ffa7;--white:#f8f9ff;--muted:#b7c8f4;--line:rgba(35,91,255,.48)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#03064c;color:var(--white);font-family:"DM Sans",Arial,sans-serif}
+a{color:inherit;text-decoration:none}button,input{font:inherit}
+.layout{min-height:100vh}
+.sidebar{position:fixed;z-index:10;left:0;top:0;bottom:0;width:298px;padding:30px 34px 28px;background:linear-gradient(180deg,#05084f 0%,#04064a 100%);border-right:1px solid rgba(0,245,176,.12);display:flex;flex-direction:column}
+.brand{display:flex;align-items:center;gap:13px;margin-bottom:43px;white-space:nowrap}
+.brand-icon{width:43px;height:48px;color:var(--mint);display:grid;place-items:center}
+.brand-icon svg{width:43px;height:48px}
+.brand-name{font:800 31px/1 "DM Sans",sans-serif;letter-spacing:-1.7px}
+.brand-name span{color:var(--mint)}
+.nav{display:grid;gap:7px}
+.nav a{display:flex;align-items:center;gap:17px;padding:15px 14px;border-radius:20px;font-size:16px;font-weight:500;color:#f0f2ff;min-height:50px;transition:.2s}
+.nav a:hover{background:rgba(255,255,255,.07)}
+.nav a.active{background:linear-gradient(100deg,#00f5b0,#00e9bf);color:#05265e;box-shadow:0 7px 22px rgba(0,245,176,.18)}
+.nav svg{width:25px;height:25px;flex:none;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.side-tip{margin-top:auto;margin-bottom:0;padding:18px 17px 21px;border:1px solid rgba(0,95,255,.5);border-radius:20px;background:rgba(0,10,75,.3);color:#a5e8ff;font-size:15px;line-height:1.65;position:relative}
+.side-tip .bolt{font-size:27px;color:var(--mint);display:block;margin-bottom:7px}
+.side-tip:after{content:"";display:block;width:47px;height:3px;border-radius:3px;background:var(--mint);margin:15px 0 0 18px}
+.main{margin-left:298px;min-height:100vh;overflow:hidden;background:radial-gradient(ellipse at 73% 22%,rgba(24,41,190,.28),transparent 38%),linear-gradient(120deg,#04064c 0%,#030743 100%)}
+.topbar{height:99px;padding:25px 34px 18px 55px;display:flex;align-items:flex-start;justify-content:space-between;gap:24px;position:relative;z-index:4}
+.search{height:48px;width:min(610px,62%);border:1px solid #1751df;border-radius:28px;display:flex;align-items:center;gap:14px;padding:0 16px;background:rgba(7,17,102,.7);box-shadow:inset 0 0 0 1px rgba(25,62,199,.12)}
+.search svg{width:22px;height:22px;stroke:#f7f8ff;stroke-width:2;fill:none;flex:none}
+.search input{border:0;outline:0;background:transparent;color:#fff;width:100%;font-size:13px}
+.search input::placeholder{color:#f2f3ff;opacity:1}
+.shortcut{border:1px solid #1d49c4;border-radius:5px;padding:3px 8px;font-size:12px}
+.top-icons{display:flex;gap:26px;align-items:center;padding-top:6px}
+.top-icons button{position:relative;background:transparent;color:#f7f8ff;border:0;padding:0;cursor:pointer;font-size:23px}
+.top-icons button:after{content:"";position:absolute;right:-2px;top:0;width:6px;height:6px;background:var(--mint);border-radius:50%}
+.top-icons .user{display:grid;place-items:center;width:35px;height:35px;border-radius:50%;background:#1742b9;font-size:20px}
+.hero{position:relative;min-height:445px;padding:43px 34px 0 63px;overflow:hidden;isolation:isolate}
+.hero-scene{position:absolute;z-index:-2;right:0;top:-5px;width:59%;height:485px;object-fit:cover;object-position:54% 35%;opacity:.98;mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.18) 9%,#000 28%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.18) 9%,#000 28%)}
+.hero:before{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,#04064c 0%,rgba(4,6,76,.98) 35%,rgba(4,6,76,.38) 60%,rgba(4,6,76,.04) 100%);pointer-events:none}
+.welcome{display:inline-flex;border:2px solid var(--mint);color:var(--mint);border-radius:24px;padding:7px 17px;font-size:14px;font-weight:800;letter-spacing:1.2px}
+h1{font:800 clamp(54px,6.1vw,101px)/.98 "DM Sans",sans-serif;letter-spacing:-5px;margin:17px 0 12px;white-space:nowrap;text-shadow:0 2px 20px rgba(0,0,0,.12)}
+h1 span{color:var(--mint)}
+.lead{font-size:clamp(18px,1.75vw,27px);line-height:1.38;max-width:590px;margin:0;color:#f3f4ff;letter-spacing:-.45px}
+.lead strong{color:var(--mint);font-weight:800}
+.quicklinks{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:21px;font-size:13px}
+.quicklinks a{display:flex;align-items:center;gap:8px;white-space:nowrap}
+.quicklinks svg{width:25px;height:25px;stroke:var(--mint);stroke-width:2.3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.cta{margin-top:26px;border:0;border-radius:30px;padding:14px 25px;background:linear-gradient(100deg,#00f4b1,#00e9bf);color:#03235a;font-size:15px;font-weight:800;display:inline-flex;align-items:center;gap:19px;cursor:pointer;box-shadow:0 8px 24px rgba(0,245,176,.12);transition:.2s}
+.cta:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,245,176,.23)}
+.categories-section{padding:5px 35px 0 48px;position:relative;z-index:2}
+.section-title{display:flex;align-items:center;gap:15px;margin-bottom:22px}
+.section-title .dash{width:35px;height:4px;background:var(--mint);border-radius:5px;flex:none}
+.section-title h2{font-size:23px;line-height:1.2;margin:0;font-weight:800;letter-spacing:-.5px}
+.section-title p{margin:4px 0 0;color:#b8c8f2;font-size:14px}
+.section-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:22px}
+.all-cats{font-size:13px;color:var(--mint);font-weight:700;white-space:nowrap}
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:25px}
+.card{min-height:177px;border:1px solid #123bd0;border-radius:21px;padding:18px 19px 17px;background:linear-gradient(140deg,rgba(7,20,111,.9),rgba(4,9,76,.94));position:relative;transition:transform .2s,border-color .2s;display:block}
+.card:hover{transform:translateY(-4px);border-color:var(--mint)}
+.card-icon{height:43px;color:var(--mint);margin-bottom:9px}
+.card-icon svg{width:42px;height:42px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.card h3{margin:0 0 7px;font-size:16px;font-weight:700;letter-spacing:-.3px}
+.card p{margin:0;max-width:210px;color:#c6d2f6;font-size:12px;line-height:1.55;padding-right:12px}
+.arrow{position:absolute;right:16px;bottom:19px;border:2px solid var(--mint);color:var(--mint);width:35px;height:35px;border-radius:50%;display:grid;place-items:center;font-size:21px;line-height:1}
+.footer{height:75px;display:flex;align-items:center;justify-content:space-between;padding:0 40px 0 0;margin-left:0;color:var(--mint)}
+.motto{font:italic 23px "Space Grotesk",sans-serif;letter-spacing:.3px;display:flex;align-items:center;gap:13px;white-space:nowrap}
+.motto span{border-bottom:2px solid var(--mint);padding-bottom:4px}
+.socials{display:flex;gap:15px;color:#8fa8e9;font-size:18px}
+.socials a:hover{color:var(--mint)}
+.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,15px);opacity:0;transition:.2s;z-index:30;padding:12px 18px;border:1px solid var(--mint);border-radius:12px;background:#070b64;color:white;font-size:13px;pointer-events:none}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:1350px){.sidebar{width:250px;padding-inline:25px}.main{margin-left:250px}.hero{padding-left:40px}.hero-scene{width:57%;opacity:.8}.quicklinks{gap:15px}.cards{gap:13px}.card{padding:16px}.categories-section{padding-left:32px;padding-right:25px}.brand-name{font-size:27px}}
+@media(max-width:1050px){.sidebar{width:210px;padding-inline:17px}.main{margin-left:210px}.brand-name{font-size:23px}.hero{padding-left:28px;min-height:420px}.hero-scene{width:55%;opacity:.55}h1{font-size:clamp(48px,6vw,70px);letter-spacing:-3px}.lead{font-size:19px;max-width:470px}.quicklinks{gap:12px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.card{min-height:160px}.topbar{padding-left:28px}.footer{padding-left:25px}.motto{font-size:18px}}
+@media(max-width:700px){.sidebar{position:relative;width:auto;inset:auto;padding:14px 15px;border-right:0;border-bottom:1px solid rgba(0,245,176,.15)}.brand{margin:0 0 13px}.brand-icon{width:33px;height:37px}.brand-icon svg{width:33px;height:37px}.brand-name{font-size:25px}.nav{display:flex;overflow-x:auto;gap:5px}.nav a{min-width:max-content;padding:10px 12px;font-size:13px;border-radius:13px}.nav svg{width:19px;height:19px}.side-tip{display:none}.main{margin-left:0}.topbar{height:auto;padding:17px 16px;align-items:center}.search{width:100%;height:43px}.top-icons{display:none}.hero{min-height:570px;padding:30px 22px 0}.hero-scene{top:225px;width:100%;height:340px;opacity:.7;object-position:57% 38%;mask-image:linear-gradient(180deg,transparent 0%,#000 22%);-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 22%)}.hero:before{background:linear-gradient(180deg,#04064c 0%,rgba(4,6,76,.98) 42%,rgba(4,6,76,.18) 100%)}h1{font-size:clamp(47px,12vw,70px);letter-spacing:-3px}.lead{font-size:18px}.quicklinks{gap:12px 17px;font-size:12px}.quicklinks svg{width:21px;height:21px}.categories-section{padding:10px 15px 0}.section-head{align-items:flex-start}.section-title h2{font-size:21px}.section-title p{font-size:12px}.all-cats{font-size:11px}.cards{gap:10px}.card{padding:14px 12px;min-height:170px;border-radius:16px}.card-icon svg{width:34px;height:34px}.card h3{font-size:14px}.card p{font-size:11px;padding-right:0}.arrow{width:28px;height:28px;right:10px;bottom:10px;font-size:17px}.footer{height:auto;padding:25px 15px;flex-direction:column;gap:13px}.motto{font-size:16px;gap:7px}.socials{font-size:17px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
 </head>
 <body>
-  <aside class="sidebar" aria-label="Navigation principale">
-    <div class="brand">
-      <button class="menu-toggle" id="menuToggle" aria-label="Réduire ou agrandir le menu">☰</button>
-      <div class="brand-name">UNLOCK<br>HUB</div>
+<div class="layout">
+<aside class="sidebar">
+  <a href="#accueil" class="brand" aria-label="UnlockHub accueil">
+    <span class="brand-icon"><svg viewBox="0 0 48 52" aria-hidden="true"><path d="M15 21v-7a9 9 0 0 1 18 0v7" stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round"/><rect x="7" y="20" width="34" height="29" rx="5" fill="currentColor"/><circle cx="24" cy="32" r="3" fill="#060761"/><path d="M24 35v5" stroke="#060761" stroke-width="3" stroke-linecap="round"/></svg></span>
+    <span class="brand-name">Unlock<span>Hub</span></span>
+  </a>
+  <nav class="nav" aria-label="Navigation">
+    <a class="active" href="#accueil"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7"/><path d="M5 9v11h14V9M9 20v-7h6v7"/></svg>Accueil</a>
+    <a href="#astuces"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4"/><path d="M8 14c-1.3-1.1-2-2.7-2-4.5a6 6 0 1 1 12 0c0 1.8-.7 3.4-2 4.5-.8.7-1 1.4-1 2h-6c0-.6-.2-1.3-1-2Z"/><path d="M12 1v2M3 5l2 1M21 5l-2 1"/></svg>Astuces</a>
+    <a href="#outils"><svg viewBox="0 0 24 24"><path d="M14 6a5 5 0 0 0-6.6 6.6L2 18l4 4 5.4-5.4A5 5 0 0 0 18 10l-3 3-4-4 3-3Z"/><path d="m16 3 5 5"/></svg>Outils</a>
+    <a href="#logiciels"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 17v4h16v-4"/></svg>Logiciels Gratuits</a>
+    <a href="#communaute"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg>Communauté</a>
+    <a href="#apropos"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 11v5M12 7h.01"/></svg>À propos</a>
+  </nav>
+  <div class="side-tip"><span class="bolt">ϟ</span>Moins de dépenses,<br>plus de possibilités.</div>
+</aside>
+<main class="main" id="accueil">
+  <header class="topbar">
+    <label class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg><input id="search" type="search" placeholder="Rechercher une astuce, un outil, un logiciel..." aria-label="Rechercher"><span class="shortcut">/</span></label>
+    <div class="top-icons"><button aria-label="Changer de thème" id="theme">☼</button><button aria-label="Notifications" id="notify">♧</button><button class="user" aria-label="Profil">♟</button></div>
+  </header>
+  <section class="hero">
+    <img class="hero-scene" src="unlockhub-gamer-scene.jpg" alt="Illustration d'un gamer dans une chambre lumineuse aux néons">
+    <div class="welcome">BIENVENUE SUR</div>
+    <h1>Unlock<span>Hub</span></h1>
+    <p class="lead">Les meilleures astuces, outils et bons plans<br class="desktop-break"> pour profiter du numérique <strong>sans se ruiner&nbsp;!</strong></p>
+    <div class="quicklinks">
+      <a href="#astuces"><svg viewBox="0 0 24 24"><path d="m13 2-9 12h7l-1 8 10-13h-7Z"/></svg>Astuces</a>
+      <a href="#outils"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M1 21h22M8 17l-2 4m10-4 2 4"/></svg>Outils gratuits</a>
+      <a href="#economies"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v5c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 10v5c0 1.7 3.6 3 8 3 1.4 0 2.7-.2 3.8-.5M4 15v4c0 1.7 3.6 3 8 3"/></svg>Économies</a>
+      <a href="#communaute"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-4M16 3a4 4 0 0 1 0 8"/></svg>Communauté</a>
     </div>
-
-    <nav class="nav">
-      <a class="active" href="#accueil"><span class="nav-icon">⌂</span><span class="nav-label">ACCUEIL</span></a>
-      <a href="#astuces"><span class="nav-icon">✦</span><span class="nav-label">ASTUCES</span></a>
-      <a href="#outils"><span class="nav-icon">▣</span><span class="nav-label">OUTILS</span></a>
-      <a href="#communaute"><span class="nav-icon">♧</span><span class="nav-label">COMMUNAUTÉ</span></a>
-    </nav>
-
-    <a class="discord" href="#communaute"><span class="nav-icon">◉</span><span class="discord-label">REJOINDRE LA COMMUNAUTÉ</span></a>
-  </aside>
-
-  <main class="main" id="accueil">
-    <div class="stars" id="stars" aria-hidden="true"></div>
-    <div class="moon" aria-hidden="true"></div>
-
-    <section class="hero">
-      <p class="eyebrow">LES SECRETS DU NUMÉRIQUE</p>
-      <h1>UNLOCKHUB</h1>
-      <p class="subtitle">Débloque tout le potentiel du numérique.<br>Moins de dépenses, plus de possibilités.</p>
-    </section>
-
-    <div class="landscape" aria-hidden="true">
-      <div class="castle-glow"></div>
-      <svg viewBox="0 0 1200 430" preserveAspectRatio="none" width="100%" height="100%">
-        <path d="M0 210 L160 105 L290 205 L420 130 L560 220 L720 95 L860 215 L1010 120 L1200 215 L1200 430 L0 430Z" fill="#11116b"/>
-        <path d="M0 280 L130 190 L280 290 L380 220 L520 300 L700 205 L850 295 L1010 210 L1200 285 L1200 430 L0 430Z" fill="#09094f"/>
-        <!-- Château central -->
-        <g fill="#030329">
-          <rect x="470" y="225" width="260" height="170"/>
-          <rect x="450" y="190" width="70" height="205"/>
-          <path d="M440 190 L485 110 L530 190Z"/>
-          <rect x="550" y="130" width="100" height="265"/>
-          <path d="M535 130 L600 35 L665 130Z"/>
-          <rect x="680" y="190" width="70" height="205"/>
-          <path d="M670 190 L715 110 L760 190Z"/>
-          <path d="M0 390 Q300 360 600 390 T1200 390 L1200 430 L0 430Z"/>
-        </g>
-        <!-- Drapeaux -->
-        <g stroke="#030329" stroke-width="3">
-          <path d="M600 35 V-5 M485 110 V75 M715 110 V75" fill="none"/>
-          <path d="M600 -5 L642 8 L600 22Z M485 75 L520 85 L485 97Z M715 75 L750 85 L715 97Z" fill="#41FFA7" stroke="none"/>
-        </g>
-        <!-- Fenêtres -->
-        <g fill="#41FFA7">
-          <rect x="493" y="250" width="11" height="25" rx="5"/>
-          <rect x="696" y="250" width="11" height="25" rx="5"/>
-          <rect x="590" y="200" width="18" height="35" rx="9" fill="#7ee8b8"/>
-        </g>
-        <!-- Silhouettes lointaines -->
-        <path d="M90 390 V335 L110 290 L130 335 V390Z M1070 390 V325 L1090 270 L1110 325 V390Z" fill="#030329"/>
-      </svg>
+    <a class="cta" href="#categories">Explorer maintenant <span style="font-size:22px">→</span></a>
+  </section>
+  <section class="categories-section" id="categories">
+    <div class="section-head"><div class="section-title"><span class="dash"></span><div><h2>Nos catégories</h2><p>Tout ce dont tu as besoin, au même endroit.</p></div></div><a class="all-cats" href="#categories">Voir toutes les catégories&nbsp; →</a></div>
+    <div class="cards" id="cards">
+      <a class="card searchable" id="astuces" href="#astuces" data-keywords="astuces conseils informatique pc internet">
+        <div class="card-icon"><svg viewBox="0 0 48 48"><path d="M17 31c-2-2-4-5-4-9a11 11 0 1 1 22 0c0 4-2 7-4 9-1 1-1 2-1 3H18c0-1 0-2-1-3ZM19 39h10M21 43h6"/><path d="M24 3v4M7 10l4 3M41 10l-4 3M5 24h4M39 24h4M9 38l3-3M39 38l-3-3"/><path d="m20 22 3 3 6-7"/></svg></div><h3>Astuces</h3><p>Des conseils simples et efficaces pour mieux utiliser ton PC, ton tel et Internet.</p><span class="arrow">→</span>
+      </a>
+      <a class="card searchable" id="outils" href="#outils" data-keywords="outils applications web productivité">
+        <div class="card-icon"><svg viewBox="0 0 48 48"><rect x="5" y="5" width="38" height="29" rx="3"/><path d="M2 41h44M16 34l-3 7m22-7 3 7"/></svg></div><h3>Outils</h3><p>Des outils en ligne et applications pour gagner du temps et être plus productif.</p><span class="arrow">→</span>
+      </a>
+      <a class="card searchable" id="logiciels" href="#logiciels" data-keywords="logiciels gratuits télécharger applications jeux">
+        <div class="card-icon"><svg viewBox="0 0 48 48"><path d="M24 4v27M14 21l10 10 10-10M7 33v9h34v-9"/></svg></div><h3>Logiciels Gratuits</h3><p>Les meilleurs logiciels gratuits pour travailler, créer, jouer et t'amuser.</p><span class="arrow">→</span>
+      </a>
+      <a class="card searchable" id="communaute" href="#communaute" data-keywords="communauté questions entraide bons plans">
+        <div class="card-icon"><svg viewBox="0 0 48 48"><path d="M18 39v-3a7 7 0 0 0-7-7H8a7 7 0 0 0-7 7v3M9 22a6 6 0 1 0 0-12 6 6 0 0 0 0 12ZM47 39v-3a7 7 0 0 0-7-7h-3M36 22a6 6 0 1 0 0-12M17 39v-4a8 8 0 0 1 8-8h4a8 8 0 0 1 8 8v4M27 21a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z"/></svg></div><h3>Communauté</h3><p>Échange, pose tes questions et découvre les bons plans des autres membres.</p><span class="arrow">→</span>
+      </a>
     </div>
-
-    <section class="content" id="astuces">
-      <div class="content-card">
-        <h2>Le numérique, sans payer le prix fort.</h2>
-        <p>Découvre des logiciels gratuits, des outils méconnus, des astuces pratiques et des alternatives intelligentes pour tirer le maximum de ton matériel et de tes applications.</p>
-      </div>
-    </section>
-    <div id="outils"></div>
-    <div id="communaute"></div>
-  </main>
-
-  <script>
-    // Étoiles décoratives générées sans bibliothèque externe.
-    const starsContainer = document.getElementById('stars');
-    for (let i = 0; i < 75; i++) {
-      const star = document.createElement('span');
-      star.className = 'star';
-      star.style.left = `${Math.random() * 100}%`;
-      star.style.top = `${Math.random() * 100}%`;
-      star.style.animationDelay = `${Math.random() * 4}s`;
-      star.style.animationDuration = `${2.5 + Math.random() * 4}s`;
-      if (i % 5 === 0) {
-        star.style.width = '4px';
-        star.style.height = '4px';
-      }
-      starsContainer.appendChild(star);
-    }
-
-    // Menu rétractable sur ordinateur.
-    document.getElementById('menuToggle').addEventListener('click', () => {
-      document.body.classList.toggle('collapsed');
-    });
-
-    // Navigation active.
-    document.querySelectorAll('.nav a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.querySelectorAll('.nav a').forEach(item => item.classList.remove('active'));
-        link.classList.add('active');
-      });
-    });
-  </script>
+  </section>
+  <footer class="footer" id="apropos"><div class="motto">♧ <span>Explore</span> · <span>Apprends</span> · <span>Économise</span> · <span>Grandis</span> ♕</div><div class="socials"><a href="#communaute" aria-label="Discord">◉</a><a href="#communaute" aria-label="YouTube">▶</a><a href="#communaute" aria-label="TikTok">♪</a><a href="#communaute" aria-label="X">𝕏</a></div></footer>
+</main>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const search=document.getElementById('search');
+const cards=[...document.querySelectorAll('.searchable')];
+search.addEventListener('input',()=>{
+ const q=search.value.trim().toLocaleLowerCase('fr');
+ cards.forEach(card=>{card.style.display=(!q||(card.innerText+' '+card.dataset.keywords).toLocaleLowerCase('fr').includes(q))?'':'none'});
+});
+document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)){e.preventDefault();search.focus()}if(e.key==='Escape'){search.value='';search.dispatchEvent(new Event('input'));search.blur()}});
+document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>{document.querySelectorAll('.nav a').forEach(n=>n.classList.remove('active'));a.classList.add('active')}));
+document.getElementById('theme').addEventListener('click',()=>{document.body.classList.toggle('alternate');document.body.style.filter=document.body.classList.contains('alternate')?'brightness(1.2) saturate(.85)':''});
+document.getElementById('notify').addEventListener('click',()=>{const t=document.getElementById('toast');t.textContent='Tu es à jour : aucune nouvelle notification.';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2400)});
+</script>
 </body>
 </html>
