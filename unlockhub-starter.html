@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#10091b" />
+  <title>UnlockHub — Ton univers numérique</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+
+    :root {
+      --sidebar: #130c20;
+      --panel: #1a1029;
+      --purple: #8c35f5;
+      --pink: #ee4fca;
+      --text: #f8f3ff;
+      --muted: #c7bbd7;
+      --border: rgba(157, 77, 255, .52);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #0c0713;
+      color: var(--text);
+      font-family: Inter, system-ui, sans-serif;
+    }
+
+    .sidebar {
+      position: fixed;
+      inset: 16px auto 16px 16px;
+      z-index: 10;
+      width: 298px;
+      padding: 16px 10px;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--border);
+      border-radius: 27px;
+      background: rgba(20, 12, 32, .96);
+      box-shadow: 0 0 36px rgba(97, 25, 173, .08);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      padding: 0 8px 22px;
+    }
+
+    .menu-toggle {
+      width: 47px;
+      height: 47px;
+      flex: 0 0 47px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(149, 55, 255, .65);
+      border-radius: 15px;
+      color: white;
+      background: #211233;
+      cursor: pointer;
+      font-size: 22px;
+      transition: background .2s, transform .2s;
+    }
+    .menu-toggle:hover { background: #35204c; transform: translateY(-1px); }
+
+    .brand-name {
+      font-family: Cinzel, Georgia, serif;
+      font-size: 18px;
+      line-height: .95;
+      letter-spacing: -.8px;
+      font-weight: 900;
+    }
+
+    .nav {
+      padding: 6px;
+      border: 1px solid rgba(134, 65, 199, .28);
+      border-radius: 21px;
+      background: rgba(29, 16, 45, .8);
+    }
+
+    .nav a, .discord {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-height: 59px;
+      padding: 0 14px;
+      color: #d9cfe5;
+      text-decoration: none;
+      font-family: Cinzel, Georgia, serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .45px;
+      border-radius: 16px;
+      transition: color .2s, background .2s, transform .2s;
+    }
+    .nav a + a { margin-top: 8px; }
+    .nav a:hover { color: white; background: rgba(139, 54, 230, .22); }
+    .nav a.active {
+      color: #fff;
+      background: linear-gradient(110deg, #8738ed 0%, #bd23d6 68%, #e74dc4 100%);
+      box-shadow: 0 8px 22px rgba(180, 41, 224, .24);
+    }
+    .nav-icon { width: 21px; text-align: center; font-family: sans-serif; font-size: 18px; }
+
+    .discord {
+      min-height: 60px;
+      margin: auto 5px 0;
+      border: 1px solid #e94fc6;
+      background: rgba(18, 10, 28, .7);
+    }
+    .discord:hover { background: rgba(220, 53, 190, .13); color: white; }
+
+    .main {
+      min-height: 100vh;
+      margin-left: 330px;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      background:
+        radial-gradient(ellipse at 50% 83%, rgba(230, 60, 194, .32), transparent 43%),
+        linear-gradient(180deg, #0c0714 0%, #190a31 34%, #4e167b 73%, #8d2f9d 100%);
+    }
+
+    .stars {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .star {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: #f7eaff;
+      opacity: .8;
+      box-shadow: 0 0 8px rgba(255,255,255,.25);
+      animation: twinkle 3.8s ease-in-out infinite alternate;
+    }
+    @keyframes twinkle { from { opacity: .25; transform: scale(.7); } to { opacity: .95; transform: scale(1.25); } }
+
+    .moon {
+      position: absolute;
+      top: 35%;
+      right: 12.3%;
+      width: 102px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: #fbf8ff;
+      box-shadow: 0 0 30px 15px rgba(231, 206, 255, .12), 0 0 75px 30px rgba(224, 188, 255, .1);
+    }
+    .moon::before, .moon::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: #ddd5e8;
+    }
+    .moon::before { width: 17px; height: 17px; top: 28px; right: 25px; }
+    .moon::after { width: 11px; height: 11px; top: 62px; left: 31px; }
+
+    .hero {
+      position: relative;
+      z-index: 2;
+      min-height: 530px;
+      padding: 92px 32px 0;
+      text-align: center;
+    }
+    .eyebrow {
+      margin: 0 0 9px;
+      color: #ed64c9;
+      font-family: Cinzel, Georgia, serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .55em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      font-family: Cinzel, Georgia, serif;
+      font-size: clamp(43px, 6.1vw, 96px);
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -.075em;
+      text-shadow: 0 0 22px rgba(177, 92, 255, .65), 0 5px 0 rgba(33, 9, 60, .6);
+    }
+    .subtitle {
+      max-width: 550px;
+      margin: 20px auto 0;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      line-height: 1.7;
+      text-shadow: 0 2px 6px rgba(0,0,0,.2);
+    }
+
+    .landscape {
+      position: absolute;
+      inset: auto 0 0;
+      z-index: 1;
+      width: 100%;
+      height: 47%;
+      min-height: 320px;
+      pointer-events: none;
+    }
+    .castle-glow {
+      position: absolute;
+      bottom: 8%;
+      left: 50%;
+      width: 340px;
+      height: 260px;
+      transform: translateX(-50%);
+      background: rgba(230, 66, 209, .1);
+      filter: blur(35px);
+    }
+
+    .content {
+      position: relative;
+      z-index: 3;
+      padding: 28px clamp(20px, 5vw, 72px) 70px;
+      margin-top: 8px;
+    }
+    .content-card {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 25px;
+      border: 1px solid rgba(219, 147, 255, .25);
+      border-radius: 20px;
+      background: rgba(19, 9, 31, .64);
+      backdrop-filter: blur(12px);
+    }
+    .content-card h2 {
+      margin: 0 0 8px;
+      font-family: Cinzel, Georgia, serif;
+      font-size: 22px;
+    }
+    .content-card p { margin: 0; color: #d7c9e5; line-height: 1.7; }
+
+    body.collapsed .sidebar { width: 78px; }
+    body.collapsed .brand { justify-content: center; padding-inline: 0; }
+    body.collapsed .brand-name, body.collapsed .nav-label, body.collapsed .discord-label { display: none; }
+    body.collapsed .nav a, body.collapsed .discord { justify-content: center; padding-inline: 0; }
+    body.collapsed .nav-icon { font-size: 21px; }
+    body.collapsed .main { margin-left: 110px; }
+
+    @media (max-width: 900px) {
+      .sidebar { width: 245px; }
+      .main { margin-left: 277px; }
+      h1 { font-size: clamp(39px, 7vw, 70px); }
+      .moon { right: 7%; width: 75px; }
+      .eyebrow { letter-spacing: .3em; }
+    }
+    @media (max-width: 640px) {
+      .sidebar {
+        inset: 10px 10px auto;
+        width: auto;
+        height: auto;
+        padding: 9px;
+        border-radius: 19px;
+      }
+      .brand { padding: 0 4px; }
+      .brand-name { font-size: 16px; }
+      .nav { display: flex; gap: 4px; padding: 5px; }
+      .nav a, .nav a + a {
+        flex: 1;
+        justify-content: center;
+        min-height: 43px;
+        margin: 0;
+        padding: 0 6px;
+        gap: 5px;
+        font-size: 10px;
+        letter-spacing: 0;
+      }
+      .nav-icon { width: auto; font-size: 15px; }
+      .discord { display: none; }
+      .main, body.collapsed .main { margin-left: 0; padding-top: 135px; }
+      .hero { min-height: 460px; padding: 60px 16px 0; }
+      .eyebrow { font-size: 10px; letter-spacing: .2em; }
+      h1 { font-size: clamp(36px, 10vw, 60px); letter-spacing: -.07em; }
+      .subtitle { font-size: 17px; }
+      .moon { top: 42%; right: 8%; width: 58px; }
+      .landscape { height: 37%; min-height: 250px; }
+      .content { padding: 20px 14px 35px; }
+      .content-card { padding: 20px; }
+      body.collapsed .sidebar { width: auto; }
+      body.collapsed .brand-name { display: block; }
+      body.collapsed .nav-label { display: inline; }
+    }
+  </style>
+</head>
+<body>
+  <aside class="sidebar" aria-label="Navigation principale">
+    <div class="brand">
+      <button class="menu-toggle" id="menuToggle" aria-label="Réduire ou agrandir le menu">☰</button>
+      <div class="brand-name">UNLOCK<br>HUB</div>
+    </div>
+
+    <nav class="nav">
+      <a class="active" href="#accueil"><span class="nav-icon">⌂</span><span class="nav-label">ACCUEIL</span></a>
+      <a href="#astuces"><span class="nav-icon">✦</span><span class="nav-label">ASTUCES</span></a>
+      <a href="#outils"><span class="nav-icon">▣</span><span class="nav-label">OUTILS</span></a>
+      <a href="#communaute"><span class="nav-icon">♧</span><span class="nav-label">COMMUNAUTÉ</span></a>
+    </nav>
+
+    <a class="discord" href="#communaute"><span class="nav-icon">◉</span><span class="discord-label">REJOINDRE LA COMMUNAUTÉ</span></a>
+  </aside>
+
+  <main class="main" id="accueil">
+    <div class="stars" id="stars" aria-hidden="true"></div>
+    <div class="moon" aria-hidden="true"></div>
+
+    <section class="hero">
+      <p class="eyebrow">LES SECRETS DU NUMÉRIQUE</p>
+      <h1>UNLOCKHUB</h1>
+      <p class="subtitle">Débloque tout le potentiel du numérique.<br>Moins de dépenses, plus de possibilités.</p>
+    </section>
+
+    <div class="landscape" aria-hidden="true">
+      <div class="castle-glow"></div>
+      <svg viewBox="0 0 1200 430" preserveAspectRatio="none" width="100%" height="100%">
+        <path d="M0 210 L160 105 L290 205 L420 130 L560 220 L720 95 L860 215 L1010 120 L1200 215 L1200 430 L0 430Z" fill="#29154e"/>
+        <path d="M0 280 L130 190 L280 290 L380 220 L520 300 L700 205 L850 295 L1010 210 L1200 285 L1200 430 L0 430Z" fill="#1a0c32"/>
+        <!-- Château central -->
+        <g fill="#0b0715">
+          <rect x="470" y="225" width="260" height="170"/>
+          <rect x="450" y="190" width="70" height="205"/>
+          <path d="M440 190 L485 110 L530 190Z"/>
+          <rect x="550" y="130" width="100" height="265"/>
+          <path d="M535 130 L600 35 L665 130Z"/>
+          <rect x="680" y="190" width="70" height="205"/>
+          <path d="M670 190 L715 110 L760 190Z"/>
+          <path d="M0 390 Q300 360 600 390 T1200 390 L1200 430 L0 430Z"/>
+        </g>
+        <!-- Drapeaux -->
+        <g stroke="#100719" stroke-width="3">
+          <path d="M600 35 V-5 M485 110 V75 M715 110 V75" fill="none"/>
+          <path d="M600 -5 L642 8 L600 22Z M485 75 L520 85 L485 97Z M715 75 L750 85 L715 97Z" fill="#f06bcf" stroke="none"/>
+        </g>
+        <!-- Fenêtres -->
+        <g fill="#f7b5ed">
+          <rect x="493" y="250" width="11" height="25" rx="5"/>
+          <rect x="696" y="250" width="11" height="25" rx="5"/>
+          <rect x="590" y="200" width="18" height="35" rx="9" fill="#bca3bf"/>
+        </g>
+        <!-- Silhouettes lointaines -->
+        <path d="M90 390 V335 L110 290 L130 335 V390Z M1070 390 V325 L1090 270 L1110 325 V390Z" fill="#0b0715"/>
+      </svg>
+    </div>
+
+    <section class="content" id="astuces">
+      <div class="content-card">
+        <h2>Le numérique, sans payer le prix fort.</h2>
+        <p>Découvre des logiciels gratuits, des outils méconnus, des astuces pratiques et des alternatives intelligentes pour tirer le maximum de ton matériel et de tes applications.</p>
+      </div>
+    </section>
+    <div id="outils"></div>
+    <div id="communaute"></div>
+  </main>
+
+  <script>
+    // Étoiles décoratives générées sans bibliothèque externe.
+    const starsContainer = document.getElementById('stars');
+    for (let i = 0; i < 75; i++) {
+      const star = document.createElement('span');
+      star.className = 'star';
+      star.style.left = `${Math.random() * 100}%`;
+      star.style.top = `${Math.random() * 100}%`;
+      star.style.animationDelay = `${Math.random() * 4}s`;
+      star.style.animationDuration = `${2.5 + Math.random() * 4}s`;
+      if (i % 5 === 0) {
+        star.style.width = '4px';
+        star.style.height = '4px';
+      }
+      starsContainer.appendChild(star);
+    }
+
+    // Menu rétractable sur ordinateur.
+    document.getElementById('menuToggle').addEventListener('click', () => {
+      document.body.classList.toggle('collapsed');
+    });
+
+    // Navigation active.
+    document.querySelectorAll('.nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelectorAll('.nav a').forEach(item => item.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
