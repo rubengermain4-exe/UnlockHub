@@ -65,6 +65,7 @@
     @media(max-width:850px){.main{grid-template-columns:1fr;max-width:520px;padding-top:15px}.intro{min-height:0;padding:12px 4px 5px}.intro h1{font-size:54px}.intro-copy{font-size:17px}.benefits{display:none}.glow{right:15%;top:0;width:120px;height:120px}.auth-card{padding:27px}.top{padding:20px}.footer{padding:18px 20px}}
     @media(max-width:480px){.brand-name{font-size:25px}.brand-mark{width:32px;height:36px}.top{align-items:flex-start}.back{font-size:12px;padding-top:8px}.main{width:calc(100% - 24px);gap:20px;padding-bottom:25px}.intro h1{font-size:47px;letter-spacing:-2.5px}.intro-copy{font-size:15px}.auth-card{padding:22px 18px;border-radius:22px}h2{font-size:25px}.footer{flex-direction:column;align-items:center;text-align:center}.form-row{font-size:11px}}
   </style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
 <header class="top">
@@ -134,7 +135,7 @@
 <script>
   // Dans Supabase : Project Settings > API. Utilise la clé publishable/anon,
   // jamais une clé secrète ou service_role dans le navigateur.
-  const SUPABASE_URL = "https://todipvfklflzjdiufazy.supabase.co/rest/v1/";
+  const SUPABASE_URL = "https://todipvfklflzjdiufazy.supabase.co";
   const SUPABASE_ANON_KEY = "sb_publishable_Hsn2zeY1kRa0CAOyjUnRMQ_iO6GqXTK";
   const isConfigured = SUPABASE_URL.startsWith("https://")
     && !SUPABASE_URL.includes("TON-PROJET")
@@ -179,6 +180,7 @@
   }
   $("login-tab").addEventListener("click", () => setMode("login"));
   $("signup-tab").addEventListener("click", () => setMode("signup"));
+  if (new URLSearchParams(window.location.search).get("mode") === "signup") setMode("signup");
   $("toggle-password").addEventListener("click", () => {
     const input = $("password");
     const visible = input.type === "password";

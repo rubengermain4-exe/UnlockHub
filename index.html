@@ -80,6 +80,7 @@ h1 span{color:var(--mint)}
 @media(max-width:700px){.sidebar{position:relative;width:auto;inset:auto;padding:14px 15px;border-right:0;border-bottom:1px solid rgba(0,245,176,.15)}.brand{margin:0 0 13px}.brand-icon{width:33px;height:37px}.brand-icon svg{width:33px;height:37px}.brand-name{font-size:25px}.nav{display:flex;overflow-x:auto;gap:5px}.nav a{min-width:max-content;padding:10px 12px;font-size:13px;border-radius:13px}.nav svg{width:19px;height:19px}.side-tip{display:none}.main{margin-left:0}.topbar{height:auto;padding:17px 16px;align-items:center}.search{width:100%;height:43px}.top-icons{display:none}.hero{min-height:570px;padding:30px 22px 0}.hero-scene{top:225px;width:100%;height:340px;opacity:.7;object-position:57% 38%;mask-image:linear-gradient(180deg,transparent 0%,#000 22%);-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 22%)}.hero:before{background:linear-gradient(180deg,#04064c 0%,rgba(4,6,76,.98) 42%,rgba(4,6,76,.18) 100%)}h1{font-size:clamp(47px,12vw,70px);letter-spacing:-3px}.lead{font-size:18px}.quicklinks{gap:12px 17px;font-size:12px}.quicklinks svg{width:21px;height:21px}.categories-section{padding:10px 15px 0}.section-head{align-items:flex-start}.section-title h2{font-size:21px}.section-title p{font-size:12px}.all-cats{font-size:11px}.cards{gap:10px}.card{padding:14px 12px;min-height:170px;border-radius:16px}.card-icon svg{width:34px;height:34px}.card h3{font-size:14px}.card p{font-size:11px;padding-right:0}.arrow{width:28px;height:28px;right:10px;bottom:10px;font-size:17px}.footer{height:auto;padding:25px 15px;flex-direction:column;gap:13px}.motto{font-size:16px;gap:7px}.socials{font-size:17px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
 <div class="layout">
@@ -101,7 +102,7 @@ h1 span{color:var(--mint)}
 <main class="main" id="accueil">
   <header class="topbar">
     <label class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg><input id="search" type="search" placeholder="Rechercher une astuce, un outil, un logiciel..." aria-label="Rechercher"><span class="shortcut">/</span></label>
-    <div class="top-icons"><button aria-label="Changer de thème" id="theme">☼</button><button aria-label="Notifications" id="notify">♧</button><button class="user" aria-label="Profil">♟</button></div>
+    <div class="top-icons"><button aria-label="Changer de thème" id="theme">☼</button><button aria-label="Notifications" id="notify">♧</button><a class="user" href="profile.html" aria-label="Profil" title="Mon profil">♟</a></div>
   </header>
   <section class="hero">
     <img class="hero-scene" src="unlockhub-gamer-scene.jpg" alt="Illustration d'un gamer dans une chambre lumineuse aux néons">
@@ -137,6 +138,19 @@ h1 span{color:var(--mint)}
 </main>
 </div>
 <div class="toast" id="toast" role="status"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+// Accueil conditionnel : si aucune session n'existe, ouvrir l'espace profil.
+(async function enforceProfileEntry() {
+  const SUPABASE_URL = "https://todipvfklflzjdiufazy.supabase.co";
+  const SUPABASE_ANON_KEY = "sb_publishable_Hsn2zeY1kRa0CAOyjUnRMQ_iO6GqXTK";
+  const configured = !SUPABASE_URL.includes("TON-PROJET") && !SUPABASE_ANON_KEY.includes("TA_CLE");
+  if (!configured || !window.supabase) return; // Ne bloque pas tant que Supabase n'est pas configuré.
+  const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  const { data: { session } } = await client.auth.getSession();
+  if (!session) window.location.replace("profile.html");
+})();
+</script>
 <script>
 const search=document.getElementById('search');
 const cards=[...document.querySelectorAll('.searchable')];
