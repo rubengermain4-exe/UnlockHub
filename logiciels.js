@@ -324,5 +324,29 @@ window.UNLOCKHUB_SOFTWARE = [
     ],
     "guide": "astuces/mots-de-passe.html",
     "logo": "assets/logos/keepassxc.svg"
+  },
+  {
+    "id": "bitwarden",
+    "name": "Bitwarden",
+    "cat": "Sécurité",
+    "desc": "Synchronise tes mots de passe entre appareils avec une offre gratuite.",
+    "letter": "B",
+    "tags": [
+      "Mots de passe",
+      "Synchronisation",
+      "Windows / macOS / Linux / mobile"
+    ],
+    "version": "Gratuit (offre premium facultative)",
+    "download": "https://bitwarden.com/download/",
+    "about": "Bitwarden est un gestionnaire de mots de passe open source avec des applications pour navigateur, ordinateur et téléphone. Le compte gratuit synchronise tes identifiants.",
+    "use": "Créer des mots de passe uniques, les retrouver sur tous tes appareils et partager un coffre avec ta famille.",
+    "steps": [
+      "Crée un compte gratuit sur le site de Bitwarden.",
+      "Installe l’extension de navigateur et l’application mobile.",
+      "Importe tes identifiants existants ou ajoute-les manuellement.",
+      "Active la double authentification sur ton compte Bitwarden."
+    ],
+    "guide": "astuces/mots-de-passe.html",
+    "logo": "assets/logos/bitwarden.svg"
   }
 ];
