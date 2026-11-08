@@ -102,7 +102,7 @@ h1 span{color:var(--mint)}
 <main class="main" id="accueil">
   <header class="topbar">
     <label class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg><input id="search" type="search" placeholder="Rechercher une astuce, un outil, un logiciel..." aria-label="Rechercher"><span class="shortcut">/</span></label>
-    <div class="top-icons"><button aria-label="Changer de thème" id="theme">☼</button><button aria-label="Notifications" id="notify">♧</button><a class="user" href="profile.html" aria-label="Profil" title="Mon profil">♟</a></div>
+    <div class="top-icons"><button aria-label="Changer de thème" id="theme">☼</button><button aria-label="Notifications" id="notify">♧</button></div>
   </header>
   <section class="hero">
     <img class="hero-scene" src="unlockhub-gamer-scene.jpg" alt="Illustration d'un gamer dans une chambre lumineuse aux néons">
@@ -138,19 +138,6 @@ h1 span{color:var(--mint)}
 </main>
 </div>
 <div class="toast" id="toast" role="status"></div>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script>
-// Accueil conditionnel : si aucune session n'existe, ouvrir l'espace profil.
-(async function enforceProfileEntry() {
-  const SUPABASE_URL = "https://todipvfklflzjdiufazy.supabase.co";
-  const SUPABASE_ANON_KEY = "sb_publishable_Hsn2zeY1kRa0CAOyjUnRMQ_iO6GqXTK";
-  const configured = !SUPABASE_URL.includes("TON-PROJET") && !SUPABASE_ANON_KEY.includes("TA_CLE");
-  if (!configured || !window.supabase) return; // Ne bloque pas tant que Supabase n'est pas configuré.
-  const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-  const { data: { session } } = await client.auth.getSession();
-  if (!session) window.location.replace("profile.html");
-})();
-</script>
 <script>
 const search=document.getElementById('search');
 const cards=[...document.querySelectorAll('.searchable')];
