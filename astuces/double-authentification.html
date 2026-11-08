@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#060761">
+<title>Activer la double authentification sans se verrouiller dehors — UnlockHub</title>
+<meta name="description" content="Le deuxième facteur qui bloque la majorité des piratages de compte, et comment le configurer proprement.">
+<meta property="og:title" content="Activer la double authentification sans se verrouiller dehors — UnlockHub">
+<meta property="og:description" content="Le deuxième facteur qui bloque la majorité des piratages de compte, et comment le configurer proprement.">
+<meta property="og:type" content="article">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+<a class="brand" href="../index.html"><span class="brand-icon">⬡</span><span>Unlock<span>Hub</span></span></a>
+<nav class="nav" aria-label="Navigation">
+<a href="../index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v11h14V9M9 20v-7h6v7"/></svg>Accueil</a>
+<a href="../astuces.html" class="active"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 22h4M8 14c-1.3-1.1-2-2.7-2-4.5a6 6 0 1 1 12 0c0 1.8-.7 3.4-2 4.5-.8.7-1 1.4-1 2h-6c0-.6-.2-1.3-1-2Z"/><path d="M12 1v2M3 5l2 1M21 5l-2 1"/></svg>Astuces</a>
+<a href="../outils.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 6a5 5 0 0 0-6.6 6.6L2 18l4 4 5.4-5.4A5 5 0 0 0 18 10l-3 3-4-4 3-3Z"/><path d="m16 3 5 5"/></svg>Outils</a>
+<a href="../outils.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 17v4h16v-4"/></svg>Logiciels gratuits</a>
+<a href="../index.html#communaute"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a7 7 0 0 1 14 0v2M16 3a4 4 0 0 1 0 8M19 15a4 4 0 0 1 3 4v2"/></svg>Communauté</a>
+<a href="../apropos.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 11v5M12 7h.01"/></svg>À propos</a>
+</nav>
+<div class="side-tip"><b>ϟ</b>Moins de dépenses,<br>plus de possibilités.</div>
+</aside>
+<main class="main">
+<div class="topline">
+<div class="crumb">UNLOCKHUB / ASTUCES / SÉCURITÉ</div>
+<form class="search" action="../astuces.html" role="search">
+<span aria-hidden="true">⌕</span>
+<input type="search" name="q" placeholder="Rechercher une astuce…" aria-label="Rechercher une astuce">
+</form>
+</div>
+<article class="article">
+<a class="back" href="../astuces.html">← Toutes les astuces</a>
+<div class="eyebrow">SÉCURITÉ</div>
+<h1 class="article-title">Activer la double authentification sans se verrouiller dehors</h1>
+<p class="lede">Un mot de passe volé ne suffit plus si un deuxième facteur est demandé. Encore faut-il choisir le bon et garder une porte de secours.</p>
+<div class="article-meta">Mis à jour le 8 novembre 2026 · 5 min de lecture · <a href="securite.html">Sécurité</a></div>
+<nav class="toc" aria-label="Sommaire"><strong>Au sommaire</strong><ol><li><a href="#s1">Ce que ça change vraiment</a></li><li><a href="#s2">Choisir la bonne méthode</a></li><li><a href="#s3">Configurer proprement</a></li><li><a href="#s4">Les erreurs qui coûtent cher</a></li></ol></nav>
+<h2 id="s1">Ce que ça change vraiment</h2><p>La double authentification (2FA) ajoute un second élément : quelque chose que tu possèdes, en plus de ton mot de passe. Même si quelqu’un connaît ton mot de passe, il ne peut pas se connecter sans ce second facteur.</p><p>C’est l’un des réglages les plus rentables en sécurité. À faire en priorité sur la messagerie, car elle permet de réinitialiser presque tous tes autres comptes.</p><h2 id="s2">Choisir la bonne méthode</h2><p>Évite les codes envoyés par mail quand une autre option existe : si ta boîte mail est compromise, la protection tombe avec elle.</p><ul><li>Application d’authentification (Aegis, Ente Auth, 2FAS, Google Authenticator) : le meilleur compromis pour la plupart des gens.</li><li>Clé de sécurité physique (YubiKey) : très solide, mais payante et à garder sur soi.</li><li>Passkeys : pratique quand le service les propose, mais attention à la dépendance à un seul appareil.</li><li>SMS : mieux que rien, mais vulnérable au SIM swapping et aux numéros recyclés.</li></ul><div class="callout"><strong>Le vrai filet de sécurité :</strong> les codes de secours. Imprime-les ou stocke-les dans ton gestionnaire de mots de passe, pas dans ta boîte mail.</div><h2 id="s3">Configurer proprement</h2><ol class="steps"><li>Ouvre les paramètres de sécurité du compte et cherche « double authentification » ou « 2FA ».</li><li>Scanne le QR code avec ton application d’authentification.</li><li>Sauvegarde immédiatement les codes de secours hors ligne, dans un gestionnaire ou sur papier.</li><li>Teste une connexion depuis un autre appareil avant de fermer la session.</li><li>Ajoute un second appareil ou une méthode de secours si le service le permet.</li></ol><h2 id="s4">Les erreurs qui coûtent cher</h2><p>Avoir un seul téléphone configuré, sans codes de secours, c’est prendre le risque de perdre l’accès à tous tes comptes en cas de casse ou de vol.</p><p>Ne prends pas de capture d’écran du QR code dans ta galerie, ne partage jamais un code à 6 chiffres, même avec quelqu’un qui se présente comme le support.</p>
+<div class="pager"><a href="../astuces.html">← Toutes les astuces</a><a href="securite.html">Plus de Sécurité →</a></div>
+<section class="related"><h2>À lire ensuite</h2><div class="grid"><a class="guide-card" href="mots-de-passe.html" data-search="des mots de passe solides sans devenir fou la methode des phrases de passe, un gestionnaire, et les erreurs a arreter tout de suite. securite securite mots de passe">
+<span class="tag">Sécurité</span>
+<h2>Des mots de passe solides sans devenir fou</h2>
+<p>La méthode des phrases de passe, un gestionnaire, et les erreurs à arrêter tout de suite.</p>
+<div class="guide-meta"><span>6 min de lecture</span><span class="more">Lire →</span></div>
+</a><a class="guide-card" href="phishing.html" data-search="reconnaitre un phishing avant de cliquer les signaux qui trahissent un faux mail, un faux sms ou un faux site — et quoi faire si tu es tombe dedans. securite securite phishing">
+<span class="tag">Sécurité</span>
+<h2>Reconnaître un phishing avant de cliquer</h2>
+<p>Les signaux qui trahissent un faux mail, un faux SMS ou un faux site — et quoi faire si tu es tombé dedans.</p>
+<div class="guide-meta"><span>5 min de lecture</span><span class="more">Lire →</span></div>
+</a><a class="guide-card" href="securite-mobile.html" data-search="securiser son telephone en 15 minutes verrouillage, mises a jour, permissions, localisation, sauvegarde. mobile mobile securite mobile">
+<span class="tag">Mobile</span>
+<h2>Sécuriser son téléphone en 15 minutes</h2>
+<p>Verrouillage, mises à jour, permissions, localisation, sauvegarde.</p>
+<div class="guide-meta"><span>5 min de lecture</span><span class="more">Lire →</span></div>
+</a></div></section>
+</article>
+<div class="footer"><span>© 2026 UnlockHub · <a href="../conditions.html">Conditions</a> · <a href="../confidentialite.html">Confidentialité</a></span><span class="motto">Explore · Apprends · Économise · Grandis</span></div>
+</main>
+</div>
+
+</body>
+</html>
