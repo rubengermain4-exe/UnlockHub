@@ -443,5 +443,29 @@ window.UNLOCKHUB_SOFTWARE = [
     ],
     "guide": "astuces/outils-etudiant.html",
     "logo": "assets/logos/zotero.svg"
+  },
+  {
+    "id": "anki",
+    "name": "Anki",
+    "cat": "Organisation",
+    "desc": "Révise avec des flashcards et la répétition espacée.",
+    "letter": "A",
+    "tags": [
+      "Mémorisation",
+      "Flashcards",
+      "Windows / macOS / Linux / mobile"
+    ],
+    "version": "Gratuit sur ordinateur et Android",
+    "download": "https://apps.ankiweb.net/",
+    "about": "Anki programme les révisions en fonction de ce que tu retiens. Les cartes difficiles reviennent plus souvent, les cartes maîtrisées s’espacent.",
+    "use": "Mémoriser du vocabulaire, des dates, des formules ou des définitions pour un examen.",
+    "steps": [
+      "Télécharge Anki sur ton ordinateur.",
+      "Crée un paquet et ajoute tes premières cartes.",
+      "Révise chaque jour les cartes proposées.",
+      "Synchronise avec l’application mobile pour réviser en déplacement."
+    ],
+    "guide": "astuces/organisation-revisions.html",
+    "logo": "assets/logos/anki.svg"
   }
 ];
