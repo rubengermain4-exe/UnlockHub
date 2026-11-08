@@ -276,5 +276,29 @@ window.UNLOCKHUB_SOFTWARE = [
       "Sélectionne les passages à traiter, puis exporte en WAV ou MP3."
     ],
     "logo": "assets/logos/audacity.svg"
+  },
+  {
+    "id": "inkscape",
+    "name": "Inkscape",
+    "cat": "Design",
+    "desc": "Dessine des logos et des illustrations vectorielles qui restent nets.",
+    "letter": "I",
+    "tags": [
+      "Vectoriel",
+      "Logo",
+      "Windows / macOS / Linux"
+    ],
+    "version": "Gratuit et open source",
+    "download": "https://inkscape.org/release/",
+    "about": "Inkscape travaille avec des formes vectorielles plutôt que des pixels. Les fichiers restent nets à toutes les tailles et s’exportent en SVG, PNG ou PDF.",
+    "use": "Créer un logo, dessiner une icône, mettre en page une affiche ou préparer un fichier pour l’impression.",
+    "steps": [
+      "Télécharge Inkscape depuis le site officiel.",
+      "Installe-le et crée un nouveau document.",
+      "Utilise les formes, les courbes de Bézier et le texte pour construire ton visuel.",
+      "Exporte en PNG pour le web ou en PDF pour l’impression."
+    ],
+    "guide": "astuces/vectoriser-inkscape.html",
+    "logo": "assets/logos/inkscape.svg"
   }
 ];
