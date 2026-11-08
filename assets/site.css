@@ -72,6 +72,11 @@ button,input{font:inherit}
 .steps{counter-reset:step;list-style:none;padding:0!important;margin:0 0 18px}
 .steps li{counter-increment:step;display:flex;gap:12px;margin:12px 0}
 .steps li:before{content:counter(step);flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--mint);color:#05265e;font-weight:800;font-size:13px}
+.article-software{display:flex;align-items:center;gap:15px;border:1px solid #1d47bd;border-radius:16px;background:#070c58;padding:14px 18px;margin:0 0 28px;transition:.2s}
+.article-software:hover{border-color:var(--mint);transform:translateY(-2px)}
+.article-software img{width:54px;height:54px;flex:none;object-fit:contain;background:linear-gradient(145deg,#fff,#e9edff);border-radius:13px;padding:9px}
+.article-software strong{display:block;font-size:15px;margin-bottom:2px}
+.article-software span{color:#8fa8e9;font-size:12.5px;line-height:1.4;display:block}
 .pager{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;border-top:1px solid #182d8b;margin-top:38px;padding-top:22px}
 .pager a{border:1px solid #2b58d4;border-radius:22px;padding:10px 15px;color:#dce5ff;font-size:13px}
 .pager a:hover{border-color:var(--mint);color:var(--mint)}
