@@ -467,5 +467,29 @@ window.UNLOCKHUB_SOFTWARE = [
     ],
     "guide": "astuces/organisation-revisions.html",
     "logo": "assets/logos/anki.svg"
+  },
+  {
+    "id": "vscodium",
+    "name": "VSCodium",
+    "cat": "Programmation",
+    "desc": "VS Code sans la télémétrie Microsoft, pour coder librement.",
+    "letter": "V",
+    "tags": [
+      "Code",
+      "Open source",
+      "Windows / macOS / Linux"
+    ],
+    "version": "Gratuit et open source",
+    "download": "https://vscodium.com/",
+    "about": "VSCodium est une compilation communautaire de VS Code sans les composants propriétaires ni la télémétrie. Les extensions du marché Microsoft ne sont pas toutes disponibles.",
+    "use": "Écrire du HTML, CSS, JavaScript, Python et installer des extensions libres.",
+    "steps": [
+      "Télécharge VSCodium depuis le site officiel.",
+      "Installe-le et ouvre ton dossier de projet.",
+      "Installe les extensions depuis le registre Open VSX.",
+      "Configure le terminal intégré et les raccourcis."
+    ],
+    "guide": "astuces/open-source.html",
+    "logo": "assets/logos/vscodium.svg"
   }
 ];
