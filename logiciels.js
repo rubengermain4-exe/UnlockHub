@@ -253,5 +253,28 @@ window.UNLOCKHUB_SOFTWARE = [
     ],
     "guide": "astuces/enregistrer-obs.html",
     "logo": "assets/logos/obs.svg"
+  },
+  {
+    "id": "audacity",
+    "name": "Audacity",
+    "cat": "Multimédia",
+    "desc": "Enregistre, découpe et nettoie de l’audio sans abonnement.",
+    "letter": "A",
+    "tags": [
+      "Audio",
+      "Montage sonore",
+      "Windows / macOS / Linux"
+    ],
+    "version": "Gratuit et open source",
+    "download": "https://www.audacityteam.org/download/",
+    "about": "Audacity enregistre plusieurs pistes audio et propose des outils de coupe, de réduction de bruit, de normalisation et d’export.",
+    "use": "Nettoyer une voix pour une vidéo, enregistrer un podcast, découper une musique ou convertir un fichier audio.",
+    "steps": [
+      "Télécharge Audacity depuis son site officiel.",
+      "Installe et lance le logiciel.",
+      "Importe un fichier ou arme le micro pour enregistrer.",
+      "Sélectionne les passages à traiter, puis exporte en WAV ou MP3."
+    ],
+    "logo": "assets/logos/audacity.svg"
   }
 ];
