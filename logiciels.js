@@ -395,5 +395,29 @@ window.UNLOCKHUB_SOFTWARE = [
       "Configure la signature et les dossiers de tri."
     ],
     "logo": "assets/logos/thunderbird.svg"
+  },
+  {
+    "id": "onlyoffice",
+    "name": "OnlyOffice",
+    "cat": "Bureautique",
+    "desc": "Une suite bureautique gratuite avec une bonne compatibilité Word, Excel et PowerPoint.",
+    "letter": "O",
+    "tags": [
+      "Documents",
+      "Tableur",
+      "Présentation"
+    ],
+    "version": "Gratuit (Desktop Editors)",
+    "download": "https://www.onlyoffice.com/download-desktop.aspx",
+    "about": "OnlyOffice Desktop Editors propose un traitement de texte, un tableur et un outil de présentation. Son point fort est la fidélité d’ouverture des fichiers Microsoft Office.",
+    "use": "Ouvrir et modifier des DOCX, XLSX et PPTX, puis exporter en PDF sans abonnement.",
+    "steps": [
+      "Télécharge OnlyOffice Desktop Editors depuis le site officiel.",
+      "Installe le logiciel et lance-le.",
+      "Ouvre un document existant ou crée un nouveau fichier.",
+      "Vérifie la mise en page, puis exporte en PDF si nécessaire."
+    ],
+    "guide": "astuces/alternatives-office.html",
+    "logo": "assets/logos/onlyoffice.svg"
   }
 ];
