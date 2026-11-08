@@ -20,7 +20,8 @@ window.UNLOCKHUB_SOFTWARE = [
       "Suis les étapes de l’assistant d’installation et conserve les options par défaut si tu débutes.",
       "Lance Blender depuis le menu Démarrer ou le raccourci créé."
     ],
-    "logo": "assets/logos/blender.svg"
+    "logo": "assets/logos/blender.svg",
+    "guide": "astuces/debuter-blender.html"
   },
   {
     "id": "obsidian",
