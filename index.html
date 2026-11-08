@@ -64,6 +64,7 @@ h1 span{color:var(--mint)}
 .card:hover{transform:translateY(-4px);border-color:var(--mint)}
 .card-icon{height:43px;color:var(--mint);margin-bottom:9px}
 .card-icon svg{width:42px;height:42px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.card-logo{height:58px;margin-bottom:8px}.card-logo img{width:58px;height:58px;object-fit:contain;background:linear-gradient(145deg,#fff,#e9edff);border-radius:14px;padding:9px}
 .card h3{margin:0 0 7px;font-size:16px;font-weight:700;letter-spacing:-.3px}
 .card p{margin:0;max-width:210px;color:#c6d2f6;font-size:12px;line-height:1.55;padding-right:12px}
 .arrow{position:absolute;right:16px;bottom:19px;border:2px solid var(--mint);color:var(--mint);width:35px;height:35px;border-radius:50%;display:grid;place-items:center;font-size:21px;line-height:1}
@@ -77,6 +78,7 @@ h1 span{color:var(--mint)}
 @media(max-width:1350px){.sidebar{width:250px;padding-inline:25px}.main{margin-left:250px}.hero{padding-left:40px}.hero-scene{width:57%;opacity:.8}.quicklinks{gap:15px}.cards{gap:13px}.card{padding:16px}.categories-section{padding-left:32px;padding-right:25px}.brand-name{font-size:27px}}
 @media(max-width:1050px){.sidebar{width:210px;padding-inline:17px}.main{margin-left:210px}.brand-name{font-size:23px}.hero{padding-left:28px;min-height:420px}.hero-scene{width:55%;opacity:.55}h1{font-size:clamp(48px,6vw,70px);letter-spacing:-3px}.lead{font-size:19px;max-width:470px}.quicklinks{gap:12px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.card{min-height:160px}.topbar{padding-left:28px}.footer{padding-left:25px}.motto{font-size:18px}}
 @media(max-width:700px){.sidebar{position:relative;width:auto;inset:auto;padding:14px 15px;border-right:0;border-bottom:1px solid rgba(0,245,176,.15)}.brand{margin:0 0 13px}.brand-icon{width:33px;height:37px}.brand-icon svg{width:33px;height:37px}.brand-name{font-size:25px}.nav{display:flex;overflow-x:auto;gap:5px}.nav a{min-width:max-content;padding:10px 12px;font-size:13px;border-radius:13px}.nav svg{width:19px;height:19px}.side-tip{display:none}.main{margin-left:0}.topbar{height:auto;padding:17px 16px;align-items:center}.search{width:100%;height:43px}.top-icons{display:none}.hero{min-height:570px;padding:30px 22px 0}.hero-scene{top:225px;width:100%;height:340px;opacity:.7;object-position:57% 38%;mask-image:linear-gradient(180deg,transparent 0%,#000 22%);-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 22%)}.hero:before{background:linear-gradient(180deg,#04064c 0%,rgba(4,6,76,.98) 42%,rgba(4,6,76,.18) 100%)}h1{font-size:clamp(47px,12vw,70px);letter-spacing:-3px}.lead{font-size:18px}.quicklinks{gap:12px 17px;font-size:12px}.quicklinks svg{width:21px;height:21px}.categories-section{padding:10px 15px 0}.section-head{align-items:flex-start}.section-title h2{font-size:21px}.section-title p{font-size:12px}.all-cats{font-size:11px}.cards{gap:10px}.card{padding:14px 12px;min-height:170px;border-radius:16px}.card-icon svg{width:34px;height:34px}.card h3{font-size:14px}.card p{font-size:11px;padding-right:0}.arrow{width:28px;height:28px;right:10px;bottom:10px;font-size:17px}.footer{height:auto;padding:25px 15px;flex-direction:column;gap:13px}.motto{font-size:16px;gap:7px}.socials{font-size:17px}}
+@media(max-width:700px){.card-logo{height:46px}.card-logo img{width:46px;height:46px;border-radius:12px;padding:7px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -130,6 +132,23 @@ h1 span{color:var(--mint)}
       </a>
       <a class="card searchable" id="communaute" href="#communaute" data-keywords="communauté questions entraide bons plans">
         <div class="card-icon"><svg viewBox="0 0 48 48"><path d="M18 39v-3a7 7 0 0 0-7-7H8a7 7 0 0 0-7 7v3M9 22a6 6 0 1 0 0-12 6 6 0 0 0 0 12ZM47 39v-3a7 7 0 0 0-7-7h-3M36 22a6 6 0 1 0 0-12M17 39v-4a8 8 0 0 1 8-8h4a8 8 0 0 1 8 8v4M27 21a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z"/></svg></div><h3>Communauté</h3><p>Échange, pose tes questions et découvre les bons plans des autres membres.</p><span class="arrow">→</span>
+      </a>
+    </div>
+  </section>
+  <section class="categories-section" id="logiciels-une">
+    <div class="section-head"><div class="section-title"><span class="dash"></span><div><h2>Logiciels à la une</h2><p>Des outils gratuits pour créer, monter et enregistrer.</p></div></div><a class="all-cats" href="outils.html">Voir le catalogue&nbsp; →</a></div>
+    <div class="cards">
+      <a class="card searchable" href="logiciel.html?id=blender" data-keywords="blender 3d animation rendu">
+        <div class="card-logo"><img src="assets/logos/blender.svg" alt="Logo Blender" loading="lazy"></div><h3>Blender</h3><p>Modélisation 3D, animation et rendus de qualité professionnelle.</p><span class="arrow">→</span>
+      </a>
+      <a class="card searchable" href="logiciel.html?id=davinci-resolve" data-keywords="davinci resolve montage vidéo étalonnage">
+        <div class="card-logo"><img src="assets/logos/davinci-resolve.svg" alt="Logo DaVinci Resolve" loading="lazy"></div><h3>DaVinci Resolve</h3><p>Monte et étalonne tes vidéos avec une version gratuite complète.</p><span class="arrow">→</span>
+      </a>
+      <a class="card searchable" href="logiciel.html?id=obs-studio" data-keywords="obs studio capture écran streaming">
+        <div class="card-logo"><img src="assets/logos/obs.svg" alt="Logo OBS Studio" loading="lazy"></div><h3>OBS Studio</h3><p>Enregistre ton écran et streame avec des scènes et des sources.</p><span class="arrow">→</span>
+      </a>
+      <a class="card searchable" href="logiciel.html?id=gimp" data-keywords="gimp retouche photo design">
+        <div class="card-logo"><img src="assets/logos/gimp.svg" alt="Logo GIMP" loading="lazy"></div><h3>GIMP</h3><p>Retouche tes photos et crée des visuels sans abonnement.</p><span class="arrow">→</span>
       </a>
     </div>
   </section>
