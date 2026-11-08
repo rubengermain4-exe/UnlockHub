@@ -90,7 +90,8 @@ window.UNLOCKHUB_SOFTWARE = [
       "Suis les instructions de l’assistant.",
       "Lance GIMP et ouvre une image avec Fichier > Ouvrir."
     ],
-    "logo": "assets/logos/gimp.svg"
+    "logo": "assets/logos/gimp.svg",
+    "guide": "astuces/retoucher-gimp.html"
   },
   {
     "id": "7zip",
