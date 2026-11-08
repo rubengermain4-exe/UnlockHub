@@ -348,5 +348,29 @@ window.UNLOCKHUB_SOFTWARE = [
     ],
     "guide": "astuces/mots-de-passe.html",
     "logo": "assets/logos/bitwarden.svg"
+  },
+  {
+    "id": "firefox",
+    "name": "Firefox",
+    "cat": "Navigateur",
+    "desc": "Un navigateur indépendant, compatible avec les bloqueurs de publicité.",
+    "letter": "F",
+    "tags": [
+      "Navigateur",
+      "Vie privée",
+      "Windows / macOS / Linux"
+    ],
+    "version": "Gratuit et open source",
+    "download": "https://www.mozilla.org/firefox/new/",
+    "about": "Firefox est développé par la Fondation Mozilla. Il prend en charge les extensions complètes, dont uBlock Origin, et propose des réglages de confidentialité avancés.",
+    "use": "Naviguer avec un bloqueur de publicité, isoler tes comptes avec des profils et limiter le pistage entre sites.",
+    "steps": [
+      "Télécharge Firefox depuis le site de Mozilla.",
+      "Installe-le et importe tes favoris si besoin.",
+      "Ajoute l’extension uBlock Origin depuis le magasin officiel.",
+      "Crée un profil séparé pour tes usages sensibles."
+    ],
+    "guide": "astuces/bloqueurs-pub.html",
+    "logo": "assets/logos/firefox.svg"
   }
 ];
