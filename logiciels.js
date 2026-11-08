@@ -19,7 +19,8 @@ window.UNLOCKHUB_SOFTWARE = [
       "Télécharge le programme d’installation, puis ouvre le fichier téléchargé.",
       "Suis les étapes de l’assistant d’installation et conserve les options par défaut si tu débutes.",
       "Lance Blender depuis le menu Démarrer ou le raccourci créé."
-    ]
+    ],
+    "logo": "assets/logos/blender.svg"
   },
   {
     "id": "obsidian",
@@ -41,7 +42,8 @@ window.UNLOCKHUB_SOFTWARE = [
       "Ouvre le fichier d’installation téléchargé.",
       "Termine l’installation, puis démarre Obsidian.",
       "Crée un nouveau coffre-fort pour enregistrer tes notes."
-    ]
+    ],
+    "logo": "assets/logos/obsidian.svg"
   },
   {
     "id": "vscode",
@@ -63,7 +65,8 @@ window.UNLOCKHUB_SOFTWARE = [
       "Lance le programme d’installation.",
       "Accepte la licence, puis suis les étapes proposées.",
       "Ouvre VS Code et installe les extensions utiles à ton langage."
-    ]
+    ],
+    "logo": "assets/logos/vscode.svg"
   },
   {
     "id": "gimp",
@@ -85,7 +88,8 @@ window.UNLOCKHUB_SOFTWARE = [
       "Ouvre le fichier téléchargé pour démarrer l’installation.",
       "Suis les instructions de l’assistant.",
       "Lance GIMP et ouvre une image avec Fichier > Ouvrir."
-    ]
+    ],
+    "logo": "assets/logos/gimp.svg"
   },
   {
     "id": "7zip",
@@ -107,7 +111,8 @@ window.UNLOCKHUB_SOFTWARE = [
       "Ouvre le fichier téléchargé.",
       "Clique sur Install, puis attends la fin de l’installation.",
       "Fais un clic droit sur une archive pour accéder aux options 7-Zip."
-    ]
+    ],
+    "logo": "assets/logos/7zip.svg"
   },
   {
     "id": "sharex",
@@ -129,7 +134,8 @@ window.UNLOCKHUB_SOFTWARE = [
       "Lance le programme d’installation.",
       "Accepte les étapes proposées pour terminer l’installation.",
       "Ouvre ShareX et choisis Capture pour tester une capture d’écran ou de région."
-    ]
+    ],
+    "logo": "assets/logos/sharex.svg"
   },
   {
     "id": "libreoffice",
@@ -151,7 +157,8 @@ window.UNLOCKHUB_SOFTWARE = [
       "Ouvre le programme d’installation.",
       "Suis les instructions jusqu’à la fin de l’installation.",
       "Lance Writer, Calc ou Impress selon le document à créer."
-    ]
+    ],
+    "logo": "assets/logos/libreoffice.svg"
   },
   {
     "id": "krita",
@@ -173,7 +180,8 @@ window.UNLOCKHUB_SOFTWARE = [
       "Ouvre le programme d’installation téléchargé.",
       "Suis les étapes indiquées pour installer l’application.",
       "Démarre Krita et crée un nouveau document."
-    ]
+    ],
+    "logo": "assets/logos/krita.svg"
   },
   {
     "id": "vlc",
@@ -195,6 +203,31 @@ window.UNLOCKHUB_SOFTWARE = [
       "Ouvre le fichier d’installation.",
       "Suis les étapes de l’assistant d’installation.",
       "Lance VLC et ouvre un média avec Média > Ouvrir un fichier."
-    ]
+    ],
+    "logo": "assets/logos/vlc.svg"
+  },
+  {
+    "id": "davinci-resolve",
+    "name": "DaVinci Resolve",
+    "cat": "Multimédia",
+    "desc": "Monte, étalonne et mixe tes vidéos avec une version gratuite très complète.",
+    "letter": "D",
+    "tags": [
+      "Montage vidéo",
+      "Étalonnage",
+      "Windows / macOS / Linux"
+    ],
+    "version": "Gratuit (version Studio payante)",
+    "download": "https://www.blackmagicdesign.com/products/davinciresolve",
+    "about": "DaVinci Resolve réunit le montage, l’étalonnage, les effets visuels et la post-production audio dans une seule application. La version gratuite couvre la plupart des besoins et n’ajoute pas de watermark.",
+    "use": "Monter des vidéos pour YouTube, corriger les couleurs, mixer le son et exporter en 4K.",
+    "steps": [
+      "Télécharge DaVinci Resolve depuis le site de Blackmagic Design.",
+      "Installe le logiciel, puis lance-le.",
+      "Crée un nouveau projet et importe tes rushes.",
+      "Monte, étalonne, puis exporte en H.264 MP4."
+    ],
+    "guide": "astuces/monter-davinci.html",
+    "logo": "assets/logos/davinci-resolve.svg"
   }
 ];
