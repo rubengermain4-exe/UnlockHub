@@ -372,5 +372,28 @@ window.UNLOCKHUB_SOFTWARE = [
     ],
     "guide": "astuces/bloqueurs-pub.html",
     "logo": "assets/logos/firefox.svg"
+  },
+  {
+    "id": "thunderbird",
+    "name": "Thunderbird",
+    "cat": "Bureautique",
+    "desc": "Gère tes boîtes mail, ton agenda et tes contacts sur ton ordinateur.",
+    "letter": "T",
+    "tags": [
+      "Mail",
+      "Agenda",
+      "Windows / macOS / Linux"
+    ],
+    "version": "Gratuit et open source",
+    "download": "https://www.thunderbird.net/download/",
+    "about": "Thunderbird regroupe le courrier, l’agenda, les contacts et les flux RSS. Il fonctionne avec la plupart des fournisseurs de messagerie via IMAP.",
+    "use": "Centraliser plusieurs adresses mail, lire tes messages hors ligne et gérer un agenda sans passer par le web.",
+    "steps": [
+      "Télécharge Thunderbird depuis le site officiel.",
+      "Installe-le, puis ouvre l’application.",
+      "Ajoute ton adresse mail et laisse Thunderbird détecter les serveurs.",
+      "Configure la signature et les dossiers de tri."
+    ],
+    "logo": "assets/logos/thunderbird.svg"
   }
 ];
