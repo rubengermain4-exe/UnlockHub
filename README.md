@@ -16,4 +16,4 @@ Les pages d'astuces sont statiques : aucun build n'est nécessaire pour les modi
 
 ## Interface
 
-UI « UnlockHub OS » : barre de menus fixe, fenêtre façon Finder, cartes à ombre dure et zéro hero. Le style partagé est dans `assets/site.css`, la barre de menus est injectée dans chaque page et l'horloge est gérée par `assets/ui.js`.
+UI « fanzine photocopié » : papier grain, encre rouge, sommaire numéroté, notes manuscrites, zéro hero et zéro carte flottante. Le style partagé est dans `assets/site.css`, la texture dans `assets/paper-grain.png`, et la barre de menus est injectée dans chaque page.
