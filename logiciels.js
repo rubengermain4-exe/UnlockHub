@@ -183,7 +183,8 @@ window.UNLOCKHUB_SOFTWARE = [
       "Suis les étapes indiquées pour installer l’application.",
       "Démarre Krita et crée un nouveau document."
     ],
-    "logo": "assets/logos/krita.svg"
+    "logo": "assets/logos/krita.svg",
+    "guide": "astuces/dessiner-krita.html"
   },
   {
     "id": "vlc",
