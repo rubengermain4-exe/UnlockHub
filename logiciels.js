@@ -160,7 +160,8 @@ window.UNLOCKHUB_SOFTWARE = [
       "Suis les instructions jusqu’à la fin de l’installation.",
       "Lance Writer, Calc ou Impress selon le document à créer."
     ],
-    "logo": "assets/logos/libreoffice.svg"
+    "logo": "assets/logos/libreoffice.svg",
+    "guide": "astuces/alternatives-office.html"
   },
   {
     "id": "krita",
