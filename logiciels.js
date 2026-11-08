@@ -419,5 +419,29 @@ window.UNLOCKHUB_SOFTWARE = [
     ],
     "guide": "astuces/alternatives-office.html",
     "logo": "assets/logos/onlyoffice.svg"
+  },
+  {
+    "id": "zotero",
+    "name": "Zotero",
+    "cat": "Organisation",
+    "desc": "Collecte tes références et génère ta bibliographie sans prise de tête.",
+    "letter": "Z",
+    "tags": [
+      "Bibliographie",
+      "Recherche",
+      "Windows / macOS / Linux"
+    ],
+    "version": "Gratuit et open source",
+    "download": "https://www.zotero.org/download/",
+    "about": "Zotero enregistre les références d’articles, de livres et de sites web, puis génère une bibliographie dans le style demandé. L’extension navigateur capture les métadonnées en un clic.",
+    "use": "Préparer un mémoire, classer des sources, annoter des PDF et exporter une bibliographie Word ou LibreOffice.",
+    "steps": [
+      "Télécharge Zotero et son connecteur pour navigateur.",
+      "Installe l’application et crée une bibliothèque.",
+      "Clique sur le connecteur depuis une page d’article pour enregistrer la référence.",
+      "Exporte la bibliographie dans le style de ton établissement."
+    ],
+    "guide": "astuces/outils-etudiant.html",
+    "logo": "assets/logos/zotero.svg"
   }
 ];
