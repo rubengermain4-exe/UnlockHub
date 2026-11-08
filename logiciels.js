@@ -300,5 +300,29 @@ window.UNLOCKHUB_SOFTWARE = [
     ],
     "guide": "astuces/vectoriser-inkscape.html",
     "logo": "assets/logos/inkscape.svg"
+  },
+  {
+    "id": "keepassxc",
+    "name": "KeePassXC",
+    "cat": "Sécurité",
+    "desc": "Stocke tes mots de passe localement, sans les confier à un service en ligne.",
+    "letter": "K",
+    "tags": [
+      "Mots de passe",
+      "Hors ligne",
+      "Windows / macOS / Linux"
+    ],
+    "version": "Gratuit et open source",
+    "download": "https://keepassxc.org/download/",
+    "about": "KeePassXC conserve ta base de mots de passe dans un fichier chiffré que tu gardes sur ton appareil. Aucun compte en ligne n’est nécessaire.",
+    "use": "Générer des mots de passe uniques, les organiser par dossiers et synchroniser le fichier chiffré avec ton propre stockage.",
+    "steps": [
+      "Télécharge KeePassXC depuis le site officiel.",
+      "Installe-le, puis crée une nouvelle base de données.",
+      "Choisis un mot de passe maître solide et sauvegarde les codes de secours.",
+      "Ajoute tes identifiants et exporte une copie de secours."
+    ],
+    "guide": "astuces/mots-de-passe.html",
+    "logo": "assets/logos/keepassxc.svg"
   }
 ];
