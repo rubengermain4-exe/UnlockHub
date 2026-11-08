@@ -229,5 +229,29 @@ window.UNLOCKHUB_SOFTWARE = [
     ],
     "guide": "astuces/monter-davinci.html",
     "logo": "assets/logos/davinci-resolve.svg"
+  },
+  {
+    "id": "obs-studio",
+    "name": "OBS Studio",
+    "cat": "Multimédia",
+    "desc": "Enregistre ton écran et streame en direct avec des scènes et des sources.",
+    "letter": "O",
+    "tags": [
+      "Capture écran",
+      "Streaming",
+      "Windows / macOS / Linux"
+    ],
+    "version": "Gratuit et open source",
+    "download": "https://obsproject.com/download",
+    "about": "OBS Studio est un logiciel de capture et de diffusion en direct. Il gère plusieurs scènes, des sources vidéo, des micros et des transitions.",
+    "use": "Enregistrer un tutoriel, capturer une partie, diffuser en direct ou filmer une webcam avec un habillage.",
+    "steps": [
+      "Télécharge OBS Studio depuis le site officiel.",
+      "Installe-le et ouvre l’application.",
+      "Ajoute une source « Capture d’écran » ou « Fenêtre ».",
+      "Choisis le dossier de sortie, puis clique sur « Commencer l’enregistrement »."
+    ],
+    "guide": "astuces/enregistrer-obs.html",
+    "logo": "assets/logos/obs.svg"
   }
 ];
