@@ -3,170 +3,159 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#060761">
+<meta name="theme-color" content="#111111">
 <title>UnlockHub — Le numérique, sans se ruiner</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--navy:#060761;--navy2:#080b70;--navy3:#0c147f;--mint:#00f5b0;--mint2:#41ffa7;--white:#f8f9ff;--muted:#b7c8f4;--line:rgba(35,91,255,.48)}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:#03064c;color:var(--white);font-family:"DM Sans",Arial,sans-serif}
-a{color:inherit;text-decoration:none}button,input{font:inherit}
-.layout{min-height:100vh}
-.sidebar{position:fixed;z-index:10;left:0;top:0;bottom:0;width:298px;padding:30px 34px 28px;background:linear-gradient(180deg,#05084f 0%,#04064a 100%);border-right:1px solid rgba(0,245,176,.12);display:flex;flex-direction:column}
-.brand{display:flex;align-items:center;gap:13px;margin-bottom:43px;white-space:nowrap}
-.brand-icon{width:43px;height:48px;color:var(--mint);display:grid;place-items:center}
-.brand-icon svg{width:43px;height:48px}
-.brand-name{font:800 31px/1 "DM Sans",sans-serif;letter-spacing:-1.7px}
-.brand-name span{color:var(--mint)}
-.nav{display:grid;gap:7px}
-.nav a{display:flex;align-items:center;gap:17px;padding:15px 14px;border-radius:20px;font-size:16px;font-weight:500;color:#f0f2ff;min-height:50px;transition:.2s}
-.nav a:hover{background:rgba(255,255,255,.07)}
-.nav a.active{background:linear-gradient(100deg,#00f5b0,#00e9bf);color:#05265e;box-shadow:0 7px 22px rgba(0,245,176,.18)}
-.nav svg{width:25px;height:25px;flex:none;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.side-tip{margin-top:auto;margin-bottom:0;padding:18px 17px 21px;border:1px solid rgba(0,95,255,.5);border-radius:20px;background:rgba(0,10,75,.3);color:#a5e8ff;font-size:15px;line-height:1.65;position:relative}
-.side-tip .bolt{font-size:27px;color:var(--mint);display:block;margin-bottom:7px}
-.side-tip:after{content:"";display:block;width:47px;height:3px;border-radius:3px;background:var(--mint);margin:15px 0 0 18px}
-.main{margin-left:298px;min-height:100vh;overflow:hidden;background:radial-gradient(ellipse at 73% 22%,rgba(24,41,190,.28),transparent 38%),linear-gradient(120deg,#04064c 0%,#030743 100%)}
-.topbar{height:99px;padding:25px 34px 18px 55px;display:flex;align-items:flex-start;justify-content:space-between;gap:24px;position:relative;z-index:4}
-.search{height:48px;width:min(610px,62%);border:1px solid #1751df;border-radius:28px;display:flex;align-items:center;gap:14px;padding:0 16px;background:rgba(7,17,102,.7);box-shadow:inset 0 0 0 1px rgba(25,62,199,.12)}
-.search svg{width:22px;height:22px;stroke:#f7f8ff;stroke-width:2;fill:none;flex:none}
-.search input{border:0;outline:0;background:transparent;color:#fff;width:100%;font-size:13px}
-.search input::placeholder{color:#f2f3ff;opacity:1}
-.shortcut{border:1px solid #1d49c4;border-radius:5px;padding:3px 8px;font-size:12px}
-.top-icons{display:flex;gap:26px;align-items:center;padding-top:6px}
-.top-icons button{position:relative;background:transparent;color:#f7f8ff;border:0;padding:0;cursor:pointer;font-size:23px}
-.top-icons button:after{content:"";position:absolute;right:-2px;top:0;width:6px;height:6px;background:var(--mint);border-radius:50%}
-.hero{position:relative;min-height:445px;padding:43px 34px 0 63px;overflow:hidden;isolation:isolate}
-.hero-scene{position:absolute;z-index:-2;right:0;top:-5px;width:59%;height:485px;object-fit:cover;object-position:54% 35%;opacity:.98;mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.18) 9%,#000 28%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.18) 9%,#000 28%)}
-.hero:before{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,#04064c 0%,rgba(4,6,76,.98) 35%,rgba(4,6,76,.38) 60%,rgba(4,6,76,.04) 100%);pointer-events:none}
-.welcome{display:inline-flex;border:2px solid var(--mint);color:var(--mint);border-radius:24px;padding:7px 17px;font-size:14px;font-weight:800;letter-spacing:1.2px}
-h1{font:800 clamp(54px,6.1vw,101px)/.98 "DM Sans",sans-serif;letter-spacing:-5px;margin:17px 0 12px;white-space:nowrap;text-shadow:0 2px 20px rgba(0,0,0,.12)}
-h1 span{color:var(--mint)}
-.lead{font-size:clamp(18px,1.75vw,27px);line-height:1.38;max-width:590px;margin:0;color:#f3f4ff;letter-spacing:-.45px}
-.lead strong{color:var(--mint);font-weight:800}
-.quicklinks{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:21px;font-size:13px}
-.quicklinks a{display:flex;align-items:center;gap:8px;white-space:nowrap}
-.quicklinks svg{width:25px;height:25px;stroke:var(--mint);stroke-width:2.3;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.cta{margin-top:26px;border:0;border-radius:30px;padding:14px 25px;background:linear-gradient(100deg,#00f4b1,#00e9bf);color:#03235a;font-size:15px;font-weight:800;display:inline-flex;align-items:center;gap:19px;cursor:pointer;box-shadow:0 8px 24px rgba(0,245,176,.12);transition:.2s}
-.cta:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,245,176,.23)}
-.categories-section{padding:5px 35px 0 48px;position:relative;z-index:2}
-.section-title{display:flex;align-items:center;gap:15px;margin-bottom:22px}
-.section-title .dash{width:35px;height:4px;background:var(--mint);border-radius:5px;flex:none}
-.section-title h2{font-size:23px;line-height:1.2;margin:0;font-weight:800;letter-spacing:-.5px}
-.section-title p{margin:4px 0 0;color:#b8c8f2;font-size:14px}
-.section-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:22px}
-.all-cats{font-size:13px;color:var(--mint);font-weight:700;white-space:nowrap}
-.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:25px}
-.card{min-height:177px;border:1px solid #123bd0;border-radius:21px;padding:18px 19px 17px;background:linear-gradient(140deg,rgba(7,20,111,.9),rgba(4,9,76,.94));position:relative;transition:transform .2s,border-color .2s;display:block}
-.card:hover{transform:translateY(-4px);border-color:var(--mint)}
-.card-icon{height:43px;color:var(--mint);margin-bottom:9px}
-.card-icon svg{width:42px;height:42px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.card-logo{height:58px;margin-bottom:8px}.card-logo img{width:58px;height:58px;object-fit:contain;background:linear-gradient(145deg,#fff,#e9edff);border-radius:14px;padding:9px}.card.featured{min-height:205px}.card.featured p{padding-right:44px}
-.card h3{margin:0 0 7px;font-size:16px;font-weight:700;letter-spacing:-.3px}
-.card p{margin:0;max-width:210px;color:#c6d2f6;font-size:12px;line-height:1.55;padding-right:12px}
-.arrow{position:absolute;right:16px;bottom:19px;border:2px solid var(--mint);color:var(--mint);width:35px;height:35px;border-radius:50%;display:grid;place-items:center;font-size:21px;line-height:1}
-.footer{height:75px;display:flex;align-items:center;justify-content:space-between;padding:0 40px 0 0;margin-left:0;color:var(--mint)}
-.motto{font:italic 23px "Space Grotesk",sans-serif;letter-spacing:.3px;display:flex;align-items:center;gap:13px;white-space:nowrap}
-.motto span{border-bottom:2px solid var(--mint);padding-bottom:4px}
-.socials{display:flex;gap:15px;color:#8fa8e9;font-size:18px}
-.socials a:hover{color:var(--mint)}
-.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,15px);opacity:0;transition:.2s;z-index:30;padding:12px 18px;border:1px solid var(--mint);border-radius:12px;background:#070b64;color:white;font-size:13px;pointer-events:none}
-.toast.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:1350px){.sidebar{width:250px;padding-inline:25px}.main{margin-left:250px}.hero{padding-left:40px}.hero-scene{width:57%;opacity:.8}.quicklinks{gap:15px}.cards{gap:13px}.card{padding:16px}.categories-section{padding-left:32px;padding-right:25px}.brand-name{font-size:27px}}
-@media(max-width:1050px){.sidebar{width:210px;padding-inline:17px}.main{margin-left:210px}.brand-name{font-size:23px}.hero{padding-left:28px;min-height:420px}.hero-scene{width:55%;opacity:.55}h1{font-size:clamp(48px,6vw,70px);letter-spacing:-3px}.lead{font-size:19px;max-width:470px}.quicklinks{gap:12px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.card{min-height:160px}.topbar{padding-left:28px}.footer{padding-left:25px}.motto{font-size:18px}}
-@media(max-width:700px){.sidebar{position:relative;width:auto;inset:auto;padding:14px 15px;border-right:0;border-bottom:1px solid rgba(0,245,176,.15)}.brand{margin:0 0 13px}.brand-icon{width:33px;height:37px}.brand-icon svg{width:33px;height:37px}.brand-name{font-size:25px}.nav{display:flex;overflow-x:auto;gap:5px}.nav a{min-width:max-content;padding:10px 12px;font-size:13px;border-radius:13px}.nav svg{width:19px;height:19px}.side-tip{display:none}.main{margin-left:0}.topbar{height:auto;padding:17px 16px;align-items:center}.search{width:100%;height:43px}.top-icons{display:none}.hero{min-height:570px;padding:30px 22px 0}.hero-scene{top:225px;width:100%;height:340px;opacity:.7;object-position:57% 38%;mask-image:linear-gradient(180deg,transparent 0%,#000 22%);-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 22%)}.hero:before{background:linear-gradient(180deg,#04064c 0%,rgba(4,6,76,.98) 42%,rgba(4,6,76,.18) 100%)}h1{font-size:clamp(47px,12vw,70px);letter-spacing:-3px}.lead{font-size:18px}.quicklinks{gap:12px 17px;font-size:12px}.quicklinks svg{width:21px;height:21px}.categories-section{padding:10px 15px 0}.section-head{align-items:flex-start}.section-title h2{font-size:21px}.section-title p{font-size:12px}.all-cats{font-size:11px}.cards{gap:10px}.card{padding:14px 12px;min-height:170px;border-radius:16px}.card-icon svg{width:34px;height:34px}.card h3{font-size:14px}.card p{font-size:11px;padding-right:0}.arrow{width:28px;height:28px;right:10px;bottom:10px;font-size:17px}.footer{height:auto;padding:25px 15px;flex-direction:column;gap:13px}.motto{font-size:16px;gap:7px}.socials{font-size:17px}}
-@media(max-width:700px){.card-logo{height:46px}.card-logo img{width:46px;height:46px;border-radius:12px;padding:7px}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-</style>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="description" content="30 guides, 21 logiciels gratuits et zéro compte. Des astuces concrètes pour mieux utiliser ton PC, ton téléphone et Internet.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
+<header class="menubar">
+<a class="menubar-brand" href="index.html"><svg class="menu-lock" viewBox="0 0 48 52" aria-hidden="true"><path d="M15 21v-7a9 9 0 0 1 18 0v7" stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round"/><rect x="7" y="20" width="34" height="29" rx="5" fill="currentColor"/><circle cx="24" cy="32" r="3" fill="#111"/><path d="M24 35v5" stroke="#111" stroke-width="3" stroke-linecap="round"/></svg>UnlockHub</a>
+<nav aria-label="Menu principal"><a data-section="astuces" href="astuces.html">Astuces</a><a data-section="outils" href="outils.html">Logiciels</a><a href="apropos.html">À propos</a></nav>
+<div class="menubar-right"><span class="menu-status">● Accès libre</span><time id="menu-clock">--:--</time></div>
+</header>
 <div class="layout">
-<aside class="sidebar">
-  <a href="#accueil" class="brand" aria-label="UnlockHub accueil">
-    <span class="brand-icon"><svg viewBox="0 0 48 52" aria-hidden="true"><path d="M15 21v-7a9 9 0 0 1 18 0v7" stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round"/><rect x="7" y="20" width="34" height="29" rx="5" fill="currentColor"/><circle cx="24" cy="32" r="3" fill="#060761"/><path d="M24 35v5" stroke="#060761" stroke-width="3" stroke-linecap="round"/></svg></span>
-    <span class="brand-name">Unlock<span>Hub</span></span>
-  </a>
-  <nav class="nav" aria-label="Navigation">
-    <a class="active" href="#accueil"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7"/><path d="M5 9v11h14V9M9 20v-7h6v7"/></svg>Accueil</a>
-    <a href="astuces.html"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4"/><path d="M8 14c-1.3-1.1-2-2.7-2-4.5a6 6 0 1 1 12 0c0 1.8-.7 3.4-2 4.5-.8.7-1 1.4-1 2h-6c0-.6-.2-1.3-1-2Z"/><path d="M12 1v2M3 5l2 1M21 5l-2 1"/></svg>Astuces</a>
-    <a href="outils.html"><svg viewBox="0 0 24 24"><path d="M14 6a5 5 0 0 0-6.6 6.6L2 18l4 4 5.4-5.4A5 5 0 0 0 18 10l-3 3-4-4 3-3Z"/><path d="m16 3 5 5"/></svg>Outils</a>
-    <a href="outils.html"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 17v4h16v-4"/></svg>Logiciels Gratuits</a>
-    <a href="#communaute"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg>Communauté</a>
-    <a href="apropos.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 11v5M12 7h.01"/></svg>À propos</a>
-  </nav>
-  <div class="side-tip"><span class="bolt">ϟ</span>Moins de dépenses,<br>plus de possibilités.</div>
-</aside>
-<main class="main" id="accueil">
-  <header class="topbar">
-    <label class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg><input id="search" type="search" placeholder="Rechercher une astuce, un outil, un logiciel..." aria-label="Rechercher"><span class="shortcut">/</span></label>
-    <div class="top-icons"><button aria-label="Changer de thème" id="theme">☼</button><button aria-label="Notifications" id="notify">♧</button></div>
-  </header>
-  <section class="hero">
-    <img class="hero-scene" src="unlockhub-gamer-scene.jpg" alt="Illustration d'un gamer dans une chambre lumineuse aux néons">
-    <div class="welcome">BIENVENUE · ACCÈS LIBRE</div>
-    <h1>Unlock<span>Hub</span></h1>
-    <p class="lead">Les meilleures astuces, outils et bons plans<br class="desktop-break"> pour profiter du numérique <strong>sans se ruiner&nbsp;!</strong></p>
-    <div class="quicklinks">
-      <a href="astuces.html"><svg viewBox="0 0 24 24"><path d="m13 2-9 12h7l-1 8 10-13h-7Z"/></svg>Astuces</a>
-      <a href="outils.html"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M1 21h22M8 17l-2 4m10-4 2 4"/></svg>Outils gratuits</a>
-      <a href="astuces/logiciels.html"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v5c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 10v5c0 1.7 3.6 3 8 3 1.4 0 2.7-.2 3.8-.5M4 15v4c0 1.7 3.6 3 8 3"/></svg>Économies</a>
-      <a href="#communaute"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-4M16 3a4 4 0 0 1 0 8"/></svg>Communauté</a>
+  <aside class="sidebar">
+    <a class="brand" href="index.html" aria-label="UnlockHub accueil"><span class="brand-icon" aria-hidden="true"></span><span class="brand-name">Unlock<span>Hub</span></span></a>
+    <nav class="nav" aria-label="Navigation">
+<a href="index.html" class="active"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v11h14V9M9 20v-7h6v7"/></svg>Accueil</a>
+<a href="astuces.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 22h4M8 14c-1.3-1.1-2-2.7-2-4.5a6 6 0 1 1 12 0c0 1.8-.7 3.4-2 4.5-.8.7-1 1.4-1 2h-6c0-.6-.2-1.3-1-2Z"/></svg>Astuces</a>
+<a href="outils.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 17v4h16v-4"/></svg>Logiciels</a>
+<a href="apropos.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 11v5M12 7h.01"/></svg>À propos</a>
+</nav>
+    <div class="side-tip"><b>ϟ</b>Accès libre.<br>Sans compte.<br>Sans blabla.</div>
+  </aside>
+
+  <main class="main">
+    <div class="topline">
+      <div class="crumb">UnlockHub / Accueil</div>
+      <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Chercher un guide ou un logiciel…" aria-label="Rechercher"></label>
     </div>
-    <a class="cta" href="#categories">Explorer maintenant <span style="font-size:22px">→</span></a>
-  </section>
-  <section class="categories-section" id="categories">
-    <div class="section-head"><div class="section-title"><span class="dash"></span><div><h2>Nos catégories</h2><p>Tout ce dont tu as besoin, au même endroit.</p></div></div><a class="all-cats" href="astuces.html">Voir toutes les astuces&nbsp; →</a></div>
-    <div class="cards" id="cards">
-      <a class="card searchable" id="astuces" href="astuces.html" data-keywords="astuces conseils informatique pc internet">
-        <div class="card-icon"><svg viewBox="0 0 48 48"><path d="M17 31c-2-2-4-5-4-9a11 11 0 1 1 22 0c0 4-2 7-4 9-1 1-1 2-1 3H18c0-1 0-2-1-3ZM19 39h10M21 43h6"/><path d="M24 3v4M7 10l4 3M41 10l-4 3M5 24h4M39 24h4M9 38l3-3M39 38l-3-3"/><path d="m20 22 3 3 6-7"/></svg></div><h3>Astuces</h3><p>Des conseils simples et efficaces pour mieux utiliser ton PC, ton tel et Internet.</p><span class="arrow">→</span>
-      </a>
-      <a class="card searchable" id="outils" href="outils.html" data-keywords="outils applications web productivité">
-        <div class="card-icon"><svg viewBox="0 0 48 48"><rect x="5" y="5" width="38" height="29" rx="3"/><path d="M2 41h44M16 34l-3 7m22-7 3 7"/></svg></div><h3>Outils</h3><p>Des outils en ligne et applications pour gagner du temps et être plus productif.</p><span class="arrow">→</span>
-      </a>
-      <a class="card searchable" id="logiciels" href="outils.html" data-keywords="logiciels gratuits télécharger applications jeux">
-        <div class="card-icon"><svg viewBox="0 0 48 48"><path d="M24 4v27M14 21l10 10 10-10M7 33v9h34v-9"/></svg></div><h3>Logiciels Gratuits</h3><p>Les meilleurs logiciels gratuits pour travailler, créer, jouer et t'amuser.</p><span class="arrow">→</span>
-      </a>
-      <a class="card searchable" id="communaute" href="#communaute" data-keywords="communauté questions entraide bons plans">
-        <div class="card-icon"><svg viewBox="0 0 48 48"><path d="M18 39v-3a7 7 0 0 0-7-7H8a7 7 0 0 0-7 7v3M9 22a6 6 0 1 0 0-12 6 6 0 0 0 0 12ZM47 39v-3a7 7 0 0 0-7-7h-3M36 22a6 6 0 1 0 0-12M17 39v-4a8 8 0 0 1 8-8h4a8 8 0 0 1 8 8v4M27 21a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z"/></svg></div><h3>Communauté</h3><p>Échange, pose tes questions et découvre les bons plans des autres membres.</p><span class="arrow">→</span>
-      </a>
+
+    <div class="window-head">
+      <div>
+        <div class="eyebrow">Accès libre · sans compte</div>
+        <h1 class="page-title">Accueil<span>.</span></h1>
+        <p class="intro" style="margin:0">Le numérique, sans se ruiner. Ouvre un dossier ou cherche.</p>
+      </div>
+      <div class="stats" aria-label="Chiffres du site">
+        <div class="stat"><strong>30</strong><span>guides</span></div>
+        <div class="stat"><strong>21</strong><span>logiciels</span></div>
+        <div class="stat"><strong>0</strong><span>compte</span></div>
+      </div>
     </div>
-  </section>
-  <section class="categories-section" id="logiciels-une">
-    <div class="section-head"><div class="section-title"><span class="dash"></span><div><h2>Logiciels à la une</h2><p>Des outils gratuits pour créer, monter et enregistrer.</p></div></div><a class="all-cats" href="outils.html">Voir le catalogue&nbsp; →</a></div>
-    <div class="cards">
-      <a class="card searchable featured" href="logiciel.html?id=blender" data-keywords="blender 3d animation rendu">
-        <div class="card-logo"><img src="assets/logos/blender.svg" alt="Logo Blender"></div><h3>Blender</h3><p>Modélisation 3D, animation et rendus de qualité professionnelle.</p><span class="arrow">→</span>
-      </a>
-      <a class="card searchable featured" href="logiciel.html?id=davinci-resolve" data-keywords="davinci resolve montage vidéo étalonnage">
-        <div class="card-logo"><img src="assets/logos/davinci-resolve.svg" alt="Logo DaVinci Resolve"></div><h3>DaVinci Resolve</h3><p>Monte et étalonne tes vidéos avec une version gratuite complète.</p><span class="arrow">→</span>
-      </a>
-      <a class="card searchable featured" href="logiciel.html?id=obs-studio" data-keywords="obs studio capture écran streaming">
-        <div class="card-logo"><img src="assets/logos/obs.svg" alt="Logo OBS Studio"></div><h3>OBS Studio</h3><p>Enregistre ton écran et streame avec des scènes et des sources.</p><span class="arrow">→</span>
-      </a>
-      <a class="card searchable featured" href="logiciel.html?id=gimp" data-keywords="gimp retouche photo design">
-        <div class="card-logo"><img src="assets/logos/gimp.svg" alt="Logo GIMP"></div><h3>GIMP</h3><p>Retouche tes photos et crée des visuels sans abonnement.</p><span class="arrow">→</span>
-      </a>
-    </div>
-  </section>
-  <footer class="footer" id="apropos"><div class="motto">♧ <span>Explore</span> · <span>Apprends</span> · <span>Économise</span> · <span>Grandis</span> ♕</div><div class="socials"><a href="#communaute" aria-label="Discord">◉</a><a href="#communaute" aria-label="YouTube">▶</a><a href="#communaute" aria-label="TikTok">♪</a><a href="#communaute" aria-label="X">𝕏</a></div></footer>
-</main>
+
+    <section aria-labelledby="dossiers">
+      <div class="section-head"><h2 id="dossiers">Dossiers</h2><span class="count">4 éléments</span></div>
+      <div class="cat-grid">
+        <a class="cat-card" href="astuces.html" data-search="astuces guides conseils sécurité pc internet étudiant mobile création">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 22h4M8 14c-1.3-1.1-2-2.7-2-4.5a6 6 0 1 1 12 0c0 1.8-.7 3.4-2 4.5-.8.7-1 1.4-1 2h-6c0-.6-.2-1.3-1-2Z"/></svg></div>
+          <div><h2>Astuces</h2><p>30 guides pour protéger, accélérer et mieux utiliser ton matériel.</p></div>
+        </a>
+        <a class="cat-card" href="outils.html" data-search="logiciels outils gratuits catalogue blender gimp obs davinci">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 17v4h16v-4"/></svg></div>
+          <div><h2>Logiciels</h2><p>21 fiches de logiciels gratuits, avec logos et liens officiels.</p></div>
+        </a>
+        <a class="cat-card" href="astuces/creation.html" data-search="création blender davinci obs gimp krita inkscape dessin vidéo 3d">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="4"/><path d="m8 6 1.5-2h5L16 6"/></svg></div>
+          <div><h2>Création</h2><p>Blender, DaVinci, OBS, GIMP : les outils gratuits pour créer.</p></div>
+        </a>
+        <a class="cat-card" href="apropos.html" data-search="à propos projet unlockhub contact méthode">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 11v5M12 7h.01"/></svg></div>
+          <div><h2>À propos</h2><p>La méthode, les sources et les règles éditoriales du projet.</p></div>
+        </a>
+      </div>
+    </section>
+
+    <section aria-labelledby="a-la-une">
+      <div class="section-head"><h2 id="a-la-une">À la une</h2><a class="all-cats" href="outils.html">Ouvrir le catalogue →</a></div>
+      <div class="grid four">
+        <a class="software-card" href="logiciel.html?id=blender" data-search="blender 3d modélisation animation rendu création">
+          <div class="software-logo"><img src="assets/logos/blender.svg" alt="Logo Blender"></div>
+          <h2>Blender</h2><p>Modélisation 3D, animation et rendus de qualité professionnelle.</p>
+          <div class="meta"><span class="tag">Création 3D</span></div>
+          <span class="card-link">Ouvrir →</span>
+        </a>
+        <a class="software-card" href="logiciel.html?id=davinci-resolve" data-search="davinci resolve montage vidéo étalonnage audio">
+          <div class="software-logo"><img src="assets/logos/davinci-resolve.svg" alt="Logo DaVinci Resolve"></div>
+          <h2>DaVinci Resolve</h2><p>Monte et étalonne tes vidéos avec une version gratuite complète.</p>
+          <div class="meta"><span class="tag">Vidéo</span></div>
+          <span class="card-link">Ouvrir →</span>
+        </a>
+        <a class="software-card" href="logiciel.html?id=obs-studio" data-search="obs studio capture écran streaming enregistrement">
+          <div class="software-logo"><img src="assets/logos/obs.svg" alt="Logo OBS Studio"></div>
+          <h2>OBS Studio</h2><p>Enregistre ton écran et streame avec des scènes et des sources.</p>
+          <div class="meta"><span class="tag">Capture</span></div>
+          <span class="card-link">Ouvrir →</span>
+        </a>
+        <a class="software-card" href="logiciel.html?id=gimp" data-search="gimp retouche photo design image">
+          <div class="software-logo"><img src="assets/logos/gimp.svg" alt="Logo GIMP"></div>
+          <h2>GIMP</h2><p>Retouche tes photos et crée des visuels sans abonnement.</p>
+          <div class="meta"><span class="tag">Photo</span></div>
+          <span class="card-link">Ouvrir →</span>
+        </a>
+      </div>
+    </section>
+
+    <section aria-labelledby="guides-recents">
+      <div class="section-head"><h2 id="guides-recents">Derniers guides</h2><a class="all-cats" href="astuces.html">Tout voir →</a></div>
+      <div class="grid">
+        <a class="guide-card" href="astuces/mots-de-passe.html" data-search="mots de passe sécurité gestionnaire phrases de passe">
+          <span class="tag">Sécurité</span><h2>Des mots de passe solides sans devenir fou</h2><p>La méthode des phrases de passe, un gestionnaire et les erreurs à arrêter.</p>
+          <div class="guide-meta"><span>6 min</span><span class="more">Lire →</span></div>
+        </a>
+        <a class="guide-card" href="astuces/debuter-blender.html" data-search="blender 3d débuter interface modélisation création">
+          <span class="tag">Création</span><h2>Débuter sur Blender sans se perdre</h2><p>Interface, navigation, premiers objets et export : le strict nécessaire.</p>
+          <div class="guide-meta"><span>7 min</span><span class="more">Lire →</span></div>
+        </a>
+        <a class="guide-card" href="astuces/nettoyer-windows.html" data-search="windows nettoyage stockage démarrage pc">
+          <span class="tag">PC</span><h2>Nettoyer Windows sans logiciel miracle</h2><p>Stockage, démarrage, désinstallation : les outils intégrés suffisent.</p>
+          <div class="guide-meta"><span>5 min</span><span class="more">Lire →</span></div>
+        </a>
+        <a class="guide-card" href="astuces/wifi.html" data-search="wifi box réseau 5ghz 2.4ghz canal débit">
+          <span class="tag">Internet</span><h2>Un Wi-Fi qui rame : les vraies causes</h2><p>Placement, bande 5 GHz, canaux et firmware avant d’appeler le FAI.</p>
+          <div class="guide-meta"><span>6 min</span><span class="more">Lire →</span></div>
+        </a>
+        <a class="guide-card" href="astuces/alternatives-office.html" data-search="office libreoffice onlyoffice word excel bureautique">
+          <span class="tag">Logiciels</span><h2>Microsoft Office gratuit : les options sérieuses</h2><p>LibreOffice, OnlyOffice, Google Docs : compatibilité et limites.</p>
+          <div class="guide-meta"><span>5 min</span><span class="more">Lire →</span></div>
+        </a>
+        <a class="guide-card" href="astuces/organisation-revisions.html" data-search="révisions étudiant planning organisation mémorisation">
+          <span class="tag">Étudiant</span><h2>Organiser ses révisions sans se mentir</h2><p>Un planning réaliste, des sessions courtes et de la récupération active.</p>
+          <div class="guide-meta"><span>6 min</span><span class="more">Lire →</span></div>
+        </a>
+      </div>
+    </section>
+
+    <p class="intro" id="empty" hidden>Aucun résultat. Essaie « blender », « wifi » ou « cv ».</p>
+
+    <footer class="footer">
+      <span>30 guides · 21 logiciels · Accès libre</span>
+      <span class="motto">Explore · Apprends · Économise · Grandis</span>
+    </footer>
+  </main>
 </div>
-<div class="toast" id="toast" role="status"></div>
 <script>
 const search=document.getElementById('search');
-const cards=[...document.querySelectorAll('.searchable')];
-search.addEventListener('input',()=>{
- const q=search.value.trim().toLocaleLowerCase('fr');
- cards.forEach(card=>{card.style.display=(!q||(card.innerText+' '+card.dataset.keywords).toLocaleLowerCase('fr').includes(q))?'':'none'});
+const items=[...document.querySelectorAll('[data-search]')];
+const empty=document.getElementById('empty');
+function filter(){
+  const q=search.value.trim().toLocaleLowerCase('fr');
+  let n=0;
+  items.forEach(el=>{
+    const ok=!q||el.dataset.search.toLocaleLowerCase('fr').includes(q);
+    el.hidden=!ok;
+    if(ok)n++;
+  });
+  empty.hidden=n>0;
+}
+search.addEventListener('input',filter);
+document.addEventListener('keydown',e=>{
+  if(e.key==='/'&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)){e.preventDefault();search.focus()}
+  if(e.key==='Escape'){search.value='';filter();search.blur()}
 });
-document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)){e.preventDefault();search.focus()}if(e.key==='Escape'){search.value='';search.dispatchEvent(new Event('input'));search.blur()}});
-document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>{document.querySelectorAll('.nav a').forEach(n=>n.classList.remove('active'));a.classList.add('active')}));
-document.getElementById('theme').addEventListener('click',()=>{document.body.classList.toggle('alternate');document.body.style.filter=document.body.classList.contains('alternate')?'brightness(1.2) saturate(.85)':''});
-document.getElementById('notify').addEventListener('click',()=>{const t=document.getElementById('toast');t.textContent='Tu es à jour : aucune nouvelle notification.';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2400)});
 </script>
+<script src="assets/ui.js" defer></script>
 </body>
 </html>
