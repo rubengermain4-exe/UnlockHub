@@ -1,6 +1,6 @@
 # UnlockHub
 
-Toutes les astuces pour être un vrai rat du web.
+Toutes les astuces pour être un vrai rat du web. Accès libre, sans compte ni inscription.
 
 ## Structure
 
