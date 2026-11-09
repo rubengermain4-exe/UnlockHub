@@ -1,75 +1,70 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#060761">
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="#f5f4f1" name="theme-color">
+<meta content="light" name="color-scheme">
 <title>Pourquoi utiliser des logiciels open source — UnlockHub</title>
-<meta name="description" content="Gratuit ne veut pas dire douteux : ce que le code ouvert change vraiment.">
-<meta property="og:title" content="Pourquoi utiliser des logiciels open source — UnlockHub">
-<meta property="og:description" content="Gratuit ne veut pas dire douteux : ce que le code ouvert change vraiment.">
-<meta property="og:type" content="article">
-<link rel="icon" type="image/svg+xml" href="../favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/site.css">
+<meta content="Gratuit ne veut pas dire douteux : ce que le code ouvert change vraiment." name="description">
+<meta content="Pourquoi utiliser des logiciels open source — UnlockHub" property="og:title">
+<meta content="Gratuit ne veut pas dire douteux : ce que le code ouvert change vraiment." property="og:description">
+<meta content="article" property="og:type">
+<link href="../favicon.svg" rel="icon" type="image/svg+xml">
+<link as="font" crossorigin href="../assets/fonts/host-grotesk-latin.woff2" rel="preload" type="font/woff2">
+<link href="../assets/site.css" rel="stylesheet">
+<script>document.documentElement.classList.add("js")</script>
 </head>
-<body>
-<header class="menubar">
-<a class="menubar-brand" href="../index.html"><svg class="menu-lock" viewBox="0 0 48 52" aria-hidden="true"><path d="M15 21v-7a9 9 0 0 1 18 0v7" stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round"/><rect x="7" y="20" width="34" height="29" rx="5" fill="currentColor"/><circle cx="24" cy="32" r="3" fill="#111"/><path d="M24 35v5" stroke="#111" stroke-width="3" stroke-linecap="round"/></svg>UnlockHub</a>
-<nav aria-label="Menu principal"><a data-section="astuces" href="../astuces.html">Astuces</a><a data-section="outils" href="../outils.html">Logiciels</a><a href="../apropos.html">À propos</a></nav>
-<div class="menubar-right"><span class="menu-status">Fanzine n°01 — Gratuit</span></div>
+<body class="is-article">
+<!-- nav -->
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="site-nav" data-nav>
+<div class="site-nav-inner">
+<a class="wordmark" href="../index.html" aria-label="UnlockHub, accueil"><svg class="lock-mark" viewBox="0 0 18 22" aria-hidden="true"><path class="lock-shackle" d="M4.6 10.2V6.6a4.4 4.4 0 0 1 8.8 0v3.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><rect x="1" y="9" width="16" height="12.6" rx="3.4" fill="currentColor"/><path class="lock-hole" d="M9 12.6a1.7 1.7 0 0 1 .9 3.15l.45 2.35h-2.7l.45-2.35A1.7 1.7 0 0 1 9 12.6Z"/></svg><span>Unlock<b>Hub</b></span></a>
+<nav class="nav-links" aria-label="Menu principal"><a href="../astuces.html" data-section="astuces" aria-current="page">Astuces</a><a href="../outils.html" data-section="outils">Logiciels</a><a href="../apropos.html" data-section="apropos">À propos</a></nav>
+<a class="nav-search" href="../astuces.html" data-palette aria-label="Rechercher un guide ou un logiciel"><span>Rechercher</span><kbd>/</kbd></a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-sheet" aria-label="Menu"><span></span><span></span></button>
+</div>
 </header>
-<div class="layout">
-<aside class="sidebar">
-<a class="brand" href="../index.html"><span class="brand-icon">⬡</span><span>Unlock<span>Hub</span></span></a>
-<nav class="nav" aria-label="Navigation">
-<a href="../index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v11h14V9M9 20v-7h6v7"/></svg>Accueil</a>
-<a href="../astuces.html" class="active"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 22h4M8 14c-1.3-1.1-2-2.7-2-4.5a6 6 0 1 1 12 0c0 1.8-.7 3.4-2 4.5-.8.7-1 1.4-1 2h-6c0-.6-.2-1.3-1-2Z"/></svg>Astuces</a>
-<a href="../outils.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 17v4h16v-4"/></svg>Logiciels</a>
-<a href="../apropos.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 11v5M12 7h.01"/></svg>À propos</a>
-</nav>
-<div class="side-tip"><b>ϟ</b>Moins de dépenses,<br>plus de possibilités.</div>
-</aside>
-<main class="main">
-<div class="topline">
-<div class="crumb">UNLOCKHUB / ASTUCES / LOGICIELS</div>
-<form class="search" action="../astuces.html" role="search">
-<span aria-hidden="true">⌕</span>
-<input type="search" name="q" placeholder="Rechercher une astuce…" aria-label="Rechercher une astuce">
-</form>
-</div>
+<div class="nav-sheet" id="nav-sheet"><a href="../index.html">Accueil</a><a href="../astuces.html">Astuces</a><a href="../outils.html">Logiciels</a><a href="../apropos.html">À propos</a><p class="nav-sheet-foot">Accès libre, sans compte ni inscription.</p></div>
+<!-- /nav -->
+<main id="contenu" class="page page-article">
 <article class="article">
-<a class="back" href="../astuces.html">← Toutes les astuces</a>
-<div class="eyebrow">LOGICIELS</div>
-<h1 class="article-title">Pourquoi utiliser des logiciels open source</h1>
-<p class="lede">L’open source n’est pas une religion. C’est un modèle qui te donne le droit de vérifier, modifier et continuer à utiliser ton outil.</p>
-<div class="article-meta">Mis à jour le 8 novembre 2026 · 5 min de lecture · <a href="logiciels.html">Logiciels</a></div>
-<nav class="toc" aria-label="Sommaire"><strong>Au sommaire</strong><ol><li><a href="#s1">Ce que ça veut dire</a></li><li><a href="#s2">Les vrais avantages</a></li><li><a href="#s3">Les limites</a></li><li><a href="#s4">Où télécharger sans se tromper</a></li></ol></nav>
-<h2 id="s1">Ce que ça veut dire</h2><p>Un logiciel open source publie son code source sous une licence qui autorise la consultation, la modification et la redistribution. Les licences GPL, MIT ou Apache définissent les conditions exactes.</p><p>Cela ne veut pas dire que tout le monde peut faire n’importe quoi : chaque licence a ses règles, notamment sur le partage des modifications.</p><h2 id="s2">Les vrais avantages</h2><ul><li>Tu peux vérifier ce que fait le logiciel, ou demander à quelqu’un de le faire.</li><li>Pas de blocage propriétaire : tes fichiers restent lisibles avec d’autres outils.</li><li>La communauté peut corriger les bugs et maintenir le projet même si l’éditeur disparaît.</li><li>Le coût est souvent nul, même si un don ou un support payant reste possible.</li></ul><div class="callout"><strong>Si un projet t’est utile :</strong> fais un don, signale un bug ou aide à la traduction. C’est ce qui le garde en vie plus longtemps qu’un modèle publicitaire.</div><h2 id="s3">Les limites</h2><p>Open source ne signifie pas automatiquement sécurisé ou facile à utiliser. Un projet peu maintenu peut accumuler des failles, et l’interface peut être moins polie qu’un produit commercial.</p><p>Le support est souvent communautaire. Pour une entreprise, payer un support ou une version hébergée peut être la bonne approche.</p><h2 id="s4">Où télécharger sans se tromper</h2><p>Passe par le site officiel du projet, sa page GitHub Releases ou un dépôt reconnu comme F-Droid sur Android. Les sites de « téléchargement gratuit » ajoutent souvent des barres d’outils et des installeurs modifiés.</p><p>Vérifie la signature ou le hash quand le projet le propose, surtout pour les logiciels sensibles.</p>
-<div class="pager"><a href="../astuces.html">← Toutes les astuces</a><a href="logiciels.html">Plus de Logiciels →</a></div>
-<section class="related"><h2>À lire ensuite</h2><div class="grid"><a class="guide-card" href="alternatives-photoshop.html" data-search="photoshop trop cher ? les alternatives gratuites gimp, krita, photopea, darktable : a chacun son usage. logiciels logiciels alternatives photoshop">
+<header class="article-head wrap">
+<div class="article-head-inner"><nav class="crumbs" aria-label="Fil d’Ariane"><a href="../index.html">Accueil</a><a href="../astuces.html">Astuces</a><a href="logiciels.html">Logiciels</a></nav><h1 class="article-title" data-split="">Pourquoi utiliser des logiciels open source</h1><p class="lede">L’open source n’est pas une religion. C’est un modèle qui te donne le droit de vérifier, modifier et continuer à utiliser ton outil.</p><p class="article-meta"><span>Mis à jour le 8 novembre 2026</span><span>5 min de lecture</span><span><a href="logiciels.html">Logiciels</a></span></p></div>
+</header>
+<div class="article-layout wrap"><aside class="article-rail"><div class="rail-inner"><nav aria-label="Sommaire" class="toc"><strong>Au sommaire</strong><ol><li><a href="#s1">Ce que ça veut dire</a></li><li><a href="#s2">Les vrais avantages</a></li><li><a href="#s3">Les limites</a></li><li><a href="#s4">Où télécharger sans se tromper</a></li></ol></nav></div></aside><div class="prose"><h2 id="s1">Ce que ça veut dire</h2><p>Un logiciel open source publie son code source sous une licence qui autorise la consultation, la modification et la redistribution. Les licences GPL, MIT ou Apache définissent les conditions exactes.</p><p>Cela ne veut pas dire que tout le monde peut faire n’importe quoi : chaque licence a ses règles, notamment sur le partage des modifications.</p><h2 id="s2">Les vrais avantages</h2><ul><li>Tu peux vérifier ce que fait le logiciel, ou demander à quelqu’un de le faire.</li><li>Pas de blocage propriétaire : tes fichiers restent lisibles avec d’autres outils.</li><li>La communauté peut corriger les bugs et maintenir le projet même si l’éditeur disparaît.</li><li>Le coût est souvent nul, même si un don ou un support payant reste possible.</li></ul><div class="callout"><strong>Si un projet t’est utile :</strong> fais un don, signale un bug ou aide à la traduction. C’est ce qui le garde en vie plus longtemps qu’un modèle publicitaire.</div><h2 id="s3">Les limites</h2><p>Open source ne signifie pas automatiquement sécurisé ou facile à utiliser. Un projet peu maintenu peut accumuler des failles, et l’interface peut être moins polie qu’un produit commercial.</p><p>Le support est souvent communautaire. Pour une entreprise, payer un support ou une version hébergée peut être la bonne approche.</p><h2 id="s4">Où télécharger sans se tromper</h2><p>Passe par le site officiel du projet, sa page GitHub Releases ou un dépôt reconnu comme F-Droid sur Android. Les sites de « téléchargement gratuit » ajoutent souvent des barres d’outils et des installeurs modifiés.</p><p>Vérifie la signature ou le hash quand le projet le propose, surtout pour les logiciels sensibles.</p></div></div>
+<footer class="article-end wrap"><div class="pager"><a data-dir="back" href="../astuces.html">Toutes les astuces</a><a href="logiciels.html">Plus de Logiciels</a></div><section class="related"><h2>À lire ensuite</h2><div class="grid"><a class="guide-card" data-search="photoshop trop cher ? les alternatives gratuites gimp, krita, photopea, darktable : a chacun son usage. logiciels logiciels alternatives photoshop" href="alternatives-photoshop.html">
 <span class="tag">Logiciels</span>
-<h2>Photoshop trop cher ? Les alternatives gratuites</h2>
-<p>GIMP, Krita, Photopea, Darktable : à chacun son usage.</p>
-<div class="guide-meta"><span>5 min de lecture</span><span class="more">Lire →</span></div>
-</a><a class="guide-card" href="alternatives-office.html" data-search="microsoft office gratuit : les options serieuses libreoffice, onlyoffice, google docs, collabora : compatibilite et limites. logiciels logiciels alternatives office">
+<h3>Photoshop trop cher ? Les alternatives gratuites</h3>
+<p>GIMP, Krita, Photopea, Darktable : à chacun son usage.</p>
+<div class="guide-meta"><span>5 min de lecture</span><span aria-hidden="true" class="more">Lire</span></div>
+</a><a class="guide-card" data-search="microsoft office gratuit : les options serieuses libreoffice, onlyoffice, google docs, collabora : compatibilite et limites. logiciels logiciels alternatives office" href="alternatives-office.html">
 <span class="tag">Logiciels</span>
-<h2>Microsoft Office gratuit : les options sérieuses</h2>
-<p>LibreOffice, OnlyOffice, Google Docs, Collabora : compatibilité et limites.</p>
-<div class="guide-meta"><span>5 min de lecture</span><span class="more">Lire →</span></div>
-</a><a class="guide-card" href="montage-video-gratuit.html" data-search="monter des videos gratuitement, sans watermark davinci resolve, shotcut, kdenlive, capcut : choisir selon ton pc et ton niveau. logiciels logiciels montage video gratuit">
+<h3>Microsoft Office gratuit : les options sérieuses</h3>
+<p>LibreOffice, OnlyOffice, Google Docs, Collabora : compatibilité et limites.</p>
+<div class="guide-meta"><span>5 min de lecture</span><span aria-hidden="true" class="more">Lire</span></div>
+</a><a class="guide-card" data-search="monter des videos gratuitement, sans watermark davinci resolve, shotcut, kdenlive, capcut : choisir selon ton pc et ton niveau. logiciels logiciels montage video gratuit" href="montage-video-gratuit.html">
 <span class="tag">Logiciels</span>
-<h2>Monter des vidéos gratuitement, sans watermark</h2>
-<p>DaVinci Resolve, Shotcut, Kdenlive, CapCut : choisir selon ton PC et ton niveau.</p>
-<div class="guide-meta"><span>6 min de lecture</span><span class="more">Lire →</span></div>
-</a></div></section>
+<h3>Monter des vidéos gratuitement, sans watermark</h3>
+<p>DaVinci Resolve, Shotcut, Kdenlive, CapCut : choisir selon ton PC et ton niveau.</p>
+<div class="guide-meta"><span>6 min de lecture</span><span aria-hidden="true" class="more">Lire</span></div>
+</a></div></section></footer>
 </article>
-<div class="footer"><span>© 2026 UnlockHub · <a href="../conditions.html">Conditions</a> · <a href="../confidentialite.html">Confidentialité</a></span><span class="motto">Explore · Apprends · Économise · Grandis</span></div>
 </main>
+<!-- footer -->
+<footer class="site-footer">
+<div class="wrap-wide">
+<div class="footer-top">
+<div class="footer-brand"><a class="wordmark" href="../index.html"><svg class="lock-mark" viewBox="0 0 18 22" aria-hidden="true"><path class="lock-shackle" d="M4.6 10.2V6.6a4.4 4.4 0 0 1 8.8 0v3.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><rect x="1" y="9" width="16" height="12.6" rx="3.4" fill="currentColor"/><path class="lock-hole" d="M9 12.6a1.7 1.7 0 0 1 .9 3.15l.45 2.35h-2.7l.45-2.35A1.7 1.7 0 0 1 9 12.6Z"/></svg><span>Unlock<b>Hub</b></span></a><p>Le numérique, sans se ruiner. Des guides concrets et des logiciels gratuits, en accès libre.</p><div class="footer-rat"><img src="../assets/rat.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span>Toutes les astuces pour être un vrai rat du web.</span></div></div>
+<div class="footer-col"><h2>Astuces</h2><ul><li><a href="../astuces/securite.html">Sécurité</a></li><li><a href="../astuces/pc.html">PC & Windows</a></li><li><a href="../astuces/internet.html">Internet</a></li><li><a href="../astuces/logiciels.html">Logiciels</a></li><li><a href="../astuces/etudiant.html">Étudiant</a></li><li><a href="../astuces/mobile.html">Mobile</a></li><li><a href="../astuces/creation.html">Création</a></li></ul></div>
+<div class="footer-col"><h2>Logiciels</h2><ul><li><a href="../outils.html">Tout le catalogue</a></li><li><a href="../logiciel.html?id=blender">Blender</a></li><li><a href="../logiciel.html?id=davinci-resolve">DaVinci Resolve</a></li><li><a href="../logiciel.html?id=obs-studio">OBS Studio</a></li><li><a href="../logiciel.html?id=gimp">GIMP</a></li><li><a href="../logiciel.html?id=bitwarden">Bitwarden</a></li></ul></div>
+<div class="footer-col"><h2>Le projet</h2><ul><li><a href="../apropos.html">À propos</a></li><li><a href="../conditions.html">Conditions d’utilisation</a></li><li><a href="../confidentialite.html">Confidentialité</a></li><li><a href="https://github.com/rubengermain4-exe/UnlockHub" rel="noopener">Code source</a></li></ul></div>
 </div>
-
+<div class="footer-bottom"><span>© 2026 UnlockHub. Accès libre, sans compte ni inscription.</span><span>Explore, apprends, économise, grandis.</span></div>
+</div>
+</footer>
+<!-- /footer -->
 <script src="../assets/ui.js" defer></script>
 </body>
 </html>

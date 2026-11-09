@@ -1,76 +1,70 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#060761">
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="#f5f4f1" name="theme-color">
+<meta content="light" name="color-scheme">
 <title>Des mots de passe solides sans devenir fou — UnlockHub</title>
-<meta name="description" content="La méthode des phrases de passe, un gestionnaire, et les erreurs à arrêter tout de suite.">
-<meta property="og:title" content="Des mots de passe solides sans devenir fou — UnlockHub">
-<meta property="og:description" content="La méthode des phrases de passe, un gestionnaire, et les erreurs à arrêter tout de suite.">
-<meta property="og:type" content="article">
-<link rel="icon" type="image/svg+xml" href="../favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/site.css">
+<meta content="La méthode des phrases de passe, un gestionnaire, et les erreurs à arrêter tout de suite." name="description">
+<meta content="Des mots de passe solides sans devenir fou — UnlockHub" property="og:title">
+<meta content="La méthode des phrases de passe, un gestionnaire, et les erreurs à arrêter tout de suite." property="og:description">
+<meta content="article" property="og:type">
+<link href="../favicon.svg" rel="icon" type="image/svg+xml">
+<link as="font" crossorigin href="../assets/fonts/host-grotesk-latin.woff2" rel="preload" type="font/woff2">
+<link href="../assets/site.css" rel="stylesheet">
+<script>document.documentElement.classList.add("js")</script>
 </head>
-<body>
-<header class="menubar">
-<a class="menubar-brand" href="../index.html"><svg class="menu-lock" viewBox="0 0 48 52" aria-hidden="true"><path d="M15 21v-7a9 9 0 0 1 18 0v7" stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round"/><rect x="7" y="20" width="34" height="29" rx="5" fill="currentColor"/><circle cx="24" cy="32" r="3" fill="#111"/><path d="M24 35v5" stroke="#111" stroke-width="3" stroke-linecap="round"/></svg>UnlockHub</a>
-<nav aria-label="Menu principal"><a data-section="astuces" href="../astuces.html">Astuces</a><a data-section="outils" href="../outils.html">Logiciels</a><a href="../apropos.html">À propos</a></nav>
-<div class="menubar-right"><span class="menu-status">Fanzine n°01 — Gratuit</span></div>
+<body class="is-article">
+<!-- nav -->
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="site-nav" data-nav>
+<div class="site-nav-inner">
+<a class="wordmark" href="../index.html" aria-label="UnlockHub, accueil"><svg class="lock-mark" viewBox="0 0 18 22" aria-hidden="true"><path class="lock-shackle" d="M4.6 10.2V6.6a4.4 4.4 0 0 1 8.8 0v3.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><rect x="1" y="9" width="16" height="12.6" rx="3.4" fill="currentColor"/><path class="lock-hole" d="M9 12.6a1.7 1.7 0 0 1 .9 3.15l.45 2.35h-2.7l.45-2.35A1.7 1.7 0 0 1 9 12.6Z"/></svg><span>Unlock<b>Hub</b></span></a>
+<nav class="nav-links" aria-label="Menu principal"><a href="../astuces.html" data-section="astuces" aria-current="page">Astuces</a><a href="../outils.html" data-section="outils">Logiciels</a><a href="../apropos.html" data-section="apropos">À propos</a></nav>
+<a class="nav-search" href="../astuces.html" data-palette aria-label="Rechercher un guide ou un logiciel"><span>Rechercher</span><kbd>/</kbd></a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-sheet" aria-label="Menu"><span></span><span></span></button>
+</div>
 </header>
-<div class="layout">
-<aside class="sidebar">
-<a class="brand" href="../index.html"><span class="brand-icon">⬡</span><span>Unlock<span>Hub</span></span></a>
-<nav class="nav" aria-label="Navigation">
-<a href="../index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v11h14V9M9 20v-7h6v7"/></svg>Accueil</a>
-<a href="../astuces.html" class="active"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 22h4M8 14c-1.3-1.1-2-2.7-2-4.5a6 6 0 1 1 12 0c0 1.8-.7 3.4-2 4.5-.8.7-1 1.4-1 2h-6c0-.6-.2-1.3-1-2Z"/></svg>Astuces</a>
-<a href="../outils.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 17v4h16v-4"/></svg>Logiciels</a>
-<a href="../apropos.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 11v5M12 7h.01"/></svg>À propos</a>
-</nav>
-<div class="side-tip"><b>ϟ</b>Moins de dépenses,<br>plus de possibilités.</div>
-</aside>
-<main class="main">
-<div class="topline">
-<div class="crumb">UNLOCKHUB / ASTUCES / SÉCURITÉ</div>
-<form class="search" action="../astuces.html" role="search">
-<span aria-hidden="true">⌕</span>
-<input type="search" name="q" placeholder="Rechercher une astuce…" aria-label="Rechercher une astuce">
-</form>
-</div>
+<div class="nav-sheet" id="nav-sheet"><a href="../index.html">Accueil</a><a href="../astuces.html">Astuces</a><a href="../outils.html">Logiciels</a><a href="../apropos.html">À propos</a><p class="nav-sheet-foot">Accès libre, sans compte ni inscription.</p></div>
+<!-- /nav -->
+<main id="contenu" class="page page-article">
 <article class="article">
-<a class="back" href="../astuces.html">← Toutes les astuces</a>
-<div class="eyebrow">SÉCURITÉ</div>
-<h1 class="article-title">Des mots de passe solides sans devenir fou</h1>
-<p class="lede">Un mot de passe unique par compte, c’est la base. Le reste, c’est de l’organisation — pas de la mémoire.</p>
-<div class="article-meta">Mis à jour le 8 novembre 2026 · 6 min de lecture · <a href="securite.html">Sécurité</a></div>
-<a class="article-software" href="../logiciel.html?id=bitwarden"><img src="../assets/logos/bitwarden.svg" alt="Logo Bitwarden" loading="lazy"><div><strong>Bitwarden</strong><span>Fiche, lien officiel et guide d’installation →</span></div></a>
-<nav class="toc" aria-label="Sommaire"><strong>Au sommaire</strong><ol><li><a href="#s1">Pourquoi un mot de passe par compte</a></li><li><a href="#s2">La phrase de passe : longue et mémorisable</a></li><li><a href="#s3">Un gestionnaire pour ne plus retenir</a></li><li><a href="#s4">La checklist en 5 minutes</a></li></ol></nav>
-<h2 id="s1">Pourquoi un mot de passe par compte</h2><p>Quand un site est piraté, les identifiants fuitent et sont testés automatiquement sur des dizaines d’autres services. C’est le credential stuffing : ton mot de passe Gmail devient une clé pour ta banque, tes réseaux et tes achats.</p><p>Réutiliser un mot de passe, c’est donc accepter que la sécurité de tous tes comptes dépende du site le plus mal protégé que tu utilises.</p><h2 id="s2">La phrase de passe : longue et mémorisable</h2><p>Une phrase de passe de 4 à 5 mots aléatoires est plus solide qu’un mot de 8 caractères avec un « ! » à la fin. La longueur compte plus que la complexité.</p><p>Exemple de structure : trois mots sans rapport, un chiffre et un symbole. Ne prends pas un exemple trouvé sur Internet : construis le tien et garde-le uniquement pour ton gestionnaire.</p><ul><li>Vise au moins 14 caractères pour les comptes importants.</li><li>Évite les informations personnelles : prénom, date de naissance, nom du chat.</li><li>Un mot de passe unique par compte, sans exception.</li><li>Ne le transmets jamais par SMS, mail ou messagerie.</li></ul><div class="callout"><strong>À retenir :</strong> ne change pas tes mots de passe tous les 90 jours. Change-les quand ils fuient, quand tu as un doute, ou quand un service te le demande.</div><h2 id="s3">Un gestionnaire pour ne plus retenir</h2><p>Bitwarden, KeePassXC ou Proton Pass génèrent et stockent des mots de passe différents pour chaque site. Tu ne retiens qu’un seul mot de passe maître, solide, et tu actives la double authentification dessus.</p><p>Le gestionnaire intégré au navigateur dépanne, mais un gestionnaire dédié synchronise mieux entre appareils et gère les partages, les notes sécurisées et les codes 2FA.</p><h2 id="s4">La checklist en 5 minutes</h2><p>Commence par les comptes qui peuvent te coûter cher : messagerie principale, banque, comptes gouvernementaux, réseaux sociaux.</p><ol class="steps"><li>Active la double authentification sur ta messagerie principale.</li><li>Change les mots de passe réutilisés, en commençant par les plus sensibles.</li><li>Installe un gestionnaire et importe progressivement tes identifiants.</li><li>Vérifie si ton adresse apparaît dans une fuite connue sur haveibeenpwned.com.</li><li>Note tes codes de secours hors ligne.</li></ol>
-<div class="pager"><a href="../astuces.html">← Toutes les astuces</a><a href="securite.html">Plus de Sécurité →</a></div>
-<section class="related"><h2>À lire ensuite</h2><div class="grid"><a class="guide-card" href="double-authentification.html" data-search="activer la double authentification sans se verrouiller dehors le deuxieme facteur qui bloque la majorite des piratages de compte, et comment le configurer proprement. securite securite double authentification">
+<header class="article-head wrap">
+<div class="article-head-inner"><nav class="crumbs" aria-label="Fil d’Ariane"><a href="../index.html">Accueil</a><a href="../astuces.html">Astuces</a><a href="securite.html">Sécurité</a></nav><h1 class="article-title" data-split="">Des mots de passe solides sans devenir fou</h1><p class="lede">Un mot de passe unique par compte, c’est la base. Le reste, c’est de l’organisation — pas de la mémoire.</p><p class="article-meta"><span>Mis à jour le 8 novembre 2026</span><span>6 min de lecture</span><span><a href="securite.html">Sécurité</a></span></p></div>
+</header>
+<div class="article-layout wrap"><aside class="article-rail"><div class="rail-inner"><nav aria-label="Sommaire" class="toc"><strong>Au sommaire</strong><ol><li><a href="#s1">Pourquoi un mot de passe par compte</a></li><li><a href="#s2">La phrase de passe : longue et mémorisable</a></li><li><a href="#s3">Un gestionnaire pour ne plus retenir</a></li><li><a href="#s4">La checklist en 5 minutes</a></li></ol></nav><a class="article-software" href="../logiciel.html?id=bitwarden"><img alt="Logo Bitwarden" loading="lazy" src="../assets/logos/bitwarden.svg"/><div><strong>Bitwarden</strong><span>Fiche, lien officiel et guide d’installation</span></div></a></div></aside><div class="prose"><h2 id="s1">Pourquoi un mot de passe par compte</h2><p>Quand un site est piraté, les identifiants fuitent et sont testés automatiquement sur des dizaines d’autres services. C’est le credential stuffing : ton mot de passe Gmail devient une clé pour ta banque, tes réseaux et tes achats.</p><p>Réutiliser un mot de passe, c’est donc accepter que la sécurité de tous tes comptes dépende du site le plus mal protégé que tu utilises.</p><h2 id="s2">La phrase de passe : longue et mémorisable</h2><p>Une phrase de passe de 4 à 5 mots aléatoires est plus solide qu’un mot de 8 caractères avec un « ! » à la fin. La longueur compte plus que la complexité.</p><p>Exemple de structure : trois mots sans rapport, un chiffre et un symbole. Ne prends pas un exemple trouvé sur Internet : construis le tien et garde-le uniquement pour ton gestionnaire.</p><ul><li>Vise au moins 14 caractères pour les comptes importants.</li><li>Évite les informations personnelles : prénom, date de naissance, nom du chat.</li><li>Un mot de passe unique par compte, sans exception.</li><li>Ne le transmets jamais par SMS, mail ou messagerie.</li></ul><div class="callout"><strong>À retenir :</strong> ne change pas tes mots de passe tous les 90 jours. Change-les quand ils fuient, quand tu as un doute, ou quand un service te le demande.</div><h2 id="s3">Un gestionnaire pour ne plus retenir</h2><p>Bitwarden, KeePassXC ou Proton Pass génèrent et stockent des mots de passe différents pour chaque site. Tu ne retiens qu’un seul mot de passe maître, solide, et tu actives la double authentification dessus.</p><p>Le gestionnaire intégré au navigateur dépanne, mais un gestionnaire dédié synchronise mieux entre appareils et gère les partages, les notes sécurisées et les codes 2FA.</p><h2 id="s4">La checklist en 5 minutes</h2><p>Commence par les comptes qui peuvent te coûter cher : messagerie principale, banque, comptes gouvernementaux, réseaux sociaux.</p><ol class="steps"><li>Active la double authentification sur ta messagerie principale.</li><li>Change les mots de passe réutilisés, en commençant par les plus sensibles.</li><li>Installe un gestionnaire et importe progressivement tes identifiants.</li><li>Vérifie si ton adresse apparaît dans une fuite connue sur haveibeenpwned.com.</li><li>Note tes codes de secours hors ligne.</li></ol></div></div>
+<footer class="article-end wrap"><div class="pager"><a data-dir="back" href="../astuces.html">Toutes les astuces</a><a href="securite.html">Plus de Sécurité</a></div><section class="related"><h2>À lire ensuite</h2><div class="grid"><a class="guide-card" data-search="activer la double authentification sans se verrouiller dehors le deuxieme facteur qui bloque la majorite des piratages de compte, et comment le configurer proprement. securite securite double authentification" href="double-authentification.html">
 <span class="tag">Sécurité</span>
-<h2>Activer la double authentification sans se verrouiller dehors</h2>
+<h3>Activer la double authentification sans se verrouiller dehors</h3>
 <p>Le deuxième facteur qui bloque la majorité des piratages de compte, et comment le configurer proprement.</p>
-<div class="guide-meta"><span>5 min de lecture</span><span class="more">Lire →</span></div>
-</a><a class="guide-card" href="phishing.html" data-search="reconnaitre un phishing avant de cliquer les signaux qui trahissent un faux mail, un faux sms ou un faux site — et quoi faire si tu es tombe dedans. securite securite phishing">
+<div class="guide-meta"><span>5 min de lecture</span><span aria-hidden="true" class="more">Lire</span></div>
+</a><a class="guide-card" data-search="reconnaitre un phishing avant de cliquer les signaux qui trahissent un faux mail, un faux sms ou un faux site — et quoi faire si tu es tombe dedans. securite securite phishing" href="phishing.html">
 <span class="tag">Sécurité</span>
-<h2>Reconnaître un phishing avant de cliquer</h2>
+<h3>Reconnaître un phishing avant de cliquer</h3>
 <p>Les signaux qui trahissent un faux mail, un faux SMS ou un faux site — et quoi faire si tu es tombé dedans.</p>
-<div class="guide-meta"><span>5 min de lecture</span><span class="more">Lire →</span></div>
-</a><a class="guide-card" href="sauvegardes.html" data-search="sauvegarder ses fichiers : la regle 3-2-1 trois copies, deux supports, une hors de chez toi. le minimum pour ne rien perdre. securite securite sauvegardes">
+<div class="guide-meta"><span>5 min de lecture</span><span aria-hidden="true" class="more">Lire</span></div>
+</a><a class="guide-card" data-search="sauvegarder ses fichiers : la regle 3-2-1 trois copies, deux supports, une hors de chez toi. le minimum pour ne rien perdre. securite securite sauvegardes" href="sauvegardes.html">
 <span class="tag">Sécurité</span>
-<h2>Sauvegarder ses fichiers : la règle 3-2-1</h2>
+<h3>Sauvegarder ses fichiers : la règle 3-2-1</h3>
 <p>Trois copies, deux supports, une hors de chez toi. Le minimum pour ne rien perdre.</p>
-<div class="guide-meta"><span>5 min de lecture</span><span class="more">Lire →</span></div>
-</a></div></section>
+<div class="guide-meta"><span>5 min de lecture</span><span aria-hidden="true" class="more">Lire</span></div>
+</a></div></section></footer>
 </article>
-<div class="footer"><span>© 2026 UnlockHub · <a href="../conditions.html">Conditions</a> · <a href="../confidentialite.html">Confidentialité</a></span><span class="motto">Explore · Apprends · Économise · Grandis</span></div>
 </main>
+<!-- footer -->
+<footer class="site-footer">
+<div class="wrap-wide">
+<div class="footer-top">
+<div class="footer-brand"><a class="wordmark" href="../index.html"><svg class="lock-mark" viewBox="0 0 18 22" aria-hidden="true"><path class="lock-shackle" d="M4.6 10.2V6.6a4.4 4.4 0 0 1 8.8 0v3.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><rect x="1" y="9" width="16" height="12.6" rx="3.4" fill="currentColor"/><path class="lock-hole" d="M9 12.6a1.7 1.7 0 0 1 .9 3.15l.45 2.35h-2.7l.45-2.35A1.7 1.7 0 0 1 9 12.6Z"/></svg><span>Unlock<b>Hub</b></span></a><p>Le numérique, sans se ruiner. Des guides concrets et des logiciels gratuits, en accès libre.</p><div class="footer-rat"><img src="../assets/rat.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span>Toutes les astuces pour être un vrai rat du web.</span></div></div>
+<div class="footer-col"><h2>Astuces</h2><ul><li><a href="../astuces/securite.html">Sécurité</a></li><li><a href="../astuces/pc.html">PC & Windows</a></li><li><a href="../astuces/internet.html">Internet</a></li><li><a href="../astuces/logiciels.html">Logiciels</a></li><li><a href="../astuces/etudiant.html">Étudiant</a></li><li><a href="../astuces/mobile.html">Mobile</a></li><li><a href="../astuces/creation.html">Création</a></li></ul></div>
+<div class="footer-col"><h2>Logiciels</h2><ul><li><a href="../outils.html">Tout le catalogue</a></li><li><a href="../logiciel.html?id=blender">Blender</a></li><li><a href="../logiciel.html?id=davinci-resolve">DaVinci Resolve</a></li><li><a href="../logiciel.html?id=obs-studio">OBS Studio</a></li><li><a href="../logiciel.html?id=gimp">GIMP</a></li><li><a href="../logiciel.html?id=bitwarden">Bitwarden</a></li></ul></div>
+<div class="footer-col"><h2>Le projet</h2><ul><li><a href="../apropos.html">À propos</a></li><li><a href="../conditions.html">Conditions d’utilisation</a></li><li><a href="../confidentialite.html">Confidentialité</a></li><li><a href="https://github.com/rubengermain4-exe/UnlockHub" rel="noopener">Code source</a></li></ul></div>
 </div>
-
+<div class="footer-bottom"><span>© 2026 UnlockHub. Accès libre, sans compte ni inscription.</span><span>Explore, apprends, économise, grandis.</span></div>
+</div>
+</footer>
+<!-- /footer -->
 <script src="../assets/ui.js" defer></script>
 </body>
 </html>

@@ -1,75 +1,70 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#060761">
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="#f5f4f1" name="theme-color">
+<meta content="light" name="color-scheme">
 <title>Prendre des notes qui servent vraiment — UnlockHub</title>
-<meta name="description" content="La méthode simple : structurer, reformuler, réviser, retrouver.">
-<meta property="og:title" content="Prendre des notes qui servent vraiment — UnlockHub">
-<meta property="og:description" content="La méthode simple : structurer, reformuler, réviser, retrouver.">
-<meta property="og:type" content="article">
-<link rel="icon" type="image/svg+xml" href="../favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/site.css">
+<meta content="La méthode simple : structurer, reformuler, réviser, retrouver." name="description">
+<meta content="Prendre des notes qui servent vraiment — UnlockHub" property="og:title">
+<meta content="La méthode simple : structurer, reformuler, réviser, retrouver." property="og:description">
+<meta content="article" property="og:type">
+<link href="../favicon.svg" rel="icon" type="image/svg+xml">
+<link as="font" crossorigin href="../assets/fonts/host-grotesk-latin.woff2" rel="preload" type="font/woff2">
+<link href="../assets/site.css" rel="stylesheet">
+<script>document.documentElement.classList.add("js")</script>
 </head>
-<body>
-<header class="menubar">
-<a class="menubar-brand" href="../index.html"><svg class="menu-lock" viewBox="0 0 48 52" aria-hidden="true"><path d="M15 21v-7a9 9 0 0 1 18 0v7" stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round"/><rect x="7" y="20" width="34" height="29" rx="5" fill="currentColor"/><circle cx="24" cy="32" r="3" fill="#111"/><path d="M24 35v5" stroke="#111" stroke-width="3" stroke-linecap="round"/></svg>UnlockHub</a>
-<nav aria-label="Menu principal"><a data-section="astuces" href="../astuces.html">Astuces</a><a data-section="outils" href="../outils.html">Logiciels</a><a href="../apropos.html">À propos</a></nav>
-<div class="menubar-right"><span class="menu-status">Fanzine n°01 — Gratuit</span></div>
+<body class="is-article">
+<!-- nav -->
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="site-nav" data-nav>
+<div class="site-nav-inner">
+<a class="wordmark" href="../index.html" aria-label="UnlockHub, accueil"><svg class="lock-mark" viewBox="0 0 18 22" aria-hidden="true"><path class="lock-shackle" d="M4.6 10.2V6.6a4.4 4.4 0 0 1 8.8 0v3.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><rect x="1" y="9" width="16" height="12.6" rx="3.4" fill="currentColor"/><path class="lock-hole" d="M9 12.6a1.7 1.7 0 0 1 .9 3.15l.45 2.35h-2.7l.45-2.35A1.7 1.7 0 0 1 9 12.6Z"/></svg><span>Unlock<b>Hub</b></span></a>
+<nav class="nav-links" aria-label="Menu principal"><a href="../astuces.html" data-section="astuces" aria-current="page">Astuces</a><a href="../outils.html" data-section="outils">Logiciels</a><a href="../apropos.html" data-section="apropos">À propos</a></nav>
+<a class="nav-search" href="../astuces.html" data-palette aria-label="Rechercher un guide ou un logiciel"><span>Rechercher</span><kbd>/</kbd></a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-sheet" aria-label="Menu"><span></span><span></span></button>
+</div>
 </header>
-<div class="layout">
-<aside class="sidebar">
-<a class="brand" href="../index.html"><span class="brand-icon">⬡</span><span>Unlock<span>Hub</span></span></a>
-<nav class="nav" aria-label="Navigation">
-<a href="../index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v11h14V9M9 20v-7h6v7"/></svg>Accueil</a>
-<a href="../astuces.html" class="active"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 22h4M8 14c-1.3-1.1-2-2.7-2-4.5a6 6 0 1 1 12 0c0 1.8-.7 3.4-2 4.5-.8.7-1 1.4-1 2h-6c0-.6-.2-1.3-1-2Z"/></svg>Astuces</a>
-<a href="../outils.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 17v4h16v-4"/></svg>Logiciels</a>
-<a href="../apropos.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 11v5M12 7h.01"/></svg>À propos</a>
-</nav>
-<div class="side-tip"><b>ϟ</b>Moins de dépenses,<br>plus de possibilités.</div>
-</aside>
-<main class="main">
-<div class="topline">
-<div class="crumb">UNLOCKHUB / ASTUCES / ÉTUDIANT</div>
-<form class="search" action="../astuces.html" role="search">
-<span aria-hidden="true">⌕</span>
-<input type="search" name="q" placeholder="Rechercher une astuce…" aria-label="Rechercher une astuce">
-</form>
-</div>
+<div class="nav-sheet" id="nav-sheet"><a href="../index.html">Accueil</a><a href="../astuces.html">Astuces</a><a href="../outils.html">Logiciels</a><a href="../apropos.html">À propos</a><p class="nav-sheet-foot">Accès libre, sans compte ni inscription.</p></div>
+<!-- /nav -->
+<main id="contenu" class="page page-article">
 <article class="article">
-<a class="back" href="../astuces.html">← Toutes les astuces</a>
-<div class="eyebrow">ÉTUDIANT</div>
-<h1 class="article-title">Prendre des notes qui servent vraiment</h1>
-<p class="lede">Recopier le cours ne suffit pas. Une bonne note est une note que tu peux relire et comprendre six semaines plus tard.</p>
-<div class="article-meta">Mis à jour le 8 novembre 2026 · 5 min de lecture · <a href="etudiant.html">Étudiant</a></div>
-<nav class="toc" aria-label="Sommaire"><strong>Au sommaire</strong><ol><li><a href="#s1">Avant le cours</a></li><li><a href="#s2">Pendant le cours</a></li><li><a href="#s3">Après le cours</a></li><li><a href="#s4">Retrouver et réviser</a></li></ol></nav>
-<h2 id="s1">Avant le cours</h2><p>Survole le chapitre et note deux ou trois questions auxquelles le cours devrait répondre. Tu écoutes différemment quand tu cherches une réponse précise.</p><p>Prépare une page avec le titre, la date et la source. Ce détail t’évitera de mélanger deux cours quand tu réviseras.</p><h2 id="s2">Pendant le cours</h2><ul><li>Note les idées et les mots-clés, pas chaque phrase.</li><li>Utilise tes propres mots : reformuler force la compréhension.</li><li>Marque les points flous avec un point d’interrogation plutôt que de tout recopier.</li><li>Laisse de la marge pour compléter après le cours.</li><li>Si le rythme est trop rapide, enregistre avec accord et reprends les passages difficiles.</li></ul><div class="callout"><strong>Le test :</strong> si tu ne peux pas expliquer ta note à quelqu’un d’autre, réécris la partie confuse. Une note claire est déjà à moitié apprise.</div><h2 id="s3">Après le cours</h2><p>Prends dix minutes le jour même pour relire, corriger et ajouter un résumé de trois lignes. C’est le moment où tu as le plus de contexte, et donc le moins d’effort à fournir.</p><p>Relie la note à une autre : « voir chapitre 3 », « contraire de… », « exemple vu en TD ». Les liens transforment une collection de pages en mémoire structurée.</p><h2 id="s4">Retrouver et réviser</h2><p>Une note que tu ne retrouves pas ne sert à rien. Utilise des titres clairs, des tags cohérents et un seul vocabulaire pour les mêmes notions.</p><p>Pour réviser, ne relis pas passivement : pose-toi des questions, récite à voix haute, refais un exercice sans regarder la correction.</p>
-<div class="pager"><a href="../astuces.html">← Toutes les astuces</a><a href="etudiant.html">Plus de Étudiant →</a></div>
-<section class="related"><h2>À lire ensuite</h2><div class="grid"><a class="guide-card" href="outils-etudiant.html" data-search="10 outils gratuits qui sauvent un etudiant notes, bibliographie, flashcards, pdf, maths : la boite a outils sans abonnement. etudiant etudiant outils etudiant">
+<header class="article-head wrap">
+<div class="article-head-inner"><nav class="crumbs" aria-label="Fil d’Ariane"><a href="../index.html">Accueil</a><a href="../astuces.html">Astuces</a><a href="etudiant.html">Étudiant</a></nav><h1 class="article-title" data-split="">Prendre des notes qui servent vraiment</h1><p class="lede">Recopier le cours ne suffit pas. Une bonne note est une note que tu peux relire et comprendre six semaines plus tard.</p><p class="article-meta"><span>Mis à jour le 8 novembre 2026</span><span>5 min de lecture</span><span><a href="etudiant.html">Étudiant</a></span></p></div>
+</header>
+<div class="article-layout wrap"><aside class="article-rail"><div class="rail-inner"><nav aria-label="Sommaire" class="toc"><strong>Au sommaire</strong><ol><li><a href="#s1">Avant le cours</a></li><li><a href="#s2">Pendant le cours</a></li><li><a href="#s3">Après le cours</a></li><li><a href="#s4">Retrouver et réviser</a></li></ol></nav></div></aside><div class="prose"><h2 id="s1">Avant le cours</h2><p>Survole le chapitre et note deux ou trois questions auxquelles le cours devrait répondre. Tu écoutes différemment quand tu cherches une réponse précise.</p><p>Prépare une page avec le titre, la date et la source. Ce détail t’évitera de mélanger deux cours quand tu réviseras.</p><h2 id="s2">Pendant le cours</h2><ul><li>Note les idées et les mots-clés, pas chaque phrase.</li><li>Utilise tes propres mots : reformuler force la compréhension.</li><li>Marque les points flous avec un point d’interrogation plutôt que de tout recopier.</li><li>Laisse de la marge pour compléter après le cours.</li><li>Si le rythme est trop rapide, enregistre avec accord et reprends les passages difficiles.</li></ul><div class="callout"><strong>Le test :</strong> si tu ne peux pas expliquer ta note à quelqu’un d’autre, réécris la partie confuse. Une note claire est déjà à moitié apprise.</div><h2 id="s3">Après le cours</h2><p>Prends dix minutes le jour même pour relire, corriger et ajouter un résumé de trois lignes. C’est le moment où tu as le plus de contexte, et donc le moins d’effort à fournir.</p><p>Relie la note à une autre : « voir chapitre 3 », « contraire de… », « exemple vu en TD ». Les liens transforment une collection de pages en mémoire structurée.</p><h2 id="s4">Retrouver et réviser</h2><p>Une note que tu ne retrouves pas ne sert à rien. Utilise des titres clairs, des tags cohérents et un seul vocabulaire pour les mêmes notions.</p><p>Pour réviser, ne relis pas passivement : pose-toi des questions, récite à voix haute, refais un exercice sans regarder la correction.</p></div></div>
+<footer class="article-end wrap"><div class="pager"><a data-dir="back" href="../astuces.html">Toutes les astuces</a><a href="etudiant.html">Plus de Étudiant</a></div><section class="related"><h2>À lire ensuite</h2><div class="grid"><a class="guide-card" data-search="10 outils gratuits qui sauvent un etudiant notes, bibliographie, flashcards, pdf, maths : la boite a outils sans abonnement. etudiant etudiant outils etudiant" href="outils-etudiant.html">
 <span class="tag">Étudiant</span>
-<h2>10 outils gratuits qui sauvent un étudiant</h2>
-<p>Notes, bibliographie, flashcards, PDF, maths : la boîte à outils sans abonnement.</p>
-<div class="guide-meta"><span>6 min de lecture</span><span class="more">Lire →</span></div>
-</a><a class="guide-card" href="organisation-revisions.html" data-search="organiser ses revisions sans se mentir un planning realiste, des sessions courtes, et de la recuperation active. etudiant etudiant organisation revisions">
+<h3>10 outils gratuits qui sauvent un étudiant</h3>
+<p>Notes, bibliographie, flashcards, PDF, maths : la boîte à outils sans abonnement.</p>
+<div class="guide-meta"><span>6 min de lecture</span><span aria-hidden="true" class="more">Lire</span></div>
+</a><a class="guide-card" data-search="organiser ses revisions sans se mentir un planning realiste, des sessions courtes, et de la recuperation active. etudiant etudiant organisation revisions" href="organisation-revisions.html">
 <span class="tag">Étudiant</span>
-<h2>Organiser ses révisions sans se mentir</h2>
+<h3>Organiser ses révisions sans se mentir</h3>
 <p>Un planning réaliste, des sessions courtes, et de la récupération active.</p>
-<div class="guide-meta"><span>6 min de lecture</span><span class="more">Lire →</span></div>
-</a><a class="guide-card" href="cv-lettre.html" data-search="un cv et une lettre propres, gratuitement les outils, la structure et les erreurs qui font passer ton cv a la corbeille. etudiant etudiant cv lettre">
+<div class="guide-meta"><span>6 min de lecture</span><span aria-hidden="true" class="more">Lire</span></div>
+</a><a class="guide-card" data-search="un cv et une lettre propres, gratuitement les outils, la structure et les erreurs qui font passer ton cv a la corbeille. etudiant etudiant cv lettre" href="cv-lettre.html">
 <span class="tag">Étudiant</span>
-<h2>Un CV et une lettre propres, gratuitement</h2>
+<h3>Un CV et une lettre propres, gratuitement</h3>
 <p>Les outils, la structure et les erreurs qui font passer ton CV à la corbeille.</p>
-<div class="guide-meta"><span>5 min de lecture</span><span class="more">Lire →</span></div>
-</a></div></section>
+<div class="guide-meta"><span>5 min de lecture</span><span aria-hidden="true" class="more">Lire</span></div>
+</a></div></section></footer>
 </article>
-<div class="footer"><span>© 2026 UnlockHub · <a href="../conditions.html">Conditions</a> · <a href="../confidentialite.html">Confidentialité</a></span><span class="motto">Explore · Apprends · Économise · Grandis</span></div>
 </main>
+<!-- footer -->
+<footer class="site-footer">
+<div class="wrap-wide">
+<div class="footer-top">
+<div class="footer-brand"><a class="wordmark" href="../index.html"><svg class="lock-mark" viewBox="0 0 18 22" aria-hidden="true"><path class="lock-shackle" d="M4.6 10.2V6.6a4.4 4.4 0 0 1 8.8 0v3.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><rect x="1" y="9" width="16" height="12.6" rx="3.4" fill="currentColor"/><path class="lock-hole" d="M9 12.6a1.7 1.7 0 0 1 .9 3.15l.45 2.35h-2.7l.45-2.35A1.7 1.7 0 0 1 9 12.6Z"/></svg><span>Unlock<b>Hub</b></span></a><p>Le numérique, sans se ruiner. Des guides concrets et des logiciels gratuits, en accès libre.</p><div class="footer-rat"><img src="../assets/rat.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span>Toutes les astuces pour être un vrai rat du web.</span></div></div>
+<div class="footer-col"><h2>Astuces</h2><ul><li><a href="../astuces/securite.html">Sécurité</a></li><li><a href="../astuces/pc.html">PC & Windows</a></li><li><a href="../astuces/internet.html">Internet</a></li><li><a href="../astuces/logiciels.html">Logiciels</a></li><li><a href="../astuces/etudiant.html">Étudiant</a></li><li><a href="../astuces/mobile.html">Mobile</a></li><li><a href="../astuces/creation.html">Création</a></li></ul></div>
+<div class="footer-col"><h2>Logiciels</h2><ul><li><a href="../outils.html">Tout le catalogue</a></li><li><a href="../logiciel.html?id=blender">Blender</a></li><li><a href="../logiciel.html?id=davinci-resolve">DaVinci Resolve</a></li><li><a href="../logiciel.html?id=obs-studio">OBS Studio</a></li><li><a href="../logiciel.html?id=gimp">GIMP</a></li><li><a href="../logiciel.html?id=bitwarden">Bitwarden</a></li></ul></div>
+<div class="footer-col"><h2>Le projet</h2><ul><li><a href="../apropos.html">À propos</a></li><li><a href="../conditions.html">Conditions d’utilisation</a></li><li><a href="../confidentialite.html">Confidentialité</a></li><li><a href="https://github.com/rubengermain4-exe/UnlockHub" rel="noopener">Code source</a></li></ul></div>
 </div>
-
+<div class="footer-bottom"><span>© 2026 UnlockHub. Accès libre, sans compte ni inscription.</span><span>Explore, apprends, économise, grandis.</span></div>
+</div>
+</footer>
+<!-- /footer -->
 <script src="../assets/ui.js" defer></script>
 </body>
 </html>

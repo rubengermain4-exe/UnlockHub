@@ -1,161 +1,185 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#111111">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f0e0d">
+<meta name="color-scheme" content="light">
 <title>UnlockHub — Le numérique, sans se ruiner</title>
 <meta name="description" content="30 guides, 21 logiciels gratuits et zéro compte. Des astuces concrètes pour mieux utiliser ton PC, ton téléphone et Internet.">
+<meta property="og:title" content="UnlockHub — Le numérique, sans se ruiner">
+<meta property="og:description" content="30 guides, 21 logiciels gratuits et zéro compte. Des astuces concrètes pour mieux utiliser ton PC, ton téléphone et Internet.">
+<meta property="og:type" content="website">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preload" href="assets/fonts/host-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/home.css">
 </head>
-<body>
-<header class="menubar">
-<a class="menubar-brand" href="index.html"><svg class="menu-lock" viewBox="0 0 48 52" aria-hidden="true"><path d="M15 21v-7a9 9 0 0 1 18 0v7" stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round"/><rect x="7" y="20" width="34" height="29" rx="5" fill="currentColor"/><circle cx="24" cy="32" r="3" fill="#111"/><path d="M24 35v5" stroke="#111" stroke-width="3" stroke-linecap="round"/></svg>UnlockHub</a>
-<nav aria-label="Menu principal"><a data-section="astuces" href="astuces.html">Astuces</a><a data-section="outils" href="outils.html">Logiciels</a><a href="apropos.html">À propos</a></nav>
-<div class="menubar-right"><span class="menu-status">Fanzine n°01 — Gratuit</span></div>
-</header>
-<div class="layout">
-  <aside class="sidebar">
-    <a class="brand" href="index.html" aria-label="UnlockHub accueil"><span class="brand-icon" aria-hidden="true"></span><span class="brand-name">Unlock<span>Hub</span></span></a>
-    <nav class="nav" aria-label="Navigation">
-<a href="index.html" class="active"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v11h14V9M9 20v-7h6v7"/></svg>Accueil</a>
-<a href="astuces.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 22h4M8 14c-1.3-1.1-2-2.7-2-4.5a6 6 0 1 1 12 0c0 1.8-.7 3.4-2 4.5-.8.7-1 1.4-1 2h-6c0-.6-.2-1.3-1-2Z"/></svg>Astuces</a>
-<a href="outils.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 17v4h16v-4"/></svg>Logiciels</a>
-<a href="apropos.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 11v5M12 7h.01"/></svg>À propos</a>
-</nav>
-    <div class="side-tip"><b>ϟ</b>Accès libre.<br>Sans compte.<br>Sans blabla.</div>
-  </aside>
-
-  <main class="main">
-    <div class="topline">
-      <div class="crumb">UnlockHub / Sommaire</div>
-      <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Chercher un guide ou un logiciel…" aria-label="Rechercher"></label>
-    </div>
-
-    <div class="window-head">
-      <div>
-        <div class="eyebrow">Accès libre · sans compte</div>
-        <h1 class="page-title">Sommaire<span>.</span></h1>
-        <p class="intro" style="margin:0">Le numérique, sans se ruiner. Ouvre un dossier ou cherche.</p>
-      </div>
-      <div class="stats" aria-label="Chiffres du site">
-        <div class="stat"><strong>30</strong><span>guides</span></div>
-        <div class="stat"><strong>21</strong><span>logiciels</span></div>
-        <div class="stat"><strong>0</strong><span>compte</span></div>
-      </div>
-    </div>
-
-    <section aria-labelledby="dossiers">
-      <div class="section-head"><h2 id="dossiers">Dossiers</h2><span class="count">4 éléments</span></div>
-      <div class="cat-grid">
-        <a class="cat-card" href="astuces.html" data-search="astuces guides conseils sécurité pc internet étudiant mobile création">
-          <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 22h4M8 14c-1.3-1.1-2-2.7-2-4.5a6 6 0 1 1 12 0c0 1.8-.7 3.4-2 4.5-.8.7-1 1.4-1 2h-6c0-.6-.2-1.3-1-2Z"/></svg></div>
-          <div><h2>Astuces</h2><p>30 guides pour protéger, accélérer et mieux utiliser ton matériel.</p></div>
-        </a>
-        <a class="cat-card" href="outils.html" data-search="logiciels outils gratuits catalogue blender gimp obs davinci">
-          <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 17v4h16v-4"/></svg></div>
-          <div><h2>Logiciels</h2><p>21 fiches de logiciels gratuits, avec logos et liens officiels.</p></div>
-        </a>
-        <a class="cat-card" href="astuces/creation.html" data-search="création blender davinci obs gimp krita inkscape dessin vidéo 3d">
-          <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="4"/><path d="m8 6 1.5-2h5L16 6"/></svg></div>
-          <div><h2>Création</h2><p>Blender, DaVinci, OBS, GIMP : les outils gratuits pour créer.</p></div>
-        </a>
-        <a class="cat-card" href="apropos.html" data-search="à propos projet unlockhub contact méthode">
-          <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 11v5M12 7h.01"/></svg></div>
-          <div><h2>À propos</h2><p>La méthode, les sources et les règles éditoriales du projet.</p></div>
-        </a>
-      </div>
-    </section>
-
-    <section aria-labelledby="a-la-une">
-      <div class="section-head"><h2 id="a-la-une">À la une</h2><a class="all-cats" href="outils.html">Ouvrir le catalogue →</a></div>
-      <div class="grid four">
-        <a class="software-card" href="logiciel.html?id=blender" data-search="blender 3d modélisation animation rendu création">
-          <div class="software-logo"><img src="assets/logos/blender.svg" alt="Logo Blender"></div>
-          <h2>Blender</h2><p>Modélisation 3D, animation et rendus de qualité professionnelle.</p>
-          <div class="meta"><span class="tag">Création 3D</span></div>
-          <span class="card-link">Ouvrir →</span>
-        </a>
-        <a class="software-card" href="logiciel.html?id=davinci-resolve" data-search="davinci resolve montage vidéo étalonnage audio">
-          <div class="software-logo"><img src="assets/logos/davinci-resolve.svg" alt="Logo DaVinci Resolve"></div>
-          <h2>DaVinci Resolve</h2><p>Monte et étalonne tes vidéos avec une version gratuite complète.</p>
-          <div class="meta"><span class="tag">Vidéo</span></div>
-          <span class="card-link">Ouvrir →</span>
-        </a>
-        <a class="software-card" href="logiciel.html?id=obs-studio" data-search="obs studio capture écran streaming enregistrement">
-          <div class="software-logo"><img src="assets/logos/obs.svg" alt="Logo OBS Studio"></div>
-          <h2>OBS Studio</h2><p>Enregistre ton écran et streame avec des scènes et des sources.</p>
-          <div class="meta"><span class="tag">Capture</span></div>
-          <span class="card-link">Ouvrir →</span>
-        </a>
-        <a class="software-card" href="logiciel.html?id=gimp" data-search="gimp retouche photo design image">
-          <div class="software-logo"><img src="assets/logos/gimp.svg" alt="Logo GIMP"></div>
-          <h2>GIMP</h2><p>Retouche tes photos et crée des visuels sans abonnement.</p>
-          <div class="meta"><span class="tag">Photo</span></div>
-          <span class="card-link">Ouvrir →</span>
-        </a>
-      </div>
-    </section>
-
-    <section aria-labelledby="guides-recents">
-      <div class="section-head"><h2 id="guides-recents">Derniers guides</h2><a class="all-cats" href="astuces.html">Tout voir →</a></div>
-      <div class="grid">
-        <a class="guide-card" href="astuces/mots-de-passe.html" data-search="mots de passe sécurité gestionnaire phrases de passe">
-          <span class="tag">Sécurité</span><h2>Des mots de passe solides sans devenir fou</h2><p>La méthode des phrases de passe, un gestionnaire et les erreurs à arrêter.</p>
-          <div class="guide-meta"><span>6 min</span><span class="more">Lire →</span></div>
-        </a>
-        <a class="guide-card" href="astuces/debuter-blender.html" data-search="blender 3d débuter interface modélisation création">
-          <span class="tag">Création</span><h2>Débuter sur Blender sans se perdre</h2><p>Interface, navigation, premiers objets et export : le strict nécessaire.</p>
-          <div class="guide-meta"><span>7 min</span><span class="more">Lire →</span></div>
-        </a>
-        <a class="guide-card" href="astuces/nettoyer-windows.html" data-search="windows nettoyage stockage démarrage pc">
-          <span class="tag">PC</span><h2>Nettoyer Windows sans logiciel miracle</h2><p>Stockage, démarrage, désinstallation : les outils intégrés suffisent.</p>
-          <div class="guide-meta"><span>5 min</span><span class="more">Lire →</span></div>
-        </a>
-        <a class="guide-card" href="astuces/wifi.html" data-search="wifi box réseau 5ghz 2.4ghz canal débit">
-          <span class="tag">Internet</span><h2>Un Wi-Fi qui rame : les vraies causes</h2><p>Placement, bande 5 GHz, canaux et firmware avant d’appeler le FAI.</p>
-          <div class="guide-meta"><span>6 min</span><span class="more">Lire →</span></div>
-        </a>
-        <a class="guide-card" href="astuces/alternatives-office.html" data-search="office libreoffice onlyoffice word excel bureautique">
-          <span class="tag">Logiciels</span><h2>Microsoft Office gratuit : les options sérieuses</h2><p>LibreOffice, OnlyOffice, Google Docs : compatibilité et limites.</p>
-          <div class="guide-meta"><span>5 min</span><span class="more">Lire →</span></div>
-        </a>
-        <a class="guide-card" href="astuces/organisation-revisions.html" data-search="révisions étudiant planning organisation mémorisation">
-          <span class="tag">Étudiant</span><h2>Organiser ses révisions sans se mentir</h2><p>Un planning réaliste, des sessions courtes et de la récupération active.</p>
-          <div class="guide-meta"><span>6 min</span><span class="more">Lire →</span></div>
-        </a>
-      </div>
-    </section>
-
-    <p class="intro" id="empty" hidden>Aucun résultat. Essaie « blender », « wifi » ou « cv ».</p>
-
-    <footer class="footer">
-      <span>30 guides · 21 logiciels · Accès libre</span>
-      <span class="motto">Explore · Apprends · Économise · Grandis</span>
-    </footer>
-  </main>
+<body class="is-home">
+<!-- nav -->
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="site-nav" data-nav>
+<div class="site-nav-inner">
+<a class="wordmark" href="index.html" aria-label="UnlockHub, accueil"><svg class="lock-mark" viewBox="0 0 18 22" aria-hidden="true"><path class="lock-shackle" d="M4.6 10.2V6.6a4.4 4.4 0 0 1 8.8 0v3.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><rect x="1" y="9" width="16" height="12.6" rx="3.4" fill="currentColor"/><path class="lock-hole" d="M9 12.6a1.7 1.7 0 0 1 .9 3.15l.45 2.35h-2.7l.45-2.35A1.7 1.7 0 0 1 9 12.6Z"/></svg><span>Unlock<b>Hub</b></span></a>
+<nav class="nav-links" aria-label="Menu principal"><a href="astuces.html" data-section="astuces">Astuces</a><a href="outils.html" data-section="outils">Logiciels</a><a href="apropos.html" data-section="apropos">À propos</a></nav>
+<a class="nav-search" href="astuces.html" data-palette aria-label="Rechercher un guide ou un logiciel"><span>Rechercher</span><kbd>/</kbd></a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-sheet" aria-label="Menu"><span></span><span></span></button>
 </div>
-<script>
-const search=document.getElementById('search');
-const items=[...document.querySelectorAll('[data-search]')];
-const empty=document.getElementById('empty');
-function filter(){
-  const q=search.value.trim().toLocaleLowerCase('fr');
-  let n=0;
-  items.forEach(el=>{
-    const ok=!q||el.dataset.search.toLocaleLowerCase('fr').includes(q);
-    el.hidden=!ok;
-    if(ok)n++;
-  });
-  empty.hidden=n>0;
-}
-search.addEventListener('input',filter);
-document.addEventListener('keydown',e=>{
-  if(e.key==='/'&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)){e.preventDefault();search.focus()}
-  if(e.key==='Escape'){search.value='';filter();search.blur()}
-});
-</script>
+</header>
+<div class="nav-sheet" id="nav-sheet"><a href="index.html">Accueil</a><a href="astuces.html">Astuces</a><a href="outils.html">Logiciels</a><a href="apropos.html">À propos</a><p class="nav-sheet-foot">Accès libre, sans compte ni inscription.</p></div>
+<!-- /nav -->
+<main id="contenu">
+
+<section class="hero" data-theme="dark" aria-labelledby="hero-title">
+<div class="hero-stage">
+<div class="hero-light" aria-hidden="true"></div>
+<div class="hero-copy wrap-wide">
+<h1 id="hero-title" class="hero-title" data-split>Le numérique,<br>sans se ruiner.</h1>
+<p class="hero-sub">30 guides, 21 logiciels gratuits et zéro compte. Des astuces concrètes pour mieux utiliser ton PC, ton téléphone et Internet.</p>
+<div class="hero-actions on-night">
+<a class="btn btn-primary" href="astuces.html">Lire les astuces</a>
+<a class="btn btn-ghost" href="outils.html">Voir les logiciels</a>
+</div>
+</div>
+<div class="lock" aria-hidden="true">
+<div class="lock-glow"></div>
+<div class="lock-shadow"></div>
+<div class="lock-shackle-wrap"><svg class="lock-shackle" viewBox="0 0 300 420" aria-hidden="true" focusable="false">
+<defs>
+<linearGradient id="steel" x1="40" y1="0" x2="260" y2="0" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="#5b5955"/><stop offset=".1" stop-color="#d9d6d0"/><stop offset=".2" stop-color="#8d8a84"/>
+<stop offset=".5" stop-color="#bdb9b2"/><stop offset=".8" stop-color="#77746e"/><stop offset=".9" stop-color="#e6e3dd"/><stop offset="1" stop-color="#55534f"/>
+</linearGradient>
+</defs>
+<path d="M78 250V112a72 72 0 0 1 144 0v92" fill="none" stroke="url(#steel)" stroke-width="34" stroke-linecap="round"/>
+<path d="M78 250V112a72 72 0 0 1 144 0v92" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="3" stroke-linecap="round" transform="translate(-9 0)"/>
+</svg></div>
+<svg class="lock-body" viewBox="0 0 300 420" aria-hidden="true" focusable="false">
+<defs>
+<linearGradient id="bodyFill" x1="0" y1="170" x2="0" y2="400" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="#34312d"/><stop offset=".45" stop-color="#1d1b19"/><stop offset="1" stop-color="#0d0c0b"/>
+</linearGradient>
+<linearGradient id="bodySheen" x1="20" y1="0" x2="280" y2="0" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".22" stop-color="#fff" stop-opacity=".09"/><stop offset=".34" stop-color="#fff" stop-opacity="0"/>
+<stop offset=".8" stop-color="#fff" stop-opacity="0"/><stop offset=".92" stop-color="#fff" stop-opacity=".06"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="rim" x1="0" y1="170" x2="0" y2="400" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="#8b867e"/><stop offset=".12" stop-color="#3a3733"/><stop offset="1" stop-color="#121110"/>
+</linearGradient>
+<radialGradient id="holeLight" cx="150" cy="268" r="70" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="#f5f4f1"/><stop offset=".45" stop-color="#f5f4f1"/><stop offset="1" stop-color="#f6d9c4"/>
+</radialGradient>
+</defs>
+<rect x="20" y="170" width="260" height="230" rx="46" fill="url(#rim)"/>
+<rect x="23" y="173" width="254" height="224" rx="43" fill="url(#bodyFill)"/>
+<rect x="23" y="173" width="254" height="224" rx="43" fill="url(#bodySheen)"/>
+<path d="M66 175h168" stroke="#fff" stroke-opacity=".22" stroke-width="1.5" stroke-linecap="round"/>
+<path class="hole-ring" d="M150 238a24 24 0 0 1 13.4 43.9L173 334h-46l9.6-52.1A24 24 0 0 1 150 238Z" fill="#070606" stroke="#4a4641" stroke-width="2"/>
+<path class="hole-dark" d="M150 242a20 20 0 0 1 11.1 36.6L170 330h-40l8.9-51.4A20 20 0 0 1 150 242Z" fill="#000"/>
+<path class="hole-light" d="M150 242a20 20 0 0 1 11.1 36.6L170 330h-40l8.9-51.4A20 20 0 0 1 150 242Z" fill="url(#holeLight)"/>
+</svg>
+<div class="lock-floor"></div>
+</div>
+<p class="hero-free" aria-hidden="true"><span>Accès libre.</span> <span>Sans compte.</span> <span>Sans blabla.</span></p>
+<p class="hero-cue" aria-hidden="true"><span class="hero-cue-line"></span>Fais défiler pour déverrouiller</p>
+</div>
+</section>
+
+<section class="manifesto" aria-label="Le projet">
+<div class="wrap">
+<p class="manifesto-text" data-scrub>Le numérique coûte cher surtout quand on ne sait pas quoi choisir. UnlockHub rassemble des astuces simples, des logiciels gratuits et des explications vérifiables.</p>
+<dl class="proof">
+<div><dt>guides pratiques</dt><dd class="tnum">30</dd></div>
+<div><dt>logiciels gratuits</dt><dd class="tnum">21</dd></div>
+<div><dt>dossiers</dt><dd class="tnum">7</dd></div>
+<div><dt>compte à créer</dt><dd class="tnum">0</dd></div>
+</dl>
+</div>
+</section>
+
+<section class="apps" data-theme="dark" aria-labelledby="apps-title">
+<div class="apps-stage">
+<div class="apps-inner wrap-wide">
+<div class="apps-copy">
+<h2 id="apps-title" class="h-section">21 logiciels.<br>Zéro abonnement.</h2>
+<p>Que du gratuit, des liens officiels, pas de repack. Chaque fiche explique à quoi sert l’outil, comment l’installer et renvoie vers le site de l’éditeur.</p>
+<a class="link-arrow" href="outils.html">Ouvrir le catalogue<span class="i" aria-hidden="true"></span></a>
+</div>
+<ul class="app-cloud" role="list">
+<li class="app-dot" style="--n:0"><a href="logiciel.html?id=blender" aria-label="Blender, Création 3D"><span class="app-dot-icon"><img src="assets/logos/blender.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="app-dot-name">Blender</span></a></li><li class="app-dot" style="--n:1"><a href="logiciel.html?id=obsidian" aria-label="Obsidian, Organisation"><span class="app-dot-icon"><img src="assets/logos/obsidian.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="app-dot-name">Obsidian</span></a></li><li class="app-dot" style="--n:2"><a href="logiciel.html?id=vscode" aria-label="Visual Studio Code, Programmation"><span class="app-dot-icon"><img src="assets/logos/vscode.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="app-dot-name">Visual Studio Code</span></a></li><li class="app-dot" style="--n:3"><a href="logiciel.html?id=gimp" aria-label="GIMP, Design"><span class="app-dot-icon"><img src="assets/logos/gimp.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="app-dot-name">GIMP</span></a></li><li class="app-dot" style="--n:4"><a href="logiciel.html?id=7zip" aria-label="7-Zip, Utilitaire"><span class="app-dot-icon"><img src="assets/logos/7zip.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="app-dot-name">7-Zip</span></a></li><li class="app-dot" style="--n:5"><a href="logiciel.html?id=sharex" aria-label="ShareX, Utilitaire"><span class="app-dot-icon"><img src="assets/logos/sharex.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="app-dot-name">ShareX</span></a></li><li class="app-dot" style="--n:6"><a href="logiciel.html?id=libreoffice" aria-label="LibreOffice, Bureautique"><span class="app-dot-icon"><img src="assets/logos/libreoffice.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="app-dot-name">LibreOffice</span></a></li><li class="app-dot" style="--n:7"><a href="logiciel.html?id=krita" aria-label="Krita, Design"><span class="app-dot-icon"><img src="assets/logos/krita.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="app-dot-name">Krita</span></a></li><li class="app-dot" style="--n:8"><a href="logiciel.html?id=vlc" aria-label="VLC, Multimédia"><span class="app-dot-icon"><img src="assets/logos/vlc.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="app-dot-name">VLC</span></a></li><li class="app-dot" style="--n:9"><a href="logiciel.html?id=davinci-resolve" aria-label="DaVinci Resolve, Multimédia"><span class="app-dot-icon"><img src="assets/logos/davinci-resolve.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="app-dot-name">DaVinci Resolve</span></a></li><li class="app-dot" style="--n:10"><a href="logiciel.html?id=obs-studio" aria-label="OBS Studio, Multimédia"><span class="app-dot-icon"><img src="assets/logos/obs.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="app-dot-name">OBS Studio</span></a></li><li class="app-dot" style="--n:11"><a href="logiciel.html?id=audacity" aria-label="Audacity, Multimédia"><span class="app-dot-icon"><img src="assets/logos/audacity.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="app-dot-name">Audacity</span></a></li><li class="app-dot" style="--n:12"><a href="logiciel.html?id=inkscape" aria-label="Inkscape, Design"><span class="app-dot-icon"><img src="assets/logos/inkscape.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="app-dot-name">Inkscape</span></a></li><li class="app-dot" style="--n:13"><a href="logiciel.html?id=keepassxc" aria-label="KeePassXC, Sécurité"><span class="app-dot-icon"><img src="assets/logos/keepassxc.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="app-dot-name">KeePassXC</span></a></li><li class="app-dot" style="--n:14"><a href="logiciel.html?id=bitwarden" aria-label="Bitwarden, Sécurité"><span class="app-dot-icon"><img src="assets/logos/bitwarden.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="app-dot-name">Bitwarden</span></a></li><li class="app-dot" style="--n:15"><a href="logiciel.html?id=firefox" aria-label="Firefox, Navigateur"><span class="app-dot-icon"><img src="assets/logos/firefox.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="app-dot-name">Firefox</span></a></li><li class="app-dot" style="--n:16"><a href="logiciel.html?id=thunderbird" aria-label="Thunderbird, Bureautique"><span class="app-dot-icon"><img src="assets/logos/thunderbird.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="app-dot-name">Thunderbird</span></a></li><li class="app-dot" style="--n:17"><a href="logiciel.html?id=onlyoffice" aria-label="OnlyOffice, Bureautique"><span class="app-dot-icon"><img src="assets/logos/onlyoffice.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="app-dot-name">OnlyOffice</span></a></li><li class="app-dot" style="--n:18"><a href="logiciel.html?id=zotero" aria-label="Zotero, Organisation"><span class="app-dot-icon"><img src="assets/logos/zotero.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="app-dot-name">Zotero</span></a></li><li class="app-dot" style="--n:19"><a href="logiciel.html?id=anki" aria-label="Anki, Organisation"><span class="app-dot-icon"><img src="assets/logos/anki.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="app-dot-name">Anki</span></a></li><li class="app-dot" style="--n:20"><a href="logiciel.html?id=vscodium" aria-label="VSCodium, Programmation"><span class="app-dot-icon"><img src="assets/logos/vscodium.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="app-dot-name">VSCodium</span></a></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="dossiers" aria-labelledby="dossiers-title">
+<div class="wrap">
+<header class="block-head">
+<h2 id="dossiers-title" class="h-section">Sept dossiers.</h2>
+<p>Sécurité, Windows, Internet, logiciels libres, études, mobile et création. Chaque guide répond à un problème concret, avec des étapes applicables.</p>
+</header>
+<ol class="dossier-list" role="list">
+<li><a class="dossier" href="astuces/securite.html"><span class="dossier-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6l-7-3Z"></path><path d="m9 12 2 2 4-4"></path></svg></span><span class="dossier-name">Sécurité</span><span class="dossier-desc">Mots de passe, double authentification, phishing, sauvegardes : les bases qui protègent vraiment.</span><span class="dossier-count tnum">4 guides</span><span class="dossier-go" aria-hidden="true"></span></a></li><li><a class="dossier" href="astuces/pc.html"><span class="dossier-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><rect height="12" rx="2" width="18" x="3" y="4"></rect><path d="M8 20h8M12 16v4"></path></svg></span><span class="dossier-name">PC & Windows</span><span class="dossier-desc">Nettoyer, accélérer, désinstaller, libérer de l’espace — sans outils miracles.</span><span class="dossier-count tnum">4 guides</span><span class="dossier-go" aria-hidden="true"></span></a></li><li><a class="dossier" href="astuces/internet.html"><span class="dossier-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.6 3 2.6 15 0 18M12 3c-2.6 3-2.6 15 0 18"></path></svg></span><span class="dossier-name">Internet</span><span class="dossier-desc">Navigateur, pubs, Wi-Fi, achats : reprendre le contrôle de ta connexion.</span><span class="dossier-count tnum">4 guides</span><span class="dossier-go" aria-hidden="true"></span></a></li><li><a class="dossier" href="astuces/logiciels.html"><span class="dossier-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><rect height="7" rx="1" width="7" x="3" y="3"></rect><rect height="7" rx="1" width="7" x="14" y="3"></rect><rect height="7" rx="1" width="7" x="3" y="14"></rect><rect height="7" rx="1" width="7" x="14" y="14"></rect></svg></span><span class="dossier-name">Logiciels</span><span class="dossier-desc">Des alternatives gratuites et open source qui font le travail.</span><span class="dossier-count tnum">4 guides</span><span class="dossier-go" aria-hidden="true"></span></a></li><li><a class="dossier" href="astuces/etudiant.html"><span class="dossier-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2V5Z"></path><path d="M8 7h6M8 11h6"></path></svg></span><span class="dossier-name">Étudiant</span><span class="dossier-desc">Notes, révisions, CV : travailler mieux avec des outils gratuits.</span><span class="dossier-count tnum">4 guides</span><span class="dossier-go" aria-hidden="true"></span></a></li><li><a class="dossier" href="astuces/mobile.html"><span class="dossier-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><rect height="20" rx="2" width="10" x="7" y="2"></rect><path d="M11 18h2"></path></svg></span><span class="dossier-name">Mobile</span><span class="dossier-desc">Batterie, stockage, applis, sécurité : ton téléphone, en mieux.</span><span class="dossier-count tnum">4 guides</span><span class="dossier-go" aria-hidden="true"></span></a></li><li><a class="dossier" href="astuces/creation.html"><span class="dossier-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><rect height="14" rx="2" width="18" x="3" y="6"></rect><circle cx="12" cy="13" r="4"></circle><path d="m8 6 1.5-2h5L16 6"></path></svg></span><span class="dossier-name">Création</span><span class="dossier-desc">Blender, DaVinci, OBS, GIMP : apprendre les outils gratuits pour créer.</span><span class="dossier-count tnum">6 guides</span><span class="dossier-go" aria-hidden="true"></span></a></li>
+</ol>
+</div>
+</section>
+
+<section class="latest" aria-labelledby="latest-title">
+<div class="wrap">
+<header class="block-head block-head--row">
+<h2 id="latest-title" class="h-section">Derniers guides.</h2>
+<div class="rail-controls">
+<a class="link-arrow" href="astuces.html">Tous les guides<span class="i" aria-hidden="true"></span></a>
+<button class="rail-btn" type="button" data-rail="prev" aria-label="Guides précédents" disabled></button>
+<button class="rail-btn" type="button" data-rail="next" aria-label="Guides suivants"></button>
+</div>
+</header>
+</div>
+<ul class="rail" role="list" tabindex="0" aria-label="Derniers guides">
+<li class="rail-item"><a class="tile" href="astuces/mots-de-passe.html"><span class="tile-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6l-7-3Z"></path><path d="m9 12 2 2 4-4"></path></svg></span><span class="tile-cat">Sécurité</span><span class="tile-title">Des mots de passe solides sans devenir fou</span><span class="tile-desc">La méthode des phrases de passe, un gestionnaire, et les erreurs à arrêter tout de suite.</span><span class="tile-foot"><span class="tnum">6 min de lecture</span><span class="tile-go" aria-hidden="true"></span></span></a></li><li class="rail-item"><a class="tile" href="astuces/debuter-blender.html"><span class="tile-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><rect height="14" rx="2" width="18" x="3" y="6"></rect><circle cx="12" cy="13" r="4"></circle><path d="m8 6 1.5-2h5L16 6"></path></svg></span><span class="tile-cat">Création</span><span class="tile-title">Débuter sur Blender sans se perdre</span><span class="tile-desc">Interface, navigation, premiers objets et export : le strict nécessaire pour démarrer en 3D.</span><span class="tile-foot"><span class="tnum">7 min de lecture</span><span class="tile-go" aria-hidden="true"></span></span></a></li><li class="rail-item"><a class="tile" href="astuces/nettoyer-windows.html"><span class="tile-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><rect height="12" rx="2" width="18" x="3" y="4"></rect><path d="M8 20h8M12 16v4"></path></svg></span><span class="tile-cat">PC & Windows</span><span class="tile-title">Nettoyer Windows sans logiciel miracle</span><span class="tile-desc">Les outils intégrés suffisent : stockage, démarrage, désinstallation, mises à jour.</span><span class="tile-foot"><span class="tnum">5 min de lecture</span><span class="tile-go" aria-hidden="true"></span></span></a></li><li class="rail-item"><a class="tile" href="astuces/wifi.html"><span class="tile-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.6 3 2.6 15 0 18M12 3c-2.6 3-2.6 15 0 18"></path></svg></span><span class="tile-cat">Internet</span><span class="tile-title">Un Wi-Fi qui rame : les vraies causes</span><span class="tile-desc">Placement, bande 5 GHz, canaux, firmware, et quand passer au câble.</span><span class="tile-foot"><span class="tnum">6 min de lecture</span><span class="tile-go" aria-hidden="true"></span></span></a></li><li class="rail-item"><a class="tile" href="astuces/alternatives-office.html"><span class="tile-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><rect height="7" rx="1" width="7" x="3" y="3"></rect><rect height="7" rx="1" width="7" x="14" y="3"></rect><rect height="7" rx="1" width="7" x="3" y="14"></rect><rect height="7" rx="1" width="7" x="14" y="14"></rect></svg></span><span class="tile-cat">Logiciels</span><span class="tile-title">Microsoft Office gratuit : les options sérieuses</span><span class="tile-desc">LibreOffice, OnlyOffice, Google Docs, Collabora : compatibilité et limites.</span><span class="tile-foot"><span class="tnum">5 min de lecture</span><span class="tile-go" aria-hidden="true"></span></span></a></li><li class="rail-item"><a class="tile" href="astuces/organisation-revisions.html"><span class="tile-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2V5Z"></path><path d="M8 7h6M8 11h6"></path></svg></span><span class="tile-cat">Étudiant</span><span class="tile-title">Organiser ses révisions sans se mentir</span><span class="tile-desc">Un planning réaliste, des sessions courtes, et de la récupération active.</span><span class="tile-foot"><span class="tnum">6 min de lecture</span><span class="tile-go" aria-hidden="true"></span></span></a></li><li class="rail-item"><a class="tile" href="astuces/double-authentification.html"><span class="tile-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6l-7-3Z"></path><path d="m9 12 2 2 4-4"></path></svg></span><span class="tile-cat">Sécurité</span><span class="tile-title">Activer la double authentification sans se verrouiller dehors</span><span class="tile-desc">Le deuxième facteur qui bloque la majorité des piratages de compte, et comment le configurer proprement.</span><span class="tile-foot"><span class="tnum">5 min de lecture</span><span class="tile-go" aria-hidden="true"></span></span></a></li><li class="rail-item"><a class="tile" href="astuces/enregistrer-obs.html"><span class="tile-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><rect height="14" rx="2" width="18" x="3" y="6"></rect><circle cx="12" cy="13" r="4"></circle><path d="m8 6 1.5-2h5L16 6"></path></svg></span><span class="tile-cat">Création</span><span class="tile-title">Enregistrer son écran avec OBS</span><span class="tile-desc">Scènes, sources, audio et réglages d’export : un tutoriel sans jargon.</span><span class="tile-foot"><span class="tnum">6 min de lecture</span><span class="tile-go" aria-hidden="true"></span></span></a></li>
+</ul>
+</section>
+
+<section class="avoid" data-theme="dark" aria-labelledby="avoid-title">
+<div class="wrap">
+<h2 id="avoid-title" class="avoid-title">Ce qu’on évite.</h2>
+<ul class="avoid-list" role="list">
+<li><span>Les « optimiseurs » miracles</span></li>
+<li><span>Les nettoyeurs de registre</span></li>
+<li><span>Les APK modifiés</span></li>
+<li><span>Les abonnements cachés</span></li>
+</ul>
+<div class="avoid-foot">
+<p>Si un outil gratuit demande plus de permissions que nécessaire, il n’a pas sa place ici.</p>
+<p>UnlockHub ne vend pas de logiciels et ne demande jamais tes identifiants. Les liens de téléchargement renvoient vers les éditeurs officiels.</p>
+</div>
+</div>
+</section>
+
+<section class="finale" aria-labelledby="finale-title">
+<div class="wrap finale-inner">
+<svg class="finale-lock" viewBox="0 0 48 60" aria-hidden="true"><path class="finale-shackle" d="M14 26V15a10 10 0 0 1 20 0v2" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><rect x="5" y="25" width="38" height="32" rx="8" fill="currentColor"/><path d="M24 34a4 4 0 0 1 2.2 7.3L27.5 49h-7l1.3-7.7A4 4 0 0 1 24 34Z" fill="var(--paper)"/></svg>
+<h2 id="finale-title" class="finale-title">Ouvre un dossier.</h2>
+<a class="finale-search" href="astuces.html" data-palette><span>Cherche un guide ou un logiciel…</span><kbd>/</kbd></a>
+<p class="finale-hint">Essaie « blender », « wifi » ou « cv ».</p>
+</div>
+</section>
+
+</main>
+<!-- footer -->
+<footer class="site-footer">
+<div class="wrap-wide">
+<div class="footer-top">
+<div class="footer-brand"><a class="wordmark" href="index.html"><svg class="lock-mark" viewBox="0 0 18 22" aria-hidden="true"><path class="lock-shackle" d="M4.6 10.2V6.6a4.4 4.4 0 0 1 8.8 0v3.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><rect x="1" y="9" width="16" height="12.6" rx="3.4" fill="currentColor"/><path class="lock-hole" d="M9 12.6a1.7 1.7 0 0 1 .9 3.15l.45 2.35h-2.7l.45-2.35A1.7 1.7 0 0 1 9 12.6Z"/></svg><span>Unlock<b>Hub</b></span></a><p>Le numérique, sans se ruiner. Des guides concrets et des logiciels gratuits, en accès libre.</p><div class="footer-rat"><img src="assets/rat.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span>Toutes les astuces pour être un vrai rat du web.</span></div></div>
+<div class="footer-col"><h2>Astuces</h2><ul><li><a href="astuces/securite.html">Sécurité</a></li><li><a href="astuces/pc.html">PC & Windows</a></li><li><a href="astuces/internet.html">Internet</a></li><li><a href="astuces/logiciels.html">Logiciels</a></li><li><a href="astuces/etudiant.html">Étudiant</a></li><li><a href="astuces/mobile.html">Mobile</a></li><li><a href="astuces/creation.html">Création</a></li></ul></div>
+<div class="footer-col"><h2>Logiciels</h2><ul><li><a href="outils.html">Tout le catalogue</a></li><li><a href="logiciel.html?id=blender">Blender</a></li><li><a href="logiciel.html?id=davinci-resolve">DaVinci Resolve</a></li><li><a href="logiciel.html?id=obs-studio">OBS Studio</a></li><li><a href="logiciel.html?id=gimp">GIMP</a></li><li><a href="logiciel.html?id=bitwarden">Bitwarden</a></li></ul></div>
+<div class="footer-col"><h2>Le projet</h2><ul><li><a href="apropos.html">À propos</a></li><li><a href="conditions.html">Conditions d’utilisation</a></li><li><a href="confidentialite.html">Confidentialité</a></li><li><a href="https://github.com/rubengermain4-exe/UnlockHub" rel="noopener">Code source</a></li></ul></div>
+</div>
+<div class="footer-bottom"><span>© 2026 UnlockHub. Accès libre, sans compte ni inscription.</span><span>Explore, apprends, économise, grandis.</span></div>
+</div>
+</footer>
+<!-- /footer -->
 <script src="assets/ui.js" defer></script>
+<script src="assets/home.js" defer></script>
 </body>
 </html>

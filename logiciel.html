@@ -1,86 +1,97 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#111111">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f5f4f1">
+<meta name="color-scheme" content="light">
 <title>Fiche logiciel — UnlockHub</title>
+<meta name="description" content="Fiche, lien officiel et guide d’installation d’un logiciel gratuit.">
+<meta property="og:title" content="Fiche logiciel — UnlockHub">
+<meta property="og:description" content="Fiche, lien officiel et guide d’installation d’un logiciel gratuit.">
+<meta property="og:type" content="website">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preload" href="assets/fonts/host-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/site.css">
+<script>document.documentElement.classList.add("js")</script>
 </head>
-<body>
-<header class="menubar">
-<a class="menubar-brand" href="index.html"><svg class="menu-lock" viewBox="0 0 48 52" aria-hidden="true"><path d="M15 21v-7a9 9 0 0 1 18 0v7" stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round"/><rect x="7" y="20" width="34" height="29" rx="5" fill="currentColor"/><circle cx="24" cy="32" r="3" fill="#111"/><path d="M24 35v5" stroke="#111" stroke-width="3" stroke-linecap="round"/></svg>UnlockHub</a>
-<nav aria-label="Menu principal"><a data-section="astuces" href="astuces.html">Astuces</a><a data-section="outils" href="outils.html">Logiciels</a><a href="apropos.html">À propos</a></nav>
-<div class="menubar-right"><span class="menu-status">Fanzine n°01 — Gratuit</span></div>
-</header>
-<div class="layout">
-  <aside class="sidebar">
-    <a class="brand" href="index.html" aria-label="UnlockHub accueil"><span class="brand-icon" aria-hidden="true"></span><span class="brand-name">Unlock<span>Hub</span></span></a>
-    <nav class="nav" aria-label="Navigation">
-<a href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v11h14V9M9 20v-7h6v7"/></svg>Accueil</a>
-<a href="astuces.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 22h4M8 14c-1.3-1.1-2-2.7-2-4.5a6 6 0 1 1 12 0c0 1.8-.7 3.4-2 4.5-.8.7-1 1.4-1 2h-6c0-.6-.2-1.3-1-2Z"/></svg>Astuces</a>
-<a href="outils.html" class="active"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 17v4h16v-4"/></svg>Logiciels</a>
-<a href="apropos.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 11v5M12 7h.01"/></svg>À propos</a>
-</nav>
-    <div class="side-tip"><b>ϟ</b>Lien officiel.<br>Pas de repack.<br>Pas de surprise.</div>
-  </aside>
-
-  <main class="main">
-    <div class="topline">
-      <div class="crumb">UnlockHub / Logiciels / Fiche</div>
-      <form class="search" action="outils.html" role="search">
-        <span aria-hidden="true">⌕</span>
-        <input type="search" name="q" placeholder="Chercher un autre logiciel…" aria-label="Rechercher un autre logiciel">
-      </form>
-    </div>
-    <div class="detail" id="detail"><a class="back" href="outils.html">← Catalogue</a><p>Chargement de la fiche…</p></div>
-
-    <footer class="footer">
-      <span>Fiches vérifiées · Liens officiels · Accès libre</span>
-      <span class="motto">Explore · Apprends · Économise · Grandis</span>
-    </footer>
-  </main>
+<body class="is-detail">
+<!-- nav -->
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="site-nav" data-nav>
+<div class="site-nav-inner">
+<a class="wordmark" href="index.html" aria-label="UnlockHub, accueil"><svg class="lock-mark" viewBox="0 0 18 22" aria-hidden="true"><path class="lock-shackle" d="M4.6 10.2V6.6a4.4 4.4 0 0 1 8.8 0v3.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><rect x="1" y="9" width="16" height="12.6" rx="3.4" fill="currentColor"/><path class="lock-hole" d="M9 12.6a1.7 1.7 0 0 1 .9 3.15l.45 2.35h-2.7l.45-2.35A1.7 1.7 0 0 1 9 12.6Z"/></svg><span>Unlock<b>Hub</b></span></a>
+<nav class="nav-links" aria-label="Menu principal"><a href="astuces.html" data-section="astuces">Astuces</a><a href="outils.html" data-section="outils" aria-current="page">Logiciels</a><a href="apropos.html" data-section="apropos">À propos</a></nav>
+<a class="nav-search" href="astuces.html" data-palette aria-label="Rechercher un guide ou un logiciel"><span>Rechercher</span><kbd>/</kbd></a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-sheet" aria-label="Menu"><span></span><span></span></button>
 </div>
-
+</header>
+<div class="nav-sheet" id="nav-sheet"><a href="index.html">Accueil</a><a href="astuces.html">Astuces</a><a href="outils.html">Logiciels</a><a href="apropos.html">À propos</a><p class="nav-sheet-foot">Accès libre, sans compte ni inscription.</p></div>
+<!-- /nav -->
+<main id="contenu" class="page page-detail">
+<div id="detail"><div class="wrap page-head"><nav class="crumbs" aria-label="Fil d’Ariane"><a href="index.html">Accueil</a><a href="outils.html">Logiciels</a></nav><p class="intro">Chargement de la fiche…</p></div></div>
+</main>
+<!-- footer -->
+<footer class="site-footer">
+<div class="wrap-wide">
+<div class="footer-top">
+<div class="footer-brand"><a class="wordmark" href="index.html"><svg class="lock-mark" viewBox="0 0 18 22" aria-hidden="true"><path class="lock-shackle" d="M4.6 10.2V6.6a4.4 4.4 0 0 1 8.8 0v3.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><rect x="1" y="9" width="16" height="12.6" rx="3.4" fill="currentColor"/><path class="lock-hole" d="M9 12.6a1.7 1.7 0 0 1 .9 3.15l.45 2.35h-2.7l.45-2.35A1.7 1.7 0 0 1 9 12.6Z"/></svg><span>Unlock<b>Hub</b></span></a><p>Le numérique, sans se ruiner. Des guides concrets et des logiciels gratuits, en accès libre.</p><div class="footer-rat"><img src="assets/rat.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span>Toutes les astuces pour être un vrai rat du web.</span></div></div>
+<div class="footer-col"><h2>Astuces</h2><ul><li><a href="astuces/securite.html">Sécurité</a></li><li><a href="astuces/pc.html">PC & Windows</a></li><li><a href="astuces/internet.html">Internet</a></li><li><a href="astuces/logiciels.html">Logiciels</a></li><li><a href="astuces/etudiant.html">Étudiant</a></li><li><a href="astuces/mobile.html">Mobile</a></li><li><a href="astuces/creation.html">Création</a></li></ul></div>
+<div class="footer-col"><h2>Logiciels</h2><ul><li><a href="outils.html">Tout le catalogue</a></li><li><a href="logiciel.html?id=blender">Blender</a></li><li><a href="logiciel.html?id=davinci-resolve">DaVinci Resolve</a></li><li><a href="logiciel.html?id=obs-studio">OBS Studio</a></li><li><a href="logiciel.html?id=gimp">GIMP</a></li><li><a href="logiciel.html?id=bitwarden">Bitwarden</a></li></ul></div>
+<div class="footer-col"><h2>Le projet</h2><ul><li><a href="apropos.html">À propos</a></li><li><a href="conditions.html">Conditions d’utilisation</a></li><li><a href="confidentialite.html">Confidentialité</a></li><li><a href="https://github.com/rubengermain4-exe/UnlockHub" rel="noopener">Code source</a></li></ul></div>
+</div>
+<div class="footer-bottom"><span>© 2026 UnlockHub. Accès libre, sans compte ni inscription.</span><span>Explore, apprends, économise, grandis.</span></div>
+</div>
+</footer>
+<!-- /footer -->
 <script src="logiciels.js"></script>
 <script>
-const s=window.UNLOCKHUB_SOFTWARE.find(x=>x.id===new URLSearchParams(location.search).get('id'));
-const root=document.getElementById('detail');
-
-function logo(x){
-  return '<div class="detail-logo">'+(x.logo?'<img src="'+x.logo+'" alt="Logo de '+x.name+'">':'<span class="letter">'+x.letter+'</span>')+'</div>';
-}
-function card(x){
-  return '<a class="software-card" href="logiciel.html?id='+x.id+'">'+
-    '<div class="software-logo">'+(x.logo?'<img src="'+x.logo+'" alt="Logo de '+x.name+'" loading="lazy">':'<span class="letter">'+x.letter+'</span>')+'</div>'+
-    '<h2>'+x.name+'</h2><p>'+x.desc+'</p>'+
-    '<div class="meta"><span class="tag">'+x.cat+'</span></div>'+
-    '<span class="card-link">Voir la fiche →</span></a>';
-}
-
-if(!s){
-  root.innerHTML='<a class="back" href="outils.html">← Catalogue</a><h1 class="page-title">Logiciel introuvable</h1><p class="intro">Cette fiche n’existe pas ou le lien est incorrect.</p><a class="download" style="max-width:240px" href="outils.html">Retour au catalogue</a>';
-}else{
-  document.title=s.name+' — UnlockHub';
-  const related=window.UNLOCKHUB_SOFTWARE.filter(x=>x.cat===s.cat&&x.id!==s.id).slice(0,3);
-  root.innerHTML=
-    '<a class="back" href="outils.html">← Catalogue</a>'+
-    '<div class="eyebrow">'+s.cat+'</div>'+
-    '<section class="detail-hero">'+logo(s)+
-      '<div><h1>'+s.name+'</h1><p>'+s.desc+'</p>'+
-      '<div class="meta">'+s.tags.map(t=>'<span class="tag">'+t+'</span>').join('')+'<span class="tag">'+s.version+'</span></div>'+
-      '<div class="detail-actions">'+
-        '<a class="download" href="'+s.download+'" target="_blank" rel="noopener noreferrer">↓ Télécharger</a>'+
-        (s.guide?'<a class="secondary" href="'+s.guide+'">Lire le guide</a>':'')+
-        '<a class="secondary" href="outils.html">Catalogue</a>'+
-      '</div></div>'+
-    '</section>'+
-    '<section class="detail-section"><h2>À propos</h2><p>'+s.about+'</p></section>'+
-    '<section class="detail-section"><h2>À quoi ça sert</h2><p>'+s.use+'</p></section>'+
-    '<section class="detail-section"><h2>Installation</h2><ol class="steps">'+s.steps.map(step=>'<li>'+step+'</li>').join('')+'</ol><div class="notice">Télécharge toujours depuis le site officiel. Évite les installateurs provenant de sites inconnus.</div></section>'+
-    (related.length?'<section class="related"><h2>Voir aussi</h2><div class="grid">'+related.map(card).join('')+'</div></section>':'');
-}
+(() => {
+  const all = window.UNLOCKHUB_SOFTWARE;
+  const id = new URLSearchParams(location.search).get("id");
+  const s = all.find((x) => x.id === id);
+  const root = document.getElementById("detail");
+  const esc = (v) => String(v).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const crumbs = (name) => '<nav class="crumbs" aria-label="Fil d’Ariane"><a href="index.html">Accueil</a><a href="outils.html">Logiciels</a>' + (name ? '<span aria-current="page">' + esc(name) + "</span>" : "") + "</nav>";
+  const icon = (x, big) => '<span class="app-icon"' + (big ? ' style="view-transition-name:icon-' + x.id + '"' : "") + ">" + (x.logo ? '<img src="' + x.logo + '" alt="' + (big ? "Logo " + esc(x.name) : "") + '" width="96" height="96">' : '<span class="letter">' + esc(x.letter) + "</span>") + "</span>";
+  const card = (x) =>
+    '<a class="app-card" href="logiciel.html?id=' + x.id + '">' + icon(x) +
+    '<span><span class="app-card-name">' + esc(x.name) + '</span><span class="app-card-cat">' + esc(x.cat) + "</span></span>" +
+    '<span class="app-card-cta" aria-hidden="true">Voir</span><span class="app-card-desc">' + esc(x.desc) + "</span></a>";
+  if (!s) {
+    root.innerHTML = '<header class="page-head wrap">' + crumbs() + '<h1 class="page-title">Fiche introuvable<span>.</span></h1><p class="intro">Cette fiche n’existe pas ou le lien est incorrect.</p><p style="margin-top:var(--s-m)"><a class="btn btn-dark" href="outils.html">Retour au catalogue</a></p></header>';
+    return;
+  }
+  document.title = s.name + " — UnlockHub";
+  const meta = document.querySelector('meta[name="description"]');
+  if (meta) meta.content = s.desc;
+  const platform = s.tags.find((t) => /windows|macos|linux|android|ios|mobile/i.test(t)) || "Voir le site officiel";
+  const keywords = s.tags.filter((t) => t !== platform).join(", ") || s.cat;
+  const related = all.filter((x) => x.cat === s.cat && x.id !== s.id).slice(0, 3);
+  const more = related.length < 3 ? all.filter((x) => x.cat !== s.cat && x.id !== s.id).slice(0, 3 - related.length) : [];
+  root.innerHTML =
+    '<div class="wrap app-crumbs">' + crumbs(s.name) + '</div>' +
+    '<section class="app-hero wrap">' + icon(s, true) +
+      '<div><p class="app-cat">' + esc(s.cat) + '</p><h1>' + esc(s.name) + '</h1><p class="app-desc">' + esc(s.desc) + "</p>" +
+      '<div class="app-actions">' +
+        '<a class="btn btn-primary" href="' + esc(s.download) + '" target="_blank" rel="noopener noreferrer">Télécharger<span class="i i-out" aria-hidden="true"></span></a>' +
+        (s.guide ? '<a class="btn btn-ghost" href="' + esc(s.guide) + '">Lire le guide</a>' : "") +
+      "</div></div>" +
+    "</section>" +
+    '<dl class="app-facts wrap">' +
+      "<div><dt>Prix et licence</dt><dd>" + esc(s.version) + "</dd></div>" +
+      "<div><dt>Catégorie</dt><dd>" + esc(s.cat) + "</dd></div>" +
+      "<div><dt>Plateformes</dt><dd>" + esc(platform) + "</dd></div>" +
+      "<div><dt>Usages</dt><dd>" + esc(keywords) + "</dd></div>" +
+    "</dl>" +
+    '<div class="app-body wrap">' +
+      "<section><h2>À propos</h2><p>" + esc(s.about) + "</p></section>" +
+      "<section><h2>À quoi ça sert</h2><p>" + esc(s.use) + "</p></section>" +
+      '<section class="app-install"><h2>Installation</h2><ol class="steps">' + s.steps.map((x) => "<li>" + esc(x) + "</li>").join("") + "</ol>" +
+      '<p class="notice">Télécharge toujours depuis le site officiel. Évite les installateurs provenant de sites inconnus.</p></section>' +
+    "</div>" +
+    '<section class="wrap related-apps"><h2 class="section-title">Voir aussi</h2><div class="app-grid">' + related.concat(more).map(card).join("") + "</div></section>";
+})();
 </script>
 <script src="assets/ui.js" defer></script>
 </body>

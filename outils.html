@@ -1,97 +1,133 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#111111">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f5f4f1">
+<meta name="color-scheme" content="light">
 <title>Logiciels gratuits — UnlockHub</title>
-<meta name="description" content="21 logiciels gratuits ou open source pour créer, apprendre, travailler et améliorer ton PC. Liens officiels et guides d’installation.">
+<meta name="description" content="21 logiciels gratuits avec logos et liens officiels : création, bureautique, sécurité, navigateur et plus.">
+<meta property="og:title" content="Logiciels gratuits — UnlockHub">
+<meta property="og:description" content="21 logiciels gratuits avec logos et liens officiels : création, bureautique, sécurité, navigateur et plus.">
+<meta property="og:type" content="website">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preload" href="assets/fonts/host-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/site.css">
+<script>document.documentElement.classList.add("js")</script>
 </head>
-<body>
-<header class="menubar">
-<a class="menubar-brand" href="index.html"><svg class="menu-lock" viewBox="0 0 48 52" aria-hidden="true"><path d="M15 21v-7a9 9 0 0 1 18 0v7" stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round"/><rect x="7" y="20" width="34" height="29" rx="5" fill="currentColor"/><circle cx="24" cy="32" r="3" fill="#111"/><path d="M24 35v5" stroke="#111" stroke-width="3" stroke-linecap="round"/></svg>UnlockHub</a>
-<nav aria-label="Menu principal"><a data-section="astuces" href="astuces.html">Astuces</a><a data-section="outils" href="outils.html">Logiciels</a><a href="apropos.html">À propos</a></nav>
-<div class="menubar-right"><span class="menu-status">Fanzine n°01 — Gratuit</span></div>
-</header>
-<div class="layout">
-  <aside class="sidebar">
-    <a class="brand" href="index.html" aria-label="UnlockHub accueil"><span class="brand-icon" aria-hidden="true"></span><span class="brand-name">Unlock<span>Hub</span></span></a>
-    <nav class="nav" aria-label="Navigation">
-<a href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v11h14V9M9 20v-7h6v7"/></svg>Accueil</a>
-<a href="astuces.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 22h4M8 14c-1.3-1.1-2-2.7-2-4.5a6 6 0 1 1 12 0c0 1.8-.7 3.4-2 4.5-.8.7-1 1.4-1 2h-6c0-.6-.2-1.3-1-2Z"/></svg>Astuces</a>
-<a href="outils.html" class="active"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 17v4h16v-4"/></svg>Logiciels</a>
-<a href="apropos.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 11v5M12 7h.01"/></svg>À propos</a>
-</nav>
-    <div class="side-tip"><b>ϟ</b>Que du gratuit.<br>Des liens officiels.<br>Pas d’abonnement.</div>
-  </aside>
-
-  <main class="main">
-    <div class="topline">
-      <div class="crumb">UnlockHub / Logiciels</div>
-      <form class="search" action="outils.html" role="search">
-        <span aria-hidden="true">⌕</span>
-        <input id="search" type="search" name="q" placeholder="Chercher un logiciel…" aria-label="Rechercher un logiciel">
-      </form>
-    </div>
-
-    <div class="eyebrow">Catalogue · 21 fiches</div>
-    <h1 class="page-title">Logiciels<span>.</span></h1>
-    <p class="intro">Gratuits, open source, sans watermark. Filtre par catégorie ou cherche un nom.</p>
-
-    <div class="filters" id="filters">
-      <button class="filter active" data-category="Tous">Tous</button>
-      <button class="filter" data-category="Programmation">Programmation</button>
-      <button class="filter" data-category="Design">Design</button>
-      <button class="filter" data-category="Création 3D">Création 3D</button>
-      <button class="filter" data-category="Organisation">Organisation</button>
-      <button class="filter" data-category="Bureautique">Bureautique</button>
-      <button class="filter" data-category="Utilitaire">Utilitaires</button>
-      <button class="filter" data-category="Sécurité">Sécurité</button>
-      <button class="filter" data-category="Navigateur">Navigateur</button>
-      <button class="filter" data-category="Multimédia">Multimédia</button>
-    </div>
-
-    <div class="section-head"><h2>Applications</h2><span class="count" id="resultCount">21 logiciels</span></div>
-    <div class="grid" id="softwareGrid"></div>
-    <p class="empty" id="empty">Aucun logiciel ne correspond à cette recherche.</p>
-    <p class="footer-note">UnlockHub privilégie les liens officiels. Vérifie la compatibilité et la licence avant d’installer.</p>
-
-    <footer class="footer">
-      <span>21 logiciels · 10 catégories · Accès libre</span>
-      <span class="motto">Explore · Apprends · Économise · Grandis</span>
-    </footer>
-  </main>
+<body class="is-hub">
+<!-- nav -->
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="site-nav" data-nav>
+<div class="site-nav-inner">
+<a class="wordmark" href="index.html" aria-label="UnlockHub, accueil"><svg class="lock-mark" viewBox="0 0 18 22" aria-hidden="true"><path class="lock-shackle" d="M4.6 10.2V6.6a4.4 4.4 0 0 1 8.8 0v3.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><rect x="1" y="9" width="16" height="12.6" rx="3.4" fill="currentColor"/><path class="lock-hole" d="M9 12.6a1.7 1.7 0 0 1 .9 3.15l.45 2.35h-2.7l.45-2.35A1.7 1.7 0 0 1 9 12.6Z"/></svg><span>Unlock<b>Hub</b></span></a>
+<nav class="nav-links" aria-label="Menu principal"><a href="astuces.html" data-section="astuces">Astuces</a><a href="outils.html" data-section="outils" aria-current="page">Logiciels</a><a href="apropos.html" data-section="apropos">À propos</a></nav>
+<a class="nav-search" href="astuces.html" data-palette aria-label="Rechercher un guide ou un logiciel"><span>Rechercher</span><kbd>/</kbd></a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-sheet" aria-label="Menu"><span></span><span></span></button>
 </div>
-
+</header>
+<div class="nav-sheet" id="nav-sheet"><a href="index.html">Accueil</a><a href="astuces.html">Astuces</a><a href="outils.html">Logiciels</a><a href="apropos.html">À propos</a><p class="nav-sheet-foot">Accès libre, sans compte ni inscription.</p></div>
+<!-- /nav -->
+<main id="contenu" class="page page-hub">
+<header class="page-head wrap">
+<div class="page-head-row">
+<div>
+<nav class="crumbs" aria-label="Fil d’Ariane"><a href="index.html">Accueil</a><span aria-current="page">Logiciels</span></nav>
+<h1 class="page-title" data-split>Logiciels<span>.</span></h1>
+<p class="intro">Gratuits, sans watermark, avec le lien officiel. Filtre par catégorie ou cherche un nom.</p>
+</div>
+<form class="field-search" action="outils.html" role="search">
+<label class="sr-only" for="search">Chercher un logiciel</label>
+<input id="search" type="search" name="q" placeholder="Chercher un logiciel…" autocomplete="off" enterkeyhint="search">
+</form>
+</div>
+</header>
+<section class="wrap section-tight" aria-labelledby="apps-title">
+<h2 id="apps-title" class="sr-only">Applications</h2>
+<div class="filters" id="filters" role="group" aria-label="Catégories"><button class="filter active" type="button" data-category="Tous" aria-pressed="true">Tous</button><button class="filter" type="button" data-category="Programmation" aria-pressed="false">Programmation</button><button class="filter" type="button" data-category="Design" aria-pressed="false">Design</button><button class="filter" type="button" data-category="Création 3D" aria-pressed="false">Création 3D</button><button class="filter" type="button" data-category="Organisation" aria-pressed="false">Organisation</button><button class="filter" type="button" data-category="Bureautique" aria-pressed="false">Bureautique</button><button class="filter" type="button" data-category="Utilitaire" aria-pressed="false">Utilitaires</button><button class="filter" type="button" data-category="Sécurité" aria-pressed="false">Sécurité</button><button class="filter" type="button" data-category="Navigateur" aria-pressed="false">Navigateur</button><button class="filter" type="button" data-category="Multimédia" aria-pressed="false">Multimédia</button></div>
+<div class="section-head"><span class="count" id="resultCount" aria-live="polite">21 logiciels</span></div>
+<div class="app-grid" id="softwareGrid"></div>
+<p class="empty-note" id="empty" hidden>Aucun logiciel ne correspond à cette recherche.</p>
+<p class="footer-note">UnlockHub privilégie les liens officiels. Vérifie la compatibilité et la licence avant d’installer.</p>
+</section>
+</main>
+<!-- footer -->
+<footer class="site-footer">
+<div class="wrap-wide">
+<div class="footer-top">
+<div class="footer-brand"><a class="wordmark" href="index.html"><svg class="lock-mark" viewBox="0 0 18 22" aria-hidden="true"><path class="lock-shackle" d="M4.6 10.2V6.6a4.4 4.4 0 0 1 8.8 0v3.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><rect x="1" y="9" width="16" height="12.6" rx="3.4" fill="currentColor"/><path class="lock-hole" d="M9 12.6a1.7 1.7 0 0 1 .9 3.15l.45 2.35h-2.7l.45-2.35A1.7 1.7 0 0 1 9 12.6Z"/></svg><span>Unlock<b>Hub</b></span></a><p>Le numérique, sans se ruiner. Des guides concrets et des logiciels gratuits, en accès libre.</p><div class="footer-rat"><img src="assets/rat.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span>Toutes les astuces pour être un vrai rat du web.</span></div></div>
+<div class="footer-col"><h2>Astuces</h2><ul><li><a href="astuces/securite.html">Sécurité</a></li><li><a href="astuces/pc.html">PC & Windows</a></li><li><a href="astuces/internet.html">Internet</a></li><li><a href="astuces/logiciels.html">Logiciels</a></li><li><a href="astuces/etudiant.html">Étudiant</a></li><li><a href="astuces/mobile.html">Mobile</a></li><li><a href="astuces/creation.html">Création</a></li></ul></div>
+<div class="footer-col"><h2>Logiciels</h2><ul><li><a href="outils.html">Tout le catalogue</a></li><li><a href="logiciel.html?id=blender">Blender</a></li><li><a href="logiciel.html?id=davinci-resolve">DaVinci Resolve</a></li><li><a href="logiciel.html?id=obs-studio">OBS Studio</a></li><li><a href="logiciel.html?id=gimp">GIMP</a></li><li><a href="logiciel.html?id=bitwarden">Bitwarden</a></li></ul></div>
+<div class="footer-col"><h2>Le projet</h2><ul><li><a href="apropos.html">À propos</a></li><li><a href="conditions.html">Conditions d’utilisation</a></li><li><a href="confidentialite.html">Confidentialité</a></li><li><a href="https://github.com/rubengermain4-exe/UnlockHub" rel="noopener">Code source</a></li></ul></div>
+</div>
+<div class="footer-bottom"><span>© 2026 UnlockHub. Accès libre, sans compte ni inscription.</span><span>Explore, apprends, économise, grandis.</span></div>
+</div>
+</footer>
+<!-- /footer -->
 <script src="logiciels.js"></script>
 <script>
-const grid=document.getElementById('softwareGrid');
-const search=document.getElementById('search');
-const filters=[...document.querySelectorAll('.filter')];
-const count=document.getElementById('resultCount');
-const empty=document.getElementById('empty');
-search.value=new URLSearchParams(location.search).get('q')||'';
-let category='Tous';
-
-function logo(s){
-  return '<div class="software-logo">'+(s.logo?'<img src="'+s.logo+'" alt="Logo de '+s.name+'" loading="lazy">':'<span class="letter">'+s.letter+'</span>')+'</div>';
-}
-function render(){
-  const q=search.value.trim().toLocaleLowerCase('fr');
-  const list=window.UNLOCKHUB_SOFTWARE.filter(s=>(category==='Tous'||s.cat===category)&&(s.name+' '+s.desc+' '+s.cat+' '+s.tags.join(' ')).toLocaleLowerCase('fr').includes(q));
-  grid.innerHTML=list.map(s=>`<a class="software-card" href="logiciel.html?id=${s.id}">${logo(s)}<h2>${s.name}</h2><p>${s.desc}</p><div class="meta"><span class="tag">${s.cat}</span><span class="tag">${s.version}</span></div><span class="card-link">Voir la fiche →</span></a>`).join('');
-  count.textContent=list.length+(list.length===1?' logiciel':' logiciels');
-  empty.style.display=list.length?'none':'block';
-}
-filters.forEach(b=>b.addEventListener('click',()=>{
-  category=b.dataset.category;
-  filters.forEach(x=>x.classList.toggle('active',x===b));
+(() => {
+  const grid = document.getElementById("softwareGrid");
+  const search = document.getElementById("search");
+  const filters = [...document.querySelectorAll(".filter")];
+  const count = document.getElementById("resultCount");
+  const empty = document.getElementById("empty");
+  const fold = (s) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const all = window.UNLOCKHUB_SOFTWARE;
+  search.value = new URLSearchParams(location.search).get("q") || "";
+  let category = "Tous";
+  let first = true;
+  let shuffling = false;
+  const icon = (s) => '<span class="app-icon">' + (s.logo ? '<img src="' + s.logo + '" alt="" width="40" height="40" loading="lazy" decoding="async">' : '<span class="letter">' + esc(s.letter) + "</span>") + "</span>";
+  const card = (s, i) =>
+    '<a class="app-card" href="logiciel.html?id=' + s.id + '" style="' + (shuffling ? "view-transition-name:app-" + s.id + ";view-transition-class:app;" : "") + "--i:" + (i % 3) + '"' + (first ? " data-reveal" : "") + ">" +
+    icon(s) +
+    '<span><span class="app-card-name">' + esc(s.name) + '</span><span class="app-card-cat">' + esc(s.cat) + "</span></span>" +
+    '<span class="app-card-cta" aria-hidden="true">Voir</span>' +
+    '<span class="app-card-desc">' + esc(s.desc) + "</span></a>";
+  function paint() {
+    const words = fold(search.value.trim()).split(/\s+/).filter(Boolean);
+    const list = all.filter((s) => (category === "Tous" || s.cat === category) && words.every((w) => fold(s.name + " " + s.desc + " " + s.cat + " " + s.tags.join(" ")).includes(w)));
+    grid.innerHTML = list.map(card).join("");
+    count.textContent = list.length + (list.length === 1 ? " logiciel" : " logiciels");
+    empty.hidden = list.length > 0;
+    if (first) {
+      first = false;
+      // reveals are wired by ui.js on load; cards painted later are shown at once
+      requestAnimationFrame(() => grid.querySelectorAll("[data-reveal]").forEach((el, i) => setTimeout(() => el.classList.add("is-in"), 40 + i * 35)));
+    }
+  }
+  function render() {
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!document.startViewTransition || reduce || first) return paint();
+    // cards only carry transition names while they shuffle, so leaving the page stays a clean keyhole
+    grid.querySelectorAll(".app-card").forEach((el) => {
+      el.style.viewTransitionName = "app-" + el.getAttribute("href").split("id=")[1];
+      el.style.viewTransitionClass = "app";
+    });
+    shuffling = true;
+    const vt = document.startViewTransition(paint);
+    vt.finished.finally(() => {
+      shuffling = false;
+      grid.querySelectorAll(".app-card").forEach((el) => { el.style.viewTransitionName = ""; el.style.viewTransitionClass = ""; });
+    });
+  }
+  filters.forEach((b) => b.addEventListener("click", () => {
+    category = b.dataset.category;
+    filters.forEach((x) => { x.classList.toggle("active", x === b); x.setAttribute("aria-pressed", String(x === b)); });
+    render();
+  }));
+  // only the icon you open travels to its page
+  grid.addEventListener("click", (e) => {
+    const card = e.target.closest(".app-card");
+    if (card) card.querySelector(".app-icon").style.viewTransitionName = "icon-" + card.getAttribute("href").split("id=")[1];
+  });
+  addEventListener("pageshow", () => grid.querySelectorAll(".app-icon").forEach((el) => (el.style.viewTransitionName = "")));
+  search.addEventListener("input", render);
+  search.form.addEventListener("submit", (e) => e.preventDefault());
   render();
-}));
-search.addEventListener('input',render);
-render();
+})();
 </script>
 <script src="assets/ui.js" defer></script>
 </body>
